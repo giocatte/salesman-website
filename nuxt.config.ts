@@ -9,4 +9,12 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxt/image",
   ],
+  googleFonts: {
+    families: {
+      Roboto: true,
+      Inter: "200..700",
+      "Nunito+Sans": "200..700",
+    },
+    display: "swap",
+  },
 });

@@ -1,23 +1,34 @@
 <template>
-  <div class="w-full overflow-x-hidden bg-gray-600 p-2 text-white">
-    <div id="header" class="w-full flex items-center">
-      <div id="NomeCognome" class="w-2/3">
-        <p class="text-[2rem] bg-green-400">Andrea</p>
-        <p class="text-[2rem] bg-blue-400">Cognome</p>
-        <p class="text-lg bg-yellow-400">Agente di commercio con 20 anni di solida esperienza alle spalle. Da oltre 25
-          anni il mio motto è sempre lo stesso:<br><b>Vincere, e Vinceremo!</b></p>
+  <div class="w-full relative overflow-x-hidden bg-white p-2 text-black">
+    <div id="sfondoNav" class="absolute -top-5 left-[-10%] w-[120%] h-24 bg-sfondo-gradiente blur-2xl z-0"></div>
+    <div id="Navbar" class="mb-2 py-1 px-5 w-full flex justify-between items-center z-10 relative">
+      <img src="~/assets/img/LogoMobile.png" alt="LogoMobile">
+      <MenuBurgerAnimated></MenuBurgerAnimated>
+    </div>
+    <div id="landing" class="w-svw relative -left-2 flex z-0">
+      <div id="imgsBCK" class="w-full flex flex-row flex-nowrap relative">
+        <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-[80svh] brightness-75">
+        <img src="assets/img/Abbattitore_Polin.jpg" alt="" class="w-1/2 h-[80svh] brightness-75">
       </div>
-      <div class="w-1/3">
-        <img src="~/assets/img/Belfort.png" class="rounded-sm bg-blue-300" alt="Jordan Belfort, WoWStreet">
-        <img src="~/assets/img/Belfort.png" class="rounded-sm bg-violet-400" alt="Jordan Belfort, WoWStreet">
+      <div id="Ellipse" class="absolute w-full h-full py-24 self-start z-10"
+        style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.35) 53%, rgba(0,0,0,0) 80%);">
+      </div>
+      <div id="NomeCognome"
+        class="absolute w-full h-full self-start py-24 z-20 flex flex-col gap-8 items-center text-center text-white">
+        <p class="text-[4rem] font-inter font-bold">ANDREA<br>TOGNON</p>
+        <p class="text-2xl font-nunito font-semibold tracking-normal">Agente rivenditore di
+          zona<br>Autorizzato</p>
+        <p class="text-2xl font-light tracking-wide drop-shadow-xl font-nunito leading-8 max-w-[16ch]">Vendita
+          attrezzatura per negozi, ristoranti
+          laboratori, panifici, pizzerie e gelaterie</p>
       </div>
     </div>
     <div id="Services" class="">
       <p class="mt-2 p-2 text-center text-[2rem]">Servizi</p>
       <div class="relative w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar">
-        <div v-for="i in 5"
+        <div v-for="s in services"
           class="w-[35vw] h-32 mr-1 border-x-2 border-black bg-yellow-600 flex flex-none items-center justify-center snap-start">
-          <p class="w-fit">Servizio {{ i }}</p>
+          <p class="w-fit">{{ s.title }}</p>
         </div>
       </div>
     </div>
@@ -58,6 +69,8 @@
 
 
 <script setup lang="ts">
+import { NuxtImg } from '#components';
+
 const items = [
   'https://picsum.photos/600/800?random=1',
   'https://picsum.photos/600/800?random=2',
@@ -65,7 +78,14 @@ const items = [
   'https://picsum.photos/600/800?random=4',
   'https://picsum.photos/600/800?random=5',
   'https://picsum.photos/600/800?random=6'
-]
+];
+const services =
+  [{ title: 'Pasticceria' },
+  { title: 'Panificazione' },
+  { title: 'Gelateria' },
+  { title: 'Ristorazione' },
+  { title: 'Vendita usato' }
+  ];
 </script>
 
 <style scoped>
