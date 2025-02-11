@@ -2,7 +2,7 @@
   <div class="w-full relative overflow-x-hidden bg-white p-2 text-black">
     <div id="sfondoNav" class="absolute -top-5 left-[-10%] w-[120%] h-24 bg-sfondo-gradiente blur-2xl z-0"></div>
     <div id="Navbar" class="mb-2 py-1 px-5 w-full flex justify-between items-center z-10 relative">
-      <img src="~/assets/img/LogoMobile.png" alt="LogoMobile">
+      <img :src="LogoMobile" alt="LogoMobile">
       <MenuBurgerAnimated></MenuBurgerAnimated>
     </div>
     <div id="landing" class="w-svw relative -left-2 flex z-0">
@@ -24,13 +24,8 @@
       </div>
     </div>
     <div id="Services" class="">
-      <p class="mt-2 p-2 text-center text-[2rem]">Servizi</p>
-      <div class="relative w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar">
-        <div v-for="s in services"
-          class="w-[35vw] h-32 mr-1 border-x-2 border-black bg-yellow-600 flex flex-none items-center justify-center snap-start">
-          <p class="w-fit">{{ s.title }}</p>
-        </div>
-      </div>
+      <p class="mt-2 p-2 text-center text-[2.5rem] font-nunito font-semibold">MACCHINE PER</p>
+      <ServiceComponent :services="services" />
     </div>
     <div id="Clients">
       <p class="mt-2 p-2 text-center text-[2rem]">Clienti</p>
@@ -57,19 +52,20 @@
         <a href="https://maps.app.goo.gl/cMm6u8qLbdGnEASX9" target="_blank" class="m-0 p-0">Via Umberto I n.4, Padova
           (PD) 35000</a>
       </div>
-      <div>
+      <!-- <div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4085.2428198879093!2d11.872918877273097!3d45.403100871073164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda5228bb01e7%3A0xd50c0995897f55cb!2sVia%20Umberto%20I%2C%204%2C%2035123%20Padova%20PD!5e1!3m2!1sen!2sit!4v1737821001448!5m2!1sen!2sit"
           allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           class="w-full h-[35vh] aspect-square"></iframe>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 
 <script setup lang="ts">
-import { NuxtImg } from '#components';
+import LogoMobile from '@/assets/img/LogoMobile.png';
+import ServiceComponent from './components/ServiceComponent.vue';
 
 const items = [
   'https://picsum.photos/600/800?random=1',
@@ -79,13 +75,13 @@ const items = [
   'https://picsum.photos/600/800?random=5',
   'https://picsum.photos/600/800?random=6'
 ];
-const services =
-  [{ title: 'Pasticceria' },
-  { title: 'Panificazione' },
-  { title: 'Gelateria' },
-  { title: 'Ristorazione' },
-  { title: 'Vendita usato' }
-  ];
+const services = [
+  { BtnText: 'PIZZERIA', Title: 'Macchine per Pizzerie<br>Vendita e Assistenza', Description: 'Offriamo strumenti che ti consentono di creare un ambiente di lavoro <b>dinamico</b>, ideale per sperimentare <b>nuove creazioni</b> culinarie, esplorare <b>varietà di impasti</b> e soddisfare anche i palati più raffinati.', ImgUrl: '/img/PizzaInOven.jpg' },
+  { BtnText: 'RISTORAZIONE', Title: 'Ristorazione', Description: 'Cucina e piatti tradizionali.', ImgUrl: '/img/PizzaInOven.jpg' },
+  { BtnText: 'GELATERIA', Title: 'Gelateria', Description: 'Gelati artigianali di alta qualità.', ImgUrl: '/img/PizzaInOven.jpg' },
+  { BtnText: 'PANIFICAZIONE', Title: 'Panificazione', Description: 'Pane fresco e prodotti da forno.', ImgUrl: '/img/PizzaInOven.jpg' },
+  { BtnText: 'VENDITA USATO', Title: 'Vendita usato', Description: 'Attrezzature usate per la ristorazione.', ImgUrl: '/img/PizzaInOven.jpg' }
+];
 </script>
 
 <style scoped>
