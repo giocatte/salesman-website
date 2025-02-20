@@ -27,6 +27,10 @@
       <p class="mt-2 p-2 text-center text-[2.5rem] font-nunito font-semibold">MACCHINE PER</p>
       <ServiceComponent :services="services" />
     </div>
+    <div id="ChiSono" class="w-svw relative -left-2 flex">
+      <p class="text-4xl font-bold font-inter">CHI SONO</p>
+      <!-- <div class="relative self-center w-full max-w-[400px] rounded-[1.25rem] bg-no-repeat bg-bottom bg-cover bg-[url('/img/PizzaInOven.jpg']" style="aspect-ratio: 1/1;"></div> -->
+    </div>
     <div id="Clients">
       <p class="mt-2 p-2 text-center text-[2rem]">Clienti</p>
       <UCarousel v-slot="{ item }" :items="items" arrows>
@@ -76,11 +80,11 @@ const items = [
   'https://picsum.photos/600/800?random=6'
 ];
 const services = [
-  { BtnText: 'PIZZERIA', Title: 'Macchine per Pizzerie<br>Vendita e Assistenza', Description: 'Offriamo strumenti che ti consentono di creare un ambiente di lavoro <b>dinamico</b>, ideale per sperimentare <b>nuove creazioni</b> culinarie, esplorare <b>varietà di impasti</b> e soddisfare anche i palati più raffinati.', ImgUrl: '/img/PizzaInOven.jpg' },
-  { BtnText: 'RISTORAZIONE', Title: 'Ristorazione', Description: 'Cucina e piatti tradizionali.', ImgUrl: '/img/PizzaInOven.jpg' },
-  { BtnText: 'GELATERIA', Title: 'Gelateria', Description: 'Gelati artigianali di alta qualità.', ImgUrl: '/img/PizzaInOven.jpg' },
-  { BtnText: 'PANIFICAZIONE', Title: 'Panificazione', Description: 'Pane fresco e prodotti da forno.', ImgUrl: '/img/PizzaInOven.jpg' },
-  { BtnText: 'VENDITA USATO', Title: 'Vendita usato', Description: 'Attrezzature usate per la ristorazione.', ImgUrl: '/img/PizzaInOven.jpg' }
+  { BtnText: 'Panificazione', Title: 'Panificazione', Description: 'Pane fresco e prodotti da forno.', ImgUrl: '/img/PizzaInOven.jpg' },
+  { BtnText: 'Pizzeria', Title: 'Macchine per Pizzerie<br>Vendita e Assistenza', Description: 'Offriamo strumenti che ti consentono di creare un ambiente di lavoro <b>dinamico</b>, ideale per sperimentare <b>nuove creazioni</b> culinarie, esplorare <b>varietà di impasti</b> e soddisfare anche i palati più raffinati.', ImgUrl: '/img/PizzaInOven.jpg' },
+  { BtnText: 'Ristorazione', Title: 'Ristorazione', Description: 'Cucina e piatti tradizionali.', ImgUrl: '/img/PizzaInOven.jpg' },
+  { BtnText: 'Gelateria', Title: 'Gelateria', Description: 'Gelati artigianali di alta qualità.', ImgUrl: '/img/PizzaInOven.jpg' },
+  { BtnText: 'Vendita Usato', Title: 'Vendita usato', Description: 'Attrezzature usate per la ristorazione.', ImgUrl: '/img/PizzaInOven.jpg' }
 ];
 </script>
 
