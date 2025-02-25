@@ -1,18 +1,20 @@
 <template>
-    <div id="ServiceComponent" class="flex flex-col gap-y-2 p-6">
+    <div id="ServiceComponent" class="flex flex-col gap-y-2 px-2">
         <!-- Tabs -->
-        <div class="flex items-end gap-2 border-b border-gray-300 overflow-x-auto no-scrollbar min-h-14">
-            <button v-for="s in services" :key="s.Title" @click="setActiveTab(s.Title)"
-                class="mx-2 my-1 h-fit px-1 text-gray-600 transition-all duration-150 rounded-lg" :class="{
-                    'bg-white text-red-500 font-semibold border-2 border-black': activeTab === s.Title, 'hover:bg-white': activeTab !== s.Title
-                }">
-                {{ s.BtnText }}
-            </button>
+        <div class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-11">
+            <div class="w-fit m-1 px-[1px] pb-1 bg-BlueToRed rounded-full" v-for="s in services" :key="s.Title" @click="setActiveTab(s.Title)">
+                <button class="h-fit -m-[1px] p-2 text-black transition-all duration-150 rounded-full"
+                    :class="{
+                        'bg-white font-bold': activeTab === s.Title, 'hover:bg-white bg-white': activeTab !== s.Title
+                    }">
+                    {{ s.BtnText }}
+                </button>
+            </div>
         </div>
 
         <!-- Service Content -->
         <div v-for="s in services" :key="s.Title" v-show="s.Title === activeTab"
-            class="flex flex-col gap-y-4 p-6 pt-0 bg-white rounded-xl">
+            class="flex flex-col gap-y-4 py-1 pt-0 bg-white rounded-xl">
             <!-- Image -->
             <div class="relative self-center w-full max-w-[400px] rounded-[1.25rem] bg-no-repeat bg-bottom bg-cover"
                 :style="{ backgroundImage: `url(${s.ImgUrl})`, aspectRatio: '1 / 1' }"></div>
@@ -24,14 +26,30 @@
             <p class="text-base text-justify desc" v-html="s.Description"></p>
 
             <!-- Button -->
-            <button class="text-black w-[65%] self-center mt-2 px-4 py-2 border-2 border-black shadow-lg rounded-lg hover:bg-blue-600 transition">SCOPRI DI PIU'</button>
+            <div class="p-1 w-fit rounded-full bg-BlueToRed">
+                <button
+                    class="text-black w-fit font-bold bg-white text-base px-2 py-1 rounded-full hover:bg-blue-600 transition">SCOPRI
+                    DI PIU'</button>
+            </div>
+
+
         </div>
     </div>
 </template>
 
-<style>
-.desc b{
+<style scoped>
+.desc b {
     font-weight: 600;
+}
+
+.bg-BlueToRed {
+    background: linear-gradient(336deg,
+            #FF0000 0%,
+            #FF5700 22%,
+            #FF884A 50%,
+            #35C0FF 51%,
+            #007BFF 82%,
+            #001AFF 100%);
 }
 </style>
 
