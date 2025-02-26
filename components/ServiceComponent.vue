@@ -1,5 +1,5 @@
 <template>
-    <div id="ServiceComponent" class="flex flex-col gap-y-2 px-2">
+    <div id="ServiceComponent" class="flex flex-col gap-y-2 px-2 mb-8">
         <!-- Tabs -->
         <div class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-11">
             <div class="w-fit m-1 px-[1px] pb-1 bg-BlueToRed rounded-full" v-for="s in services" :key="s.Title" @click="setActiveTab(s.Title)">

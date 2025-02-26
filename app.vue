@@ -27,8 +27,7 @@
       <p class="mt-2 p-2 text-[2.5rem] font-nunito font-semibold">Macchine per:</p>
       <ServiceComponent :services="services" />
     </div>
-    <div id="ChiSono"
-      class="font-nunito relative w-full bg-sfondo-iron p-4 flex gap-2 row flex-col flex-nowrap">
+    <div id="ChiSono" class="font-nunito relative w-full bg-sfondo-iron p-4 flex gap-2 row flex-col flex-nowrap">
       <p class="mt-2 pt-2 text-[2.5rem] font-bold">CHI SONO</p>
       <p class="text-lg">Da oltre <b>30 anni</b> mi occupo di <b>vendita</b> e <b>assistenza</b> tecnica di
         <b>macchinari</b> nuovi e
@@ -55,12 +54,22 @@
       </UCarousel> -->
     </div>
     <div id="OnlyTheBest">
-      <p class="text-[2.5rem] text-center font-semibold font-inter">SOLO IL MEGLIO</p>
-      <div class="h-64 w-[] bg-red-200" id="loghi"></div>
+      <p class="text-[2.5rem] text-center font-semibold font-inter py-6 text-gr">SOLO IL MEGLIO</p>
+      <div class="h-72 bg-red-200" id="loghi"></div>
     </div>
-    <div id="Contacts">
-      <p class="mt-3 text-center text-[2rem] font-semibold font-nunito leading-7">ANDREA TOGNON</p>
-      <p class="text-center text-lg font-semibold font-nunito">Agente Rivenditore Autorizzato</p>
+    <div id="Contacts" class="bg-sfondo-iron p-4 flex flex-col gap-2 flex-nowrap items-center">
+      <p class="mt-3 text-center text-[2rem] font-black font-nunito leading-7 text-gr">ANDREA TOGNON</p>
+      <p class="text-center text-lg font-semibold font-nunito text-gr">Agente Rivenditore Autorizzato<br />Per il
+        Nord-Est: Padova & Venezia</p>
+      <p class="mt-3 text-center text-[2rem] font-black font-nunito leading-7 text-gr">Contatti</p>
+      <div class="w-fit rounded-full border-b-[3px] border-[#989898] shadow-md">
+        <button class="w-[20ch] font-bold font-nunito text-lg px-4 py-1 rounded-full hover:bg-blue-600 transition">Cell:
+          348 300 3229</button>
+      </div>
+      <div class="w-fit mt-2 rounded-full border-b-[3px] border-[#989898] shadow-md">
+        <button
+          class="w-[20ch] font-bold font-nunito text-lg px-4 py-1 rounded-full hover:bg-blue-600 transition">a.tognon@yahoo.it</button>
+      </div>
       <div class="flex justify-evenly mb-1">
         <a href="tel:+393881242054">(+39) 347 123 4567</a>
         <a href="mailto:mail@gmail.com">mail@gmail.com</a>
@@ -74,7 +83,7 @@
           <Icon name="ion:logo-facebook" size="20" class="inline-block"></Icon>
         </a>
       </div>
-      <div class="flex justify-evenly mb-40">
+      <div class="flex justify-evenly mb-96">
         <a href="https://maps.app.goo.gl/cMm6u8qLbdGnEASX9" target="_blank" class="m-0 p-0">Via Umberto I n.4, Padova
           (PD) 35000</a>
       </div>
@@ -144,5 +153,9 @@ const services = [
       #35C0FF 51%,
       #007BFF 82%,
       #001AFF 100%);
+}
+
+.text-gr {
+  @apply text-[#3A3939];
 }
 </style>
