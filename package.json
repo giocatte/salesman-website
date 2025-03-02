@@ -18,6 +18,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@iconify-json/ion": "^1.2.2",
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui": "^2.21.0",

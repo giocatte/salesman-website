@@ -57,43 +57,7 @@
       <p class="text-[2.5rem] text-center font-semibold font-inter py-6 text-gr">SOLO IL MEGLIO</p>
       <div class="h-72 bg-red-200" id="loghi"></div>
     </div>
-    <div id="Contacts" class="bg-sfondo-iron p-4 flex flex-col gap-2 flex-nowrap items-center">
-      <p class="mt-3 text-center text-[2rem] font-black font-nunito leading-7 text-gr">ANDREA TOGNON</p>
-      <p class="text-center text-lg font-semibold font-nunito text-gr">Agente Rivenditore Autorizzato<br />Per il
-        Nord-Est: Padova & Venezia</p>
-      <p class="mt-3 text-center text-[2rem] font-black font-nunito leading-7 text-gr">Contatti</p>
-      <div class="w-fit rounded-full border-b-[3px] border-[#989898] shadow-md">
-        <button class="w-[20ch] font-bold font-nunito text-lg px-4 py-1 rounded-full hover:bg-blue-600 transition">Cell:
-          348 300 3229</button>
-      </div>
-      <div class="w-fit mt-2 rounded-full border-b-[3px] border-[#989898] shadow-md">
-        <button
-          class="w-[20ch] font-bold font-nunito text-lg px-4 py-1 rounded-full hover:bg-blue-600 transition">a.tognon@yahoo.it</button>
-      </div>
-      <div class="flex justify-evenly mb-1">
-        <a href="tel:+393881242054">(+39) 347 123 4567</a>
-        <a href="mailto:mail@gmail.com">mail@gmail.com</a>
-        <a href="https://linkedin.com" target="_blank">
-          <Icon name="ion:logo-linkedin" size="20" class="inline-block"></Icon>
-        </a>
-        <a href="https://instagram.com" target="_blank">
-          <Icon name="ion:logo-instagram" size="20" class="inline-block"></Icon>
-        </a>
-        <a href="https://facebook.com" target="_blank">
-          <Icon name="ion:logo-facebook" size="20" class="inline-block"></Icon>
-        </a>
-      </div>
-      <div class="flex justify-evenly mb-96">
-        <a href="https://maps.app.goo.gl/cMm6u8qLbdGnEASX9" target="_blank" class="m-0 p-0">Via Umberto I n.4, Padova
-          (PD) 35000</a>
-      </div>
-      <!-- <div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4085.2428198879093!2d11.872918877273097!3d45.403100871073164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda5228bb01e7%3A0xd50c0995897f55cb!2sVia%20Umberto%20I%2C%204%2C%2035123%20Padova%20PD!5e1!3m2!1sen!2sit!4v1737821001448!5m2!1sen!2sit"
-          allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          class="w-full h-[35vh] aspect-square"></iframe>
-      </div> -->
-    </div>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -101,6 +65,7 @@
 <script setup lang="ts">
 import LogoMobile from '@/assets/img/LogoMobile.png';
 import ServiceComponent from './components/ServiceComponent.vue';
+import Footer from './components/Footer.vue';
 
 const items = [
   'https://picsum.photos/600/800?random=1',
