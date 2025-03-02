@@ -2,11 +2,11 @@
     <div id="ServiceComponent" class="flex flex-col gap-y-2 px-2 mb-8">
         <!-- Tabs -->
         <div class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-11">
-            <div class="w-fit m-1 px-[1px] pb-1 bg-BlueToRed rounded-full" v-for="s in services" :key="s.Title" @click="setActiveTab(s.Title)">
-                <button class="h-fit -m-[1px] p-2 text-black transition-all duration-150 rounded-full"
-                    :class="{
-                        'bg-white font-bold': activeTab === s.Title, 'hover:bg-white bg-white': activeTab !== s.Title
-                    }">
+            <div class="w-fit m-1 px-[1px] pb-1 bg-BlueToRed rounded-full" v-for="s in services" :key="s.Title"
+                @click="setActiveTab(s.Title)">
+                <button class="h-fit -m-[1px] p-2 text-black transition-all duration-150 rounded-full" :class="{
+                    'bg-white font-bold': activeTab === s.Title, 'hover:bg-white bg-white': activeTab !== s.Title
+                }">
                     {{ s.BtnText }}
                 </button>
             </div>
@@ -40,16 +40,6 @@
 <style scoped>
 .desc b {
     font-weight: 600;
-}
-
-.bg-BlueToRed {
-    background: linear-gradient(336deg,
-            #FF0000 0%,
-            #FF5700 22%,
-            #FF884A 50%,
-            #35C0FF 51%,
-            #007BFF 82%,
-            #001AFF 100%);
 }
 </style>
 

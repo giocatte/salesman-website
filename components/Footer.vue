@@ -1,6 +1,6 @@
 <template>
     <div id="Footer">
-        <div id="Contacts" class="bg-iron p-4 flex flex-col gap-2 flex-nowrap items-center">
+        <div id="Contacts" class="bg-iron-op bg-opacity-50 p-4 flex flex-col gap-2 flex-nowrap items-center">
             <p class="mt-3 text-center text-[2rem] font-black font-nunito leading-7 text-gr">ANDREA TOGNON</p>
             <p class="text-center text-lg font-semibold font-nunito text-gr">Agente Rivenditore Autorizzato<br />Per il
                 Nord-Est: Padova & Venezia</p>

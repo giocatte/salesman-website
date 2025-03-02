@@ -97,7 +97,7 @@ const services = [
   /* Firefox */
 }
 
-.bg-sfondo-iron {
+/* .bg-sfondo-iron {
   background: conic-gradient(#ededed 0%,
       #adadad 17%,
       #dbdbdb 35%,
@@ -118,7 +118,7 @@ const services = [
       #35C0FF 51%,
       #007BFF 82%,
       #001AFF 100%);
-}
+} */
 
 .text-gr {
   @apply text-[#3A3939];
