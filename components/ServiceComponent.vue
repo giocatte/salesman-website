@@ -23,7 +23,7 @@
             <p class="text-3xl font-semibold" v-html="s.Title"></p>
 
             <!-- Description -->
-            <p class="text-base text-justify desc" v-html="s.Description"></p>
+            <p class="text-base text-justify desc pr-2" v-html="s.Description"></p>
 
             <!-- Button -->
             <div class="p-1 w-fit rounded-full bg-BlueToRed">
@@ -31,8 +31,6 @@
                     class="text-black w-fit font-bold bg-white text-base px-2 py-1 rounded-full hover:bg-blue-600 transition">SCOPRI
                     DI PIU'</button>
             </div>
-
-
         </div>
     </div>
 </template>

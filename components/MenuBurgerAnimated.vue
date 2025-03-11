@@ -1,11 +1,21 @@
 <template>
     <label class="burger" for="burger">
-        <input type="checkbox" id="burger">
+        <input type="checkbox" id="burger" @change="handleMenuTrigger" />
         <span></span>
         <span></span>
         <span></span>
     </label>
 </template>
+
+<script>
+export default {
+    methods: {
+        handleMenuTrigger(event) {
+            this.$emit('menu-trigger', event.target.checked);
+        },
+    }
+};
+</script>
 
 <style lang="css" scoped>
 .burger {

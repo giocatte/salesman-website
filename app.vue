@@ -1,9 +1,29 @@
 <template>
-  <div class="w-full relative overflow-x-hidden bg-white text-black">
-    <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.5rem] bg-sfondo-iron z-0"></div>
-    <div id="Navbar" class="mb-2 pt-3 pb-1 px-8 w-full flex justify-between items-center z-10 relative">
-      <img :src="LogoMobile" alt="LogoMobile">
-      <MenuBurgerAnimated></MenuBurgerAnimated>
+  <div class="w-full relative bg-white text-black">
+    <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.5rem] -z-0"
+      :class="menuOpen ? 'bg-white' : 'bg-iron-op'"></div>
+    <div id="Navbar" class="py-3 px-5 w-full flex justify-between items-center z-30 sticky top-0 left-0"
+      :class="menuOpen ? 'bg-white' : 'backdrop-blur-sm'">
+      <a @click="menuOpen === true ? handleOptMenuSelected($event) : ''" href="#landing"><img :src="LogoMobile" alt="LogoMobile"
+          class=""></a>
+      <MenuBurgerAnimated @menu-trigger="handleMenuTrigger" id="menuBurger" class=""></MenuBurgerAnimated>
+    </div>
+    <div v-show="menuOpen === true"
+      class="w-full h-[93svh] fixed overflow-hidden top-[8svh] left-0 z-20 bg-gray-600 animate__animated animate__faster"
+      :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">
+      <div class="w-full h-full bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6">
+        <a @click="handleOptMenuSelected" class="w-full flex items-center gap-x-4 border-b-2 border-red-500"
+          href="">
+          <h1 class="font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit">Macchinari</h1>
+          <h1 class="font-nunito text-gr text-[2.5rem] py-1 font-bold h-fit">+</h1>
+        </a>
+        <a @click="handleOptMenuSelected" class="w-full" href="#ChiSono">
+          <h1 class="font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-blue-300">Chi sono</h1>
+        </a>
+        <a @click="handleOptMenuSelected" class="w-full" href="#Footer">
+          <h1 class="font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-green-400">Contatti</h1>
+        </a>
+      </div>
     </div>
     <div id="landing" class="w-full relative flex z-0">
       <div id="imgsBCK" class="w-full flex flex-row flex-nowrap relative">
@@ -27,7 +47,7 @@
       <p class="mt-2 p-2 text-[2.5rem] font-nunito font-semibold">Macchine per:</p>
       <ServiceComponent :services="services" />
     </div>
-    <div id="ChiSono" class="font-nunito relative w-full bg-sfondo-iron p-4 flex gap-2 row flex-col flex-nowrap">
+    <div id="ChiSono" class="font-nunito relative w-full bg-iron-op p-4 flex gap-2 row flex-col flex-nowrap">
       <p class="mt-2 pt-2 text-[2.5rem] font-bold">CHI SONO</p>
       <p class="text-lg">Da oltre <b>30 anni</b> mi occupo di <b>vendita</b> e <b>assistenza</b> tecnica di
         <b>macchinari</b> nuovi e
@@ -49,13 +69,20 @@
         <button
           class="text-black w-fit font-bold bg-white text-base px-2 py-1 rounded-full hover:bg-blue-600 transition">CONTATTAMI</button>
       </div>
-      <!-- <UCarousel v-slot="{ item }" :items="items" arrows>
-        <img :src="item" width="225" draggable="false" class="rounded-sm mr-1 aspect-[3/4]">
-      </UCarousel> -->
     </div>
-    <div id="OnlyTheBest">
+    <div id="OnlyTheBest" class="relative">
       <p class="text-[2.5rem] text-center font-semibold font-inter py-6 text-gr">SOLO IL MEGLIO</p>
-      <div class="h-72 bg-red-200" id="loghi"></div>
+      <div class="relative grid grid-cols-6 grid-rows-3">
+        <div id="loghi" class="h-24 col-start-1 col-span-5 flex items-center overflow-hidden">
+          <p v-for="n in 3" class="text-red-400 logo-anim p-2 m-2 font-bold">LOGO {{ n }}</p>
+        </div>
+        <div id="loghi" class="h-24 col-start-2 col-span-5 flex items-center overflow-hidden">
+          <p v-for="n in 3" class="text-blue-400 logo-anim-rev p-2 m-2 font-bold">LOGO {{ n + 3 }}</p>
+        </div>
+        <div id="loghi" class="h-24 col-start-1 col-span-5 flex items-center overflow-hidden">
+          <p v-for="n in 3" class="text-red-400 logo-anim-delay p-2 m-2 font-bold">LOGO {{ n + 6 }}</p>
+        </div>
+      </div>
     </div>
     <Footer></Footer>
   </div>
@@ -63,64 +90,74 @@
 
 
 <script setup lang="ts">
-import LogoMobile from '@/assets/img/LogoMobile.png';
+import LogoMobile from '@/assets/img/LogoMobileCircle.png';
 import ServiceComponent from './components/ServiceComponent.vue';
 import Footer from './components/Footer.vue';
+import 'animate.css';
 
-const items = [
-  'https://picsum.photos/600/800?random=1',
-  'https://picsum.photos/600/800?random=2',
-  'https://picsum.photos/600/800?random=3',
-  'https://picsum.photos/600/800?random=4',
-  'https://picsum.photos/600/800?random=5',
-  'https://picsum.photos/600/800?random=6'
-];
+const menuBurger = ref(null); // Ref for MenuBurger component
+const closeAnimation = ref(false);
+const menuOpen = ref(false);
+const handleMenuTrigger = (event: Event) => {
+  console.log("handleMenuTrigger", event);
+  if (menuOpen.value === true) {
+    document.body.classList.contains('overflow-y-hidden') ? document.body.classList.remove('overflow-y-hidden') : null;
+    closeAnimation.value = !closeAnimation.value;
+    setTimeout(() => { menuOpen.value = false; }, 450);
+  } else {
+    document.body.classList.add('overflow-y-hidden');
+    menuOpen.value = !menuOpen.value;
+    closeAnimation.value = !closeAnimation.value;
+  }
+};
+
+const handleOptMenuSelected = (event: Event) => {
+  const menuBurger = document.getElementById('menuBurger');
+  menuBurger ? menuBurger.click() : null;
+};
+
 const services = [
   { BtnText: 'Panetterie', Title: 'Macchine per Panetterie</br>Vendita e Assistenza', Description: 'Vendo <b>macchinari</b> e <b>strumenti</b> progettati per ottimizzare ogni fase della <b>panificazione</b>, dal dosaggio degli ingredienti alla cottura perfetta. Con le <b>migliori attrezzature</b> potrai sperimentare nuove ricette, migliorare la qualità del pane e garantire un prodotto fragrante e irresistibile, giorno dopo giorno.', ImgUrl: '/img/PizzaInOven.jpg' },
   { BtnText: 'Pasticcerie', Title: 'Macchine per Pasticcerie</br>Vendita e Assistenza', Description: 'Precisione e creatività si incontrano con le attrezzature giuste. Dagli abbattitori ai forni ventilati, passando per sfogliatrici e planetarie, ogni strumento è pensato per aiutarti a realizzare dolci impeccabili, dalla più soffice crema al più raffinato impasto.', ImgUrl: '/img/PizzaInOven.jpg' },
   { BtnText: 'Pizzerie', Title: 'Macchine per Pizzerie<br>Vendita e Assistenza', Description: 'Attrezzature professionali per una pizza sempre perfetta. Dai forni di ultima generazione agli impastatrici, offro strumenti che garantiscono prestazioni elevate, uniformità di cottura e la massima qualità per ogni impasto. Ideali per chi vuole innovare senza rinunciare alla tradizione.', ImgUrl: '/img/PizzaInOven.jpg' },
   { BtnText: 'Gelaterie', Title: 'Macchine per Gelaterie</br>Vendita e Assistenza', Description: 'Scopri le attrezzature ideali per una produzione artigianale di alta qualità. Dai mantecatori ai banchi espositivi, ogni strumento è pensato per offrirti massima efficienza e libertà creativa. Con macchinari professionali, puoi trasformare ogni ingrediente in gelati e sorbetti unici, capaci di conquistare ogni cliente al primo assaggio.', ImgUrl: '/img/PizzaInOven.jpg' }
 ];
+
 </script>
 
 <style scoped>
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+.logo-anim {
+  animation: slider linear 8s infinite;
+
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+.logo-anim-delay {
+  animation: slider linear 9s infinite 1.5s;
 }
 
-/* .bg-sfondo-iron {
-  background: conic-gradient(#ededed 0%,
-      #adadad 17%,
-      #dbdbdb 35%,
-      #e7e7e7 43%,
-      #bdbdbd 50%,
-      #ebebeb 58%,
-      #e2e2e2 68%,
-      #adadad 80%,
-      #b9b9b9 90%,
-      #e2e2e2 100%);
+.logo-anim-rev {
+  animation: slider-rev linear 8.5s infinite .75s;
 }
 
-.bg-BlueToRed {
-  background: linear-gradient(336deg,
-      #FF0000 0%,
-      #FF5700 22%,
-      #FF884A 50%,
-      #35C0FF 51%,
-      #007BFF 82%,
-      #001AFF 100%);
-} */
+@keyframes slider {
+  0% {
+    transform: translateX(-80vw);
+  }
 
-.text-gr {
-  @apply text-[#3A3939];
+  100% {
+    transform: translateX(80vw);
+  }
+
+}
+
+@keyframes slider-rev {
+  0% {
+    transform: translateX(80vw);
+  }
+
+  100% {
+    transform: translateX(-80vw);
+  }
+
 }
 </style>
