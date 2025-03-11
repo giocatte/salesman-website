@@ -4,19 +4,39 @@
       :class="menuOpen ? 'bg-white' : 'bg-iron-op'"></div>
     <div id="Navbar" class="py-3 px-5 w-full flex justify-between items-center z-30 sticky top-0 left-0"
       :class="menuOpen ? 'bg-white' : 'backdrop-blur-sm'">
-      <a @click="menuOpen === true ? handleOptMenuSelected($event) : ''" href="#landing"><img :src="LogoMobile" alt="LogoMobile"
-          class=""></a>
+      <a @click="menuOpen === true ? handleOptMenuSelected($event) : ''" href="#landing"><img :src="LogoMobile"
+          alt="LogoMobile" class=""></a>
       <MenuBurgerAnimated @menu-trigger="handleMenuTrigger" id="menuBurger" class=""></MenuBurgerAnimated>
     </div>
     <div v-show="menuOpen === true"
       class="w-full h-[93svh] fixed overflow-hidden top-[8svh] left-0 z-20 bg-gray-600 animate__animated animate__faster"
       :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">
       <div class="w-full h-full bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6">
-        <a @click="handleOptMenuSelected" class="w-full flex items-center gap-x-4 border-b-2 border-red-500"
-          href="">
-          <h1 class="font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit">Macchinari</h1>
-          <h1 class="font-nunito text-gr text-[2.5rem] py-1 font-bold h-fit">+</h1>
-        </a>
+        <div class="w-full border-b-2 border-red-500" @click="showMacchinari = !showMacchinari">
+          <div class="flex items-center gap-x-4 font-nunito text-gr py-1 font-bold h-fit">
+            <h1 class="text-[3.5rem]">Macchinari
+            </h1>
+            <h1 class="text-[2.5rem]">+</h1>
+          </div>
+          <div v-show="showMacchinari" id="MacchinariMenu"
+            class="animate__animated animate__faster animate__fadeInLeft">
+            <a @click="handleOptMenuSelected" class="w-full" href="#Panetterie">
+              <h1 class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit">Panetterie
+              </h1>
+            </a>
+            <a @click="handleOptMenuSelected" class="w-full" href="#Pasticcerie">
+              <h1 class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit">Pasticcerie
+              </h1>
+            </a>
+            <a @click="handleOptMenuSelected" class="w-full" href="#Pizzerie">
+              <h1 class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit">Pizzerie</h1>
+            </a>
+            <a @click="handleOptMenuSelected" class="w-full" href="#Gelaterie">
+              <h1 class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 mb-2 font-medium h-fit">Gelaterie
+              </h1>
+            </a>
+          </div>
+        </div>
         <a @click="handleOptMenuSelected" class="w-full" href="#ChiSono">
           <h1 class="font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-blue-300">Chi sono</h1>
         </a>
@@ -30,8 +50,7 @@
         <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-[80svh] brightness-75">
         <img src="assets/img/Abbattitore_Polin.jpg" alt="" class="w-1/2 h-[80svh] brightness-75">
       </div>
-      <div id="Ellipse" class="absolute w-full h-full py-24 self-start z-10"
-        style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.35) 53%, rgba(0,0,0,0) 80%);">
+      <div id="Ellipse" class="absolute w-full h-full py-24 self-start z-10 bg-ellipse">
       </div>
       <div id="NomeCognome"
         class="absolute w-full h-full self-start py-24 z-20 flex flex-col gap-8 items-center text-center text-white">
@@ -98,8 +117,9 @@ import 'animate.css';
 const menuBurger = ref(null); // Ref for MenuBurger component
 const closeAnimation = ref(false);
 const menuOpen = ref(false);
+const showMacchinari = ref(false);
 const handleMenuTrigger = (event: Event) => {
-  console.log("handleMenuTrigger", event);
+  // console.log("handleMenuTrigger", event);
   if (menuOpen.value === true) {
     document.body.classList.contains('overflow-y-hidden') ? document.body.classList.remove('overflow-y-hidden') : null;
     closeAnimation.value = !closeAnimation.value;
@@ -137,6 +157,10 @@ const services = [
 
 .logo-anim-rev {
   animation: slider-rev linear 8.5s infinite .75s;
+}
+
+#MacchinariMenu {
+  animation-duration: 125ms;
 }
 
 @keyframes slider {
