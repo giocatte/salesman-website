@@ -3,46 +3,51 @@
     <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.5rem] -z-0"
       :class="menuOpen ? 'bg-white' : 'bg-iron-op'"></div>
     <div id="Navbar" class="py-3 px-5 w-full flex justify-between items-center z-30 sticky top-0 left-0"
-      :class="menuOpen ? 'bg-white' : 'backdrop-blur-sm'">
+      :class="!closeAnimation ? 'backdrop-blur-sm' : 'bg-white'">
       <a @click="menuOpen === true ? handleOptMenuSelected($event) : ''" href="#landing"><img :src="LogoMobile"
           alt="LogoMobile" class=""></a>
       <MenuBurgerAnimated @menu-trigger="handleMenuTrigger" id="menuBurger" class=""></MenuBurgerAnimated>
-    </div>
-    <div v-show="menuOpen === true"
-      class="w-full h-[93svh] fixed overflow-hidden top-[8svh] left-0 z-20 bg-gray-600 animate__animated animate__faster"
-      :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">
-      <div class="w-full h-full bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6">
-        <div class="w-full border-b-2 border-red-500" @click="showMacchinari = !showMacchinari">
-          <div class="flex items-center gap-x-4 font-nunito text-gr py-1 font-bold h-fit">
-            <h1 class="text-[3.5rem]">Macchinari
-            </h1>
-            <h1 class="text-[2.5rem]">+</h1>
+      <div v-show="menuOpen === true" id="Menu"
+        class="w-full h-[93svh] fixed overflow-hidden top-[8svh] left-0 z-20 backdrop-blur-md">
+        <div
+          class="w-full h-fit bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6 pb-8 animate__animated animate__faster"
+          :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">
+          <div class="w-full border-b-2 border-red-500" @click="showMacchinari = !showMacchinari">
+            <div class="flex items-center gap-x-4 font-nunito text-gr py-1 font-bold h-fit">
+              <h1 class="text-[3.5rem]">Macchinari
+              </h1>
+              <h1 class="text-[2.5rem]">+</h1>
+            </div>
+            <div v-show="showMacchinari" id="MacchinariMenu" class="max-h-fit h-72 overflow-y-hidden">
+              <a @click="handleOptMenuSelected" class="w-full" href="#Panetterie">
+                <p
+                  class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft">
+                  Panetterie</p>
+              </a>
+              <a @click="handleOptMenuSelected" class="w-full" href="#Pasticcerie">
+                <p
+                  class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft">
+                  Pasticcerie</p>
+              </a>
+              <a @click="handleOptMenuSelected" class="w-full" href="#Pizzerie">
+                <p
+                  class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft">
+                  Pizzerie</p>
+              </a>
+              <a @click="handleOptMenuSelected" class="w-full" href="#Gelaterie">
+                <p
+                  class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit mb-2 animate__animated animate__slideInLeft">
+                  Gelaterie</p>
+              </a>
+            </div>
           </div>
-          <div v-show="showMacchinari" id="MacchinariMenu"
-            class="animate__animated animate__faster animate__fadeInLeft">
-            <a @click="handleOptMenuSelected" class="w-full" href="#Panetterie">
-              <h1 class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit">Panetterie
-              </h1>
-            </a>
-            <a @click="handleOptMenuSelected" class="w-full" href="#Pasticcerie">
-              <h1 class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit">Pasticcerie
-              </h1>
-            </a>
-            <a @click="handleOptMenuSelected" class="w-full" href="#Pizzerie">
-              <h1 class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit">Pizzerie</h1>
-            </a>
-            <a @click="handleOptMenuSelected" class="w-full" href="#Gelaterie">
-              <h1 class="font-nunito text-[#6E6E6E] text-[2.5rem] py-1 mb-2 font-medium h-fit">Gelaterie
-              </h1>
-            </a>
-          </div>
+          <a @click="handleOptMenuSelected" class="w-full" href="#ChiSono">
+            <p class="font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-blue-300">Chi sono</p>
+          </a>
+          <a @click="handleOptMenuSelected" class="w-full" href="#Footer">
+            <p class="font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-green-400">Contatti</p>
+          </a>
         </div>
-        <a @click="handleOptMenuSelected" class="w-full" href="#ChiSono">
-          <h1 class="font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-blue-300">Chi sono</h1>
-        </a>
-        <a @click="handleOptMenuSelected" class="w-full" href="#Footer">
-          <h1 class="font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-green-400">Contatti</h1>
-        </a>
       </div>
     </div>
     <div id="landing" class="w-full relative flex z-0">
@@ -114,7 +119,6 @@ import ServiceComponent from './components/ServiceComponent.vue';
 import Footer from './components/Footer.vue';
 import 'animate.css';
 
-const menuBurger = ref(null); // Ref for MenuBurger component
 const closeAnimation = ref(false);
 const menuOpen = ref(false);
 const showMacchinari = ref(false);
@@ -160,7 +164,38 @@ const services = [
 }
 
 #MacchinariMenu {
-  animation-duration: 125ms;
+  --MachMenu: 125ms;
+  /* animation-duration: var(--MachMenu); */
+  animation: heightInc var(--MachMenu) linear;
+
+  a p {
+    animation-duration: 250ms;
+    animation-delay: var(--MachMenu);
+  }
+}
+
+#MacchinariMenu a:nth-last-child(3) p {
+  animation-delay: calc(var(--MachMenu) + 40ms);
+}
+
+#MacchinariMenu a:nth-last-child(2) p {
+  animation-delay: calc(var(--MachMenu) + 80ms);
+
+}
+
+#MacchinariMenu a:last-child p {
+  animation-delay: calc(var(--MachMenu) + 120ms);
+
+}
+
+@keyframes heightInc {
+  0% {
+    @apply h-0;
+  }
+
+  100% {
+    @apply h-full;
+  }
 }
 
 @keyframes slider {
