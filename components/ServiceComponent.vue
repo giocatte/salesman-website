@@ -26,11 +26,12 @@
             <p class="text-base text-justify desc pr-2" v-html="s.Description"></p>
 
             <!-- Button -->
-            <div class="p-1 w-fit rounded-full bg-BlueToRed">
+            <NuxtLink :to="`/Macchinari/${s.BtnText}`" id="ChiSono" class="p-1 w-fit rounded-full bg-BlueToRed">
                 <button
-                    class="text-black w-fit font-bold bg-white text-base px-2 py-1 rounded-full hover:bg-blue-600 transition">SCOPRI
-                    DI PIU'</button>
-            </div>
+                    class="text-black w-fit font-bold bg-white text-base px-2 py-1 rounded-full hover:bg-RedToBlue hover:blur-[1px] active:bg-transparent active:blur-0 active:[background-image:_none]">
+                    SCOPRI DI PI&#217;
+                </button>
+            </NuxtLink>
         </div>
     </div>
 </template>
