@@ -19,7 +19,7 @@
         </div>
         <div id="Services" class="w-full">
             <p class="mt-2 p-2 text-[2.5rem] font-nunito font-semibold">Macchine per:</p>
-            <ServiceComponent :services="services" />
+            <ProductOverview :products="products.products" />
         </div>
         <div id="ChiSono_" class="font-nunito relative w-full bg-iron-op pt-0 p-4 flex gap-2 row flex-col flex-nowrap">
             <p class="mt-6 pt-2 text-[2.5rem] font-bold">CHI SONO</p>
@@ -43,8 +43,7 @@
                 tuo volume di produzione e agli spazi della tua attività.
             </p>
             <div class="p-1 mt-2 w-fit rounded-full bg-BlueToRed">
-                <button
-                    class="text-black w-fit font-bold bg-white text-base px-2 py-1 rounded-full hover:bg-RedToBlue hover:blur-[1px] active:bg-transparent active:blur-0 active:[background-image:_none]">
+                <button class="btnBlueRed">
                     CONTATTAMI
                 </button>
             </div>
@@ -63,31 +62,16 @@
                 </div>
             </div>
         </div>
-        <Footer></Footer>
     </div>
 </template>
 
 
 <script setup lang="ts">
-
-// definePageMeta({
-//     title: 'My home page'
-// });
-
-
-
-import ServiceComponent from '../components/ServiceComponent.vue';
-import Footer from '../components/Footer.vue';
+import ProductOverview from '../components/Product/Overview.vue';
 import 'animate.css';
 
-
-
-const services = [
-    { BtnText: 'Panetterie', Title: 'Macchine per Panetterie</br>Vendita e Assistenza', Description: 'Vendo <b>macchinari</b> e <b>strumenti</b> progettati per ottimizzare ogni fase della <b>panificazione</b>, dal dosaggio degli ingredienti alla cottura perfetta. Con le <b>migliori attrezzature</b> potrai sperimentare nuove ricette, migliorare la qualità del pane e garantire un prodotto fragrante e irresistibile, giorno dopo giorno.', ImgUrl: '/img/PizzaInOven.jpg' },
-    { BtnText: 'Pasticcerie', Title: 'Macchine per Pasticcerie</br>Vendita e Assistenza', Description: 'Precisione e creatività si incontrano con le attrezzature giuste. Dagli abbattitori ai forni ventilati, passando per sfogliatrici e planetarie, ogni strumento è pensato per aiutarti a realizzare dolci impeccabili, dalla più soffice crema al più raffinato impasto.', ImgUrl: '/img/PizzaInOven.jpg' },
-    { BtnText: 'Pizzerie', Title: 'Macchine per Pizzerie<br>Vendita e Assistenza', Description: 'Attrezzature professionali per una pizza sempre perfetta. Dai forni di ultima generazione agli impastatrici, offro strumenti che garantiscono prestazioni elevate, uniformità di cottura e la massima qualità per ogni impasto. Ideali per chi vuole innovare senza rinunciare alla tradizione.', ImgUrl: '/img/PizzaInOven.jpg' },
-    { BtnText: 'Gelaterie', Title: 'Macchine per Gelaterie</br>Vendita e Assistenza', Description: 'Scopri le attrezzature ideali per una produzione artigianale di alta qualità. Dai mantecatori ai banchi espositivi, ogni strumento è pensato per offrirti massima efficienza e libertà creativa. Con macchinari professionali, puoi trasformare ogni ingrediente in gelati e sorbetti unici, capaci di conquistare ogni cliente al primo assaggio.', ImgUrl: '/img/PizzaInOven.jpg' }
-];
+const { data } = await useFetch("/api/ProducType");
+const products = JSON.parse(JSON.stringify(data.value));
 
 </script>
 

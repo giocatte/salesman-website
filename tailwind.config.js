@@ -44,6 +44,26 @@ export default {
         '.text-gr': {
           color: '#3A3939',
         },
+        '.btnBlueRed': {
+          'color': '#000',
+          'width': 'fit-content',
+          'font-weight': 'bold',
+          'background-color': '#fff',
+          'font-size': '1rem',
+          'padding': '0.5rem 1rem',
+          'border-radius': '9999px',
+          '&:hover': {
+            'background-image': 'linear-gradient(336deg, rgb(0, 26, 255) 0%, rgb(0, 123, 255) 22%, rgb(53, 192, 255) 50%, rgb(255, 136, 74) 51%, rgb(255, 87, 0) 82%, rgb(255, 0, 0) 100%)',
+            'filter': 'blur(1px)',
+            'color': '#fff',
+            'font-weight': '600',
+          },
+          '&:active': {
+            'background-color': 'transparent',
+            'filter': 'blur(0)',
+            'background-image': 'none',
+          },
+        },
       });
     }
   ],

@@ -2,7 +2,7 @@
     <div id="ServiceComponent" class="flex flex-col gap-y-2 px-2 mb-8">
         <!-- Tabs -->
         <div class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-11">
-            <div class="w-fit m-1 px-[1px] pb-1 bg-BlueToRed rounded-full" v-for="s in services" :key="s.Title"
+            <div class="w-fit m-1 px-[1px] pb-1 bg-BlueToRed rounded-full" v-for="s in services" :key="s.S_ID"
                 @click="setActiveTab(s.Title)">
                 <button class="h-fit -m-[1px] p-2 text-black transition-all duration-150 rounded-full" :class="{
                     'bg-white font-bold': activeTab === s.Title, 'hover:bg-white bg-white': activeTab !== s.Title
@@ -26,7 +26,7 @@
             <p class="text-base text-justify desc pr-2" v-html="s.Description"></p>
 
             <!-- Button -->
-            <NuxtLink :to="`/Macchinari/${s.BtnText}`" id="ChiSono" class="p-1 w-fit rounded-full bg-BlueToRed">
+            <NuxtLink :to="`/Servizi/${s.BtnText}`" id="ChiSono" class="p-1 w-fit rounded-full bg-BlueToRed">
                 <button
                     class="text-black w-fit font-bold bg-white text-base px-2 py-1 rounded-full hover:bg-RedToBlue hover:blur-[1px] active:bg-transparent active:blur-0 active:[background-image:_none]">
                     SCOPRI DI PI&#217;
@@ -43,6 +43,7 @@
 </style>
 
 <script setup>
+console.log('ServiceComponent.vue');
 import { ref, onMounted } from 'vue';
 
 // Define the props

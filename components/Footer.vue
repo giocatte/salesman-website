@@ -1,6 +1,6 @@
 <template>
-    <div id="Footer">
-        <div id="Contacts" class="bg-iron-op bg-opacity-50 p-4 flex flex-col gap-y-4 flex-nowrap items-center text-gr">
+    <div id="Footer" class="bg-white">
+        <div id="Contatti" class="bg-iron-op bg-opacity-50 p-4 flex flex-col gap-y-4 flex-nowrap items-center text-gr">
             <p class="mt-3 text-center text-[2rem] font-black font-nunito leading-7">ANDREA TOGNON</p>
             <p class="text-center text-lg font-semibold font-nunito">Agente Rivenditore Autorizzato<br />Per il
                 Nord-Est: Padova & Venezia</p>
@@ -23,15 +23,13 @@
             <div id="footerdivider" class="bg-BlueToRed w-full h-1"></div>
             <div class="flex flex-row flex-wrap justify-center gap-3">
                 <p class="flex items-center pt-2">
-                    <Icon name="meteor-icons:copyright" size="16" class="inline-block"></Icon> 2025 Andrea Tognon -
-                    Tutti i
-                    diritti
-                    riservati
+                    <Icon name="meteor-icons:copyright" size="16" class="inline-block">
+                    </Icon> 2025 Andrea Tognon - Tutti i diritti riservati.
                 </p>
                 <p class="w-fit inline-block mr-2">Privacy Policy</p>
                 <p class="w-fit inline-block ml-2">Cookie Policy</p>
-                <p>Made by <a href="https://www.ethoswebstudio.it" target="_blank"
-                        class="underline">ethoswebstudio.it</a></p>
+                <p>Made by <a class="underline" target="_blank"
+                        href="https://www.ethoswebstudio.it">ethoswebstudio.it</a></p>
             </div>
         </div>
     </div>
