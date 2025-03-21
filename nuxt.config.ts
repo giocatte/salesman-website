@@ -17,4 +17,7 @@ export default defineNuxtConfig({
     },
     display: "swap",
   },
+  devServer: {
+    host: "0.0.0.0", // Accetta connessioni da qualsiasi IP
+  },
 });
