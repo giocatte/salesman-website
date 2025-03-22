@@ -43,11 +43,11 @@
                         </NuxtLink>
                     </div>
                 </div>
-                <NuxtLink @click="handleOptMenuSelected" to="#ChiSono"
+                <NuxtLink @click="handleOptMenuSelected" to="/#ChiSono"
                     class="block w-full font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-blue-300">
                     Chi sono
                 </NuxtLink>
-                <NuxtLink @click="handleOptMenuSelected" to="#Contatti"
+                <NuxtLink @click="handleOptMenuSelected" to="/#Contatti"
                     class="block w-full font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-blue-300">
                     Contatti
                 </NuxtLink>

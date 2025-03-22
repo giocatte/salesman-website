@@ -18,7 +18,7 @@
             </div>
         </div>
         <div id="Services" class="w-full">
-            <p class="mt-2 p-2 text-[2.5rem] font-nunito font-semibold">Macchine per:</p>
+            <p class="mt-2 p-2 text-[2.5rem] font-nunito font-semibold">Servizi:</p>
             <ProductOverview :products="products.products" />
         </div>
         <div id="ChiSono_" class="font-nunito relative w-full bg-iron-op pt-0 p-4 flex gap-2 row flex-col flex-nowrap">
@@ -43,7 +43,7 @@
                 tuo volume di produzione e agli spazi della tua attività.
             </p>
             <div class="p-1 mt-2 w-fit rounded-full bg-BlueToRed">
-                <button class="btnBlueRed">
+                <button class="btnBlueRed active">
                     CONTATTAMI
                 </button>
             </div>

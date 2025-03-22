@@ -169,7 +169,7 @@ export default defineEventHandler((event) => {
         Id: 5,
         Name: "Arredamento",
         component: {
-          BtnText: "Gelaterie",
+          BtnText: "Arredamento",
           Title: "Macchine per Gelaterie</br>Vendita e Assistenza",
           Description:
             "Scopri le attrezzature ideali per una produzione artigianale di alta qualità. Dai mantecatori ai banchi espositivi, ogni strumento è pensato per offrirti massima efficienza e libertà creativa. Con macchinari professionali, puoi trasformare ogni ingrediente in gelati e sorbetti unici, capaci di conquistare ogni cliente al primo assaggio.",

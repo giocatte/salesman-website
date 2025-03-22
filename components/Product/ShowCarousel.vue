@@ -1,11 +1,15 @@
 <template>
-    <div id="ShowCarousel_Component" v-if="shows && shows.length > 0" class="flex justify-center px-3 py-4 bg-white">
-        <div class="w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl">
-            <div class="relative w-full h-full bg-none rounded-xl overflow-x-auto no-scrollbar">
-                <p class="absolute w-full h-fit top-0 left-0 text-gr font-nunito text-center text-xl font-extrabold pt-4"
-                    v-html="impresaText">
-                </p>
-                <div v-for="s in shows" class="w-full h-full bg-white first:rounded-t-xl last:rounded-b-xl">
+    <div id="ShowCarousel_Component" v-if="shows && shows.length > 0" class="px-3 py-4 bg-white">
+        <div class="w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col felx-nowrap">
+            <div class="bg-none rounded-t-xl">
+                <div class="bg-white rounded-t-xl">
+                    <p class="w-full h-fit bg-[rgba(217,217,217,30%)] text-gr font-nunito text-center text-xl font-extrabold pt-4"
+                        v-html="impresaText">
+                    </p>
+                </div>
+            </div>
+            <div class="relative w-full h-full bg-none rounded-b-xl overflow-y-auto no-scrollbar">
+                <div v-for="s in shows" class="w-full h-full bg-white last:rounded-b-xl">
                     <div
                         class="w-full h-full bg-[rgba(217,217,217,30%)] px-4 flex flex-col flex-nowrap items-center text-gr font-nunito">
                         <div :style="{ backgroundImage: 'url(' + s.ImgUrl + ')' }"
