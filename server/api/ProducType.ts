@@ -37,8 +37,16 @@ export default defineEventHandler((event) => {
         pages: {
           Title: "MACCHINARI PROFESSIONALI PER PANETTERIE",
           SubTitle: "Fatti in Italia, i migliori per i Panettieri.",
-          Description:
-            "Metto a tua disposizione <b>un’ampia</b> selezione di <b>forni</b> e <b>macchinari</b> dedicati alle <b>panetterie</b>, che ti aiuteranno a trasformare la tua attività in un ambiente ideale dove sfornare <b>pane, focacce</b> e <b>prodotti da forno</b> di alta qualità. Collaboro con <b>i migliori marchi del settore</b> per offrirti soluzioni in grado di rispondere a qualsiasi esigenza produttiva.",
+          Intro:
+            "Offro una <b>gamma completa</b> di <b>forni</b> e <b>attrezzature</b> per <b>panifici</b>, pensata per garantire <b>qualità costante</b> e <b>massima resa produttiva</b>.<br/>Che tu gestisca un <b>panificio artigianale</b> o una produzione più strutturata, troverai <b>soluzioni adatte</b> a ogni esigenza.",
+          Title_2: "Affidabilità e qualità per la tua attività",
+          Desc: "Collaboro con <b>Polin</b>, uno dei <b>marchi di riferimento</b> nel settore, per offrirti <b>attrezzature</b> che uniscono <b>tecnologia avanzata</b> e <b>durabilità</b>.<br/>Nel <b>Nord Est</b> fornisco:",
+          list: [
+            "<b>Forni a tunnel</b>, a <b>vapore</b> e a <b>cupola</b>, per adattarsi a differenti modalità di <b>cottura</b>",
+            "<b>Forni ventilati</b>, ideali per una <b>distribuzione uniforme</b> del calore",
+            "<b>Impastatrici professionali</b>, adatte alla preparazione di qualsiasi tipo di <b>impasto</b>",
+            "<b>Accessori</b> e <b>macchinari ausiliari</b> per <b>ottimizzare</b> i flussi di lavoro e migliorare l’<b>efficienza</b>",
+          ],
           ImgUrl: "/img/PanetterieTemp.png",
         },
       },
@@ -76,10 +84,19 @@ export default defineEventHandler((event) => {
           ],
         },
         pages: {
-          Title: "MACCHINARI PROFESSIONALI PER PANETTERIE",
-          SubTitle: "Fatti in Italia, i migliori per i Panettieri.",
-          Description:
-            "Metto a tua disposizione <b>un’ampia</b> selezione di <b>forni</b> e <b>macchinari</b> dedicati alle <b>panetterie</b>, che ti aiuteranno a trasformare la tua attività in un ambiente ideale dove sfornare <b>pane, focacce</b> e <b>prodotti da forno</b> di alta qualità. Collaboro con <b>i migliori marchi del settore</b> per offrirti soluzioni in grado di rispondere a qualsiasi esigenza produttiva.",
+          Title: "MACCHINARI PROFESSIONALI PER PASTICCERIE",
+          SubTitle:
+            "Innovazione e precisione al servizio della tua pasticceria",
+          Intro:
+            "Metto a disposizione un’ampia selezione di <b>macchinari professionali</b> e <b>attrezzature</b> per <b>pasticceria</b>, studiati per migliorare l’<b>efficienza</b> e garantire <b>risultati eccellenti</b>.<br/>Dalle <b>pasticcerie artigianali</b> ai laboratori più strutturati, offro <b>soluzioni personalizzate</b> per ogni <b>necessità produttiva</b>.",
+          Title_2: "Soddisfa e sorprendi i tuoi clienti",
+          Desc: "Collaboro con i <b>migliori marchi</b> del settore, tra cui <b>Polin</b>, <b>RAM</b>, <b>OSTALI</b> e <b>Longoni</b>, selezionando <b>macchinari</b> che combinano <b>innovazione</b>, <b>prestazioni elevate</b> e <b>affidabilità</b> nel tempo.<br/>Nel <b>Nord Est</b> fornisco:",
+          list: [
+            "<b>Forni statici</b> ed <b>elettrici</b>, disponibili in varie configurazioni per una <b>cottura ottimale</b>",
+            "<b>Forni ventilati</b>, a <b>gas</b> ed <b>elettrici</b>, ideali per <b>lavorazioni specifiche</b>",
+            "<b>Impastatrici planetarie</b>, <b>sfogliatrici</b> e <b>spezzatrici</b>, progettate per facilitare la preparazione di <b>impasti</b> e <b>creme</b>",
+            "<b>Macchinari complementari</b> per migliorare l’<b>organizzazione</b> del laboratorio e <b>ottimizzare</b> la produzione",
+          ],
           ImgUrl: "/img/PanetterieTemp.png",
         },
       },
@@ -117,10 +134,19 @@ export default defineEventHandler((event) => {
           ],
         },
         pages: {
-          Title: "MACCHINARI PROFESSIONALI PER PANETTERIE",
-          SubTitle: "Fatti in Italia, i migliori per i Panettieri.",
-          Description:
-            "Metto a tua disposizione <b>un’ampia</b> selezione di <b>forni</b> e <b>macchinari</b> dedicati alle <b>panetterie</b>, che ti aiuteranno a trasformare la tua attività in un ambiente ideale dove sfornare <b>pane, focacce</b> e <b>prodotti da forno</b> di alta qualità. Collaboro con <b>i migliori marchi del settore</b> per offrirti soluzioni in grado di rispondere a qualsiasi esigenza produttiva.",
+          Title: "MACCHINARI PROFESSIONALI PER PIZZERIE",
+          SubTitle: "Efficienza e qualità per valorizzare la tua pizzeria",
+          Intro:
+            "Metto a tua disposizione una vasta gamma di <b>forni</b> e <b>macchinari per pizzeria</b> che ti permetteranno di <b>ottimizzare</b> la tua attività e dare vita a nuove <b>ricette</b>.<br/>Dalle <b>pizzerie artigianali</b> alle grandi catene di <b>ristoranti</b>, offro <b>soluzioni su misura</b> per soddisfare ogni <b>esigenza produttiva</b>.",
+          Title_2: "La soluzione giusta per ogni esigenza",
+          Desc: "Collaboro con il <b>brand più prestigioso</b> del settore, <b>Polin</b>, e seleziono solo <b>attrezzature</b> in grado di garantire <b>qualità</b>, <b>efficienza</b> e <b>affidabilità</b>.<br/>Il mio obiettivo è fornirti nel <b>Nord Est</b>:",
+          list: [
+            "<b>Forni statici</b> ed <b>elettrici</b> (modulari, a tunnel, a cupola)",
+            "<b>Forni ventilati</b> per cotture più rapide e omogenee",
+            "<b>Forni a gas</b> e <b>forni elettrici</b> in diverse dimensioni e potenze",
+            "<b>Impastatrici</b> e altre <b>attrezzature professionali</b> per la preparazione dell’<b>impasto</b>",
+            "<b>Macchinari ausiliari</b> e complementi per <b>ottimizzare</b> il tuo spazio di lavoro",
+          ],
           ImgUrl: "/img/PanetterieTemp.png",
         },
       },
@@ -158,10 +184,18 @@ export default defineEventHandler((event) => {
           ],
         },
         pages: {
-          Title: "MACCHINARI PROFESSIONALI PER PANETTERIE",
-          SubTitle: "Fatti in Italia, i migliori per i Panettieri.",
-          Description:
-            "Metto a tua disposizione <b>un’ampia</b> selezione di <b>forni</b> e <b>macchinari</b> dedicati alle <b>panetterie</b>, che ti aiuteranno a trasformare la tua attività in un ambiente ideale dove sfornare <b>pane, focacce</b> e <b>prodotti da forno</b> di alta qualità. Collaboro con <b>i migliori marchi del settore</b> per offrirti soluzioni in grado di rispondere a qualsiasi esigenza produttiva.",
+          Title: "MACCHINARI PROFESSIONALI PER GELATERIE",
+          SubTitle:
+            "Attrezzature specializzate per garantire gelato artigianale di alto livello",
+          Intro:
+            "Metto a tua disposizione una vasta selezione di <b>macchinari</b> e <b>soluzioni per gelaterie</b>, perfette per trasformare la tua attività in un ambiente ideale dove produrre <b>gelato artigianale</b> di altissima <b>qualità</b>.",
+          Title_2: "Distinguiti con attrezzature d’eccellenza",
+          Desc: "Collaboro con i <b>brand più affidabili</b> del settore per assicurarti <b>efficienza</b>, <b>facilità d’uso</b> e risultati <b>costanti nel tempo</b>.<br/>Grazie a <b>partnership</b> con aziende leader, come <b>Catabriga</b> per le <b>macchine gelato</b> e <b>Polin, RAM, OSTALI</b> e <b>Longoni</b> per <b>frigoriferi</b>, <b>armadi refrigerati</b>, <b>vetrine</b> e <b>banchi freddi</b>.<br/>Il mio obiettivo è fornirti nel <b>Nord Est</b>:",
+          list: [
+            "<b>Macchine per gelato</b> di ultima generazione, progettate per mantenere la massima <b>cremosità</b> e garantire la corretta <b>pastorizzazione</b>",
+            "<b>Sistemi di refrigerazione</b> e <b>conservazione</b> (<b>armadi</b>, <b>vetrine</b>, <b>banchi freddi</b>) per mantenere il <b>gelato</b> sempre alla <b>temperatura ideale</b>",
+            "<b>Soluzioni modulari</b> e <b>personalizzabili</b>, in base allo <b>spazio disponibile</b> e al <b>volume di produzione</b> della tua attività",
+          ],
           ImgUrl: "/img/PanetterieTemp.png",
         },
       },
@@ -199,10 +233,19 @@ export default defineEventHandler((event) => {
           ],
         },
         pages: {
-          Title: "MACCHINARI PROFESSIONALI PER PANETTERIE",
-          SubTitle: "Fatti in Italia, i migliori per i Panettieri.",
-          Description:
-            "Metto a tua disposizione <b>un’ampia</b> selezione di <b>forni</b> e <b>macchinari</b> dedicati alle <b>panetterie</b>, che ti aiuteranno a trasformare la tua attività in un ambiente ideale dove sfornare <b>pane, focacce</b> e <b>prodotti da forno</b> di alta qualità. Collaboro con <b>i migliori marchi del settore</b> per offrirti soluzioni in grado di rispondere a qualsiasi esigenza produttiva.",
+          Title: "MACCHINARI PROFESSIONALI PER PASTICCERIE",
+          SubTitle:
+            "Innovazione e precisione al servizio della tua pasticceria",
+          Intro:
+            "Metto a disposizione un’ampia selezione di <b>macchinari professionali</b> e <b>attrezzature</b> per <b>pasticceria</b>, studiati per migliorare l’<b>efficienza</b> e garantire <b>risultati eccellenti</b>.<br/>Dalle <b>pasticcerie artigianali</b> ai laboratori più strutturati, offro <b>soluzioni personalizzate</b> per ogni <b>necessità produttiva</b>.",
+          Title_2: "Soddisfa e sorprendi i tuoi clienti",
+          Desc: "Collaboro con i <b>migliori marchi</b> del settore, tra cui <b>Polin</b>, <b>RAM</b>, <b>OSTALI</b> e <b>Longoni</b>, selezionando <b>macchinari</b> che combinano <b>innovazione</b>, <b>prestazioni elevate</b> e <b>affidabilità</b> nel tempo.<br/>Nel <b>Nord Est</b> fornisco:",
+          list: [
+            "<b>Forni statici</b> ed <b>elettrici</b>, disponibili in varie configurazioni per una <b>cottura ottimale</b>",
+            "<b>Forni ventilati</b>, a <b>gas</b> ed <b>elettrici</b>, ideali per <b>lavorazioni specifiche</b>",
+            "<b>Impastatrici planetarie</b>, <b>sfogliatrici</b> e <b>spezzatrici</b>, progettate per facilitare la preparazione di <b>impasti</b> e <b>creme</b>",
+            "<b>Macchinari complementari</b> per migliorare l’<b>organizzazione</b> del laboratorio e <b>ottimizzare</b> la produzione",
+          ],
           ImgUrl: "/img/PanetterieTemp.png",
         },
       },
