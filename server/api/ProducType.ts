@@ -204,9 +204,9 @@ export default defineEventHandler((event) => {
         Name: "Arredamento",
         component: {
           BtnText: "Arredamento",
-          Title: "Macchine per Gelaterie</br>Vendita e Assistenza",
+          Title: "Progettazione Arredamenti</br>per Laboratori e Cucine",
           Description:
-            "Scopri le attrezzature ideali per una produzione artigianale di alta qualità. Dai mantecatori ai banchi espositivi, ogni strumento è pensato per offrirti massima efficienza e libertà creativa. Con macchinari professionali, puoi trasformare ogni ingrediente in gelati e sorbetti unici, capaci di conquistare ogni cliente al primo assaggio.",
+            "Progetto <b>laboratori</b> e <b>cucine professionali</b> su misura, curando ogni dettaglio per migliorare il <b>flusso di lavoro</b> e garantire un ambiente <b>pratico</b> e <b>confortevole</b>.<br/>Dalla disposizione degli spazi alla scelta dei materiali, ogni elemento è pensato per combinare <b>design moderno</b> e <b>funzionalità</b>.",
           ImgUrl: "/img/PizzaInOven.jpg",
           show: [
             {
