@@ -2,11 +2,11 @@
     <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.5rem] z-[1] bg-iron contrast-75"></div>
     <div id="Navbar" class="py-3 px-5 w-full h-[4.5rem] flex justify-between items-center z-30 sticky top-0 left-0">
         <NuxtLink @click="menuOpen === true ? handleOptMenuSelected($event) : ''" to="/">
-            <img :src="LogoMobile" alt="LogoMobile">
+            <img :src="LogoMobile" alt="LogoMobile" class="w-[3.125rem] aspect-square">
         </NuxtLink>
         <MenuBurgerAnimated @menu-trigger="handleMenuTrigger" id="menuBurger" class=""></MenuBurgerAnimated>
         <div v-show="menuOpen === true" id="Menu"
-            class="w-full h-[93svh] fixed overflow-hidden top-[8svh] left-0 z-20 backdrop-blur-md">
+            class="w-full min-h-dvh h-full fixed overflow-hidden top-[8svh] left-0 z-20 bg-[#00000059]">
             <div class="w-full h-fit bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6 pb-8 animate__animated animate__faster"
                 :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">
                 <div class="w-full border-b-2 border-red-500" @click="showServizi = !showServizi">
@@ -36,6 +36,11 @@
                             active-class="activeNav">
                             Gelaterie
                         </NuxtLink>
+                        <NuxtLink to="/Servizi/Attrezzature" @click="handleOptMenuSelected"
+                            class="block w-full font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft"
+                            active-class="activeNav">
+                            Attrezzature
+                        </NuxtLink>
                         <NuxtLink to="/Servizi/Arredamento" @click="handleOptMenuSelected"
                             class="block w-full font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft"
                             active-class="activeNav">
@@ -57,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import LogoMobile from '@/assets/img/LogoMobileCircle.png';
+import LogoMobile from '@/public/img/LOGHI/LOGO_AT_min.png';
 
 const showServizi = ref(false);
 
@@ -75,12 +80,15 @@ const handleMenuTrigger = (event: Event) => {
         closeAnimation.value = !closeAnimation.value;
     }
     const Navbar = document.getElementById('Navbar');
+    const Home = document.getElementById('Home');
     if (Navbar && closeAnimation.value === true) {
         Navbar.classList.remove('bg-backdrop-blur-sm');
         Navbar.classList.add('bg-white');
+        Home?.classList.add('blur-sm');
     } else if (Navbar && closeAnimation.value === false) {
         Navbar.classList.remove('bg-white');
-        Navbar.classList.add('backdrop-blur-sm')
+        Navbar.classList.add('backdrop-blur-sm');
+        Home?.classList.remove('blur-sm');
     }
 };
 
@@ -91,10 +99,10 @@ const handleOptMenuSelected = (event: Event) => {
 
 onMounted(() => {
     const Navbar = document.getElementById('Navbar');
-    const servicesSection = document.getElementById('Services');
+    const Servizi = document.getElementById('ServiziMenu');
     if (Navbar) {
         window.addEventListener('scroll', () => {
-            if (servicesSection && window.scrollY < servicesSection.offsetTop) {
+            if (Servizi && window.scrollY < Servizi.offsetTop) {
                 Navbar.classList.remove('backdrop-blur-sm');
             } else {
                 Navbar.classList.add('backdrop-blur-sm');

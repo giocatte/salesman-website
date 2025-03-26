@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full relative bg-white text-black">
+    <div id="Home" class="w-full relative bg-white text-black">
         <div id="landing" class="w-full relative flex z-0">
             <div id="imgsBCK" class="w-full flex flex-row flex-nowrap relative">
                 <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-[80svh] brightness-75">
@@ -43,22 +43,24 @@
                 tuo volume di produzione e agli spazi della tua attività.
             </p>
             <div class="p-1 mt-2 w-fit rounded-full bg-BlueToRed">
-                <button class="btnBlueRed active">
-                    CONTATTAMI
-                </button>
+                <NuxtLink to="/#Contatti">
+                    <button class="btnBlueRed active">
+                        CONTATTAMI
+                    </button>
+                </NuxtLink>
             </div>
         </div>
         <div id="OnlyTheBest" class="relative">
             <p class="text-[2.5rem] text-center font-semibold font-inter py-6 text-gr">SOLO IL MEGLIO</p>
-            <div class="relative grid grid-cols-6 grid-rows-3">
-                <div id="loghi" class="h-24 col-start-1 col-span-5 flex items-center overflow-hidden">
+            <div class="relative grid grid-rows-3">
+                <div id="loghi" class="h-24 flex items-center overflow-hidden">
                     <p v-for="n in 3" class="text-red-400 logo-anim p-2 m-2 font-bold">LOGO {{ n }}</p>
                 </div>
-                <div id="loghi" class="h-24 col-start-2 col-span-5 flex items-center overflow-hidden">
+                <div id="loghi" class="h-24 flex items-center overflow-hidden">
                     <p v-for="n in 3" class="text-blue-400 logo-anim-rev p-2 m-2 font-bold">LOGO {{ n + 3 }}</p>
                 </div>
-                <div id="loghi" class="h-24 col-start-1 col-span-5 flex items-center overflow-hidden">
-                    <p v-for="n in 3" class="text-red-400 logo-anim-delay p-2 m-2 font-bold">LOGO {{ n + 6 }}</p>
+                <div id="loghi" class="h-24 flex items-center overflow-hidden">
+                    <p v-for="n in 3" class="text-red-400 logo-anim p-2 m-2 font-bold">LOGO {{ n + 6 }}</p>
                 </div>
             </div>
         </div>
@@ -77,37 +79,31 @@ const products = JSON.parse(JSON.stringify(data.value));
 
 <style scoped>
 .logo-anim {
-    animation: slider linear 8s infinite;
-
-}
-
-.logo-anim-delay {
-    animation: slider linear 9s infinite 1.5s;
+    animation: slider linear 18s infinite;
 }
 
 .logo-anim-rev {
-    animation: slider-rev linear 8.5s infinite .75s;
+    animation: slider-rev linear 20s infinite;
 }
-
 
 @keyframes slider {
     0% {
-        transform: translateX(-80vw);
+        transform: translateX(-100vw);
     }
 
     100% {
-        transform: translateX(80vw);
+        transform: translateX(100vw);
     }
 
 }
 
 @keyframes slider-rev {
     0% {
-        transform: translateX(80vw);
+        transform: translateX(100vw);
     }
 
     100% {
-        transform: translateX(-80vw);
+        transform: translateX(-100vw);
     }
 
 }
