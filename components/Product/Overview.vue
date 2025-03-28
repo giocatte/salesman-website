@@ -1,12 +1,12 @@
 <template>
     <div id="Overview_Component" v-if="products && products.length > 0" class="flex flex-col gap-y-2 px-2 mb-8">
         <!-- Tabs -->
-        <div class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-14 h-fit">
-            <div class="p-1 mt-2 w-fit rounded-full transition-all duration-150"
+        <div class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-10 h-fit">
+            <div class="p-1 w-fit rounded-full transition-all duration-150"
                 :class="{ 'bg-BlueToRed': activeTab === p.Name }" v-for="p in products" :key="p.Id"
                 @click="setActiveTab(p.Name)">
-                <button class="px-2 py-1 h-fit -m-[1px] text-black transition-all duration-150 rounded-full"
-                    :class="activeTab === p.Name ? 'btnBlueRed-ez' : null">
+                <button class="px-2 py-1 h-fit -m-[1px] text-black rounded-full"
+                    :class="activeTab === p.Name ? 'btnBlueRed-ez p-1' : null">
                     {{ p.component.BtnText }}
                 </button>
             </div>
@@ -14,10 +14,10 @@
 
         <!-- Product Content -->
         <div v-for="p in products" :key="p.Id" v-show="p.Name === activeTab"
-            class="flex flex-col gap-y-4 py-1 pt-0 bg-white rounded-xl">
+            class="flex flex-col gap-y-4 py-1 pt-0 bg-white rounded-xl animate__animated animate__fadeIn">
 
             <!-- Image -->
-            <div class="relative self-center w-full max-w-[400px] rounded-[1.25rem] bg-no-repeat bg-bottom bg-cover"
+            <div class="relative self-center w-full max-w-[400px] rounded-[1.25rem] bg-no-repeat bg-center bg-cover"
                 :style="{ backgroundImage: `url(${p.component.ImgUrl})`, aspectRatio: '1 / 1' }">
             </div>
 

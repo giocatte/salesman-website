@@ -6,54 +6,55 @@
         </NuxtLink>
         <MenuBurgerAnimated @menu-trigger="handleMenuTrigger" id="menuBurger" class=""></MenuBurgerAnimated>
         <div v-show="menuOpen === true" id="Menu"
-            class="w-full min-h-dvh h-full fixed overflow-hidden top-[8svh] left-0 z-20 bg-[#00000059]">
+            class="w-full min-h-lvh h-lvh fixed overflow-hidden top-[4.5rem] left-0 z-20 bg-[#00000059]">
             <div class="w-full h-fit bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6 pb-8 animate__animated animate__faster"
                 :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">
-                <div class="w-full border-b-2 border-red-500" @click="showServizi = !showServizi">
-                    <div class="flex items-center gap-x-4 font-nunito text-gr py-1 font-bold h-fit">
+                <div class="w-full border-b-[1px] border-[#D8D8D8]" @click="showServizi = !showServizi">
+                    <div
+                        class="flex items-center gap-x-4 font-nunito text-gr py-1 font-bold w-fit h-fit cursor-pointer">
                         <h1 class="text-[3.5rem]">Servizi
                         </h1>
                         <h1 class="text-[2.5rem]">+</h1>
                     </div>
                     <div v-show="showServizi" id="ServiziMenu" class="max-h-fit h-fit overflow-y-hidden">
                         <NuxtLink to="/Servizi/Panetterie" @click="handleOptMenuSelected"
-                            class="block w-full font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft"
+                            class="block w-fit font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
                             active-class="activeNav">
                             Panetterie
                         </NuxtLink>
                         <NuxtLink to="/Servizi/Pasticcerie" @click="handleOptMenuSelected"
-                            class="block w-full font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft"
+                            class="block w-fit font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
                             active-class="activeNav">
                             Pasticcerie
                         </NuxtLink>
                         <NuxtLink to="/Servizi/Pizzerie" @click="handleOptMenuSelected"
-                            class="block w-full font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft"
+                            class="block w-fit font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
                             active-class="activeNav">
                             Pizzerie
                         </NuxtLink>
                         <NuxtLink to="/Servizi/Gelaterie" @click="handleOptMenuSelected"
-                            class="block w-full font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft"
+                            class="block w-fit font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
                             active-class="activeNav">
                             Gelaterie
                         </NuxtLink>
                         <NuxtLink to="/Servizi/Attrezzature" @click="handleOptMenuSelected"
-                            class="block w-full font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft"
+                            class="block w-fit font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
                             active-class="activeNav">
                             Attrezzature
                         </NuxtLink>
                         <NuxtLink to="/Servizi/Arredamento" @click="handleOptMenuSelected"
-                            class="block w-full font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit animate__animated animate__slideInLeft"
+                            class="block w-fit font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
                             active-class="activeNav">
                             Arredamento
                         </NuxtLink>
                     </div>
                 </div>
                 <NuxtLink @click="handleOptMenuSelected" to="/#ChiSono"
-                    class="block w-full font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-blue-300">
+                    class="block w-full font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-[1px] border-[#D8D8D8]">
                     Chi sono
                 </NuxtLink>
                 <NuxtLink @click="handleOptMenuSelected" to="/#Contatti"
-                    class="block w-full font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-2 border-blue-300">
+                    class="block w-full font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-[1px] border-[#D8D8D8]">
                     Contatti
                 </NuxtLink>
             </div>

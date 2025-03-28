@@ -5,18 +5,19 @@
                 <p class="text-gr font-nunito text-center text-xl font-extrabold mt-4" v-html="impresaText">
                 </p>
             </div>
-            <div class="relative w-full h-full bg-none bg-[#f4f4f4] rounded-b-xl overflow-y-auto no-scrollbar z-10">
-                <div v-for="s in shows" class="w-full h-full last:rounded-b-xl">
-                    <div class="w-full h-full px-4 flex flex-col flex-nowrap items-center text-gr font-nunito">
-                        <div :style="{ backgroundImage: 'url(' + s.ImgUrl + ')' }"
-                            class="h-full w-full block drop-shadow-lg bg-cover bg-center" alt="carousel image">
-                        </div>
-                        <p class="text-center text-xl font-extrabold">{{ s.Brand }}</p>
-                        <p class="text-center text-sm font-bold">{{ s.Model }}</p>
-                        <p class="text-center text-[13px] font-normal pb-2">{{ s.Description }}</p>
+            <UCarousel v-slot="{ item }" :items="shows" indicators :ui="{ item: 'basis-full' }"
+                class="CaroselloProdotti rounded-b-xl overflow-hidden w-full h-full bg-white">
+                <div
+                    class="w-full h-full aspect-[8/9.1] bg-[#f4f4f4] px-4 py-6 flex flex-col flex-nowrap items-center text-gr font-nunito">
+                    <div :style="{ backgroundImage: 'url(' + item.ImgUrl + ')' }"
+                        class="h-full w-full block drop-shadow-lg bg-contain bg-no-repeat bg-center"
+                        alt="carousel image">
                     </div>
+                    <p class="text-center text-xl font-extrabold">{{ item.Brand }}</p>
+                    <p class="text-center text-sm font-bold">{{ item.Model }}</p>
+                    <p class="text-center text-[13px] font-normal pb-2">{{ item.Description }}</p>
                 </div>
-            </div>
+            </UCarousel>
         </div>
     </div>
 </template>
@@ -26,16 +27,21 @@
 .desc b {
     font-weight: 600;
 }
+
+div.CaroselloProdotti {
+    --color-primary-400: 251 135 82;
+}
 </style>
 
-<script setup>
+<script setup lang="ts">
 
 const props = defineProps({
     product: Object
 });
 
-console.log("product:", props.product.component.show);
-const shows = JSON.parse(JSON.stringify(props.product.component.show));
+console.log("product:", props?.product?.component.show);
+const shows = JSON.parse(JSON.stringify(props?.product?.component.show));
 const impresaText = "SOLO IL MEGLIO PER LA TUA</br> IMPRESA";
-// console.log("shows:", shows);
+console.log("shows:", shows);
+
 </script>

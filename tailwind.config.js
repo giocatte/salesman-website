@@ -50,7 +50,7 @@ export default {
           'font-weight': 'bold',
           'background-color': '#fff',
           'font-size': '1rem',
-          'padding': '0.5rem 1rem',
+          'padding': '.25rem .5rem',
           'border-radius': '9999px'
         },
         '.btnBlueRed': {
