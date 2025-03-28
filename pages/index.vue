@@ -50,17 +50,28 @@
                 </NuxtLink>
             </div>
         </div>
-        <div id="OnlyTheBest" class="relative">
-            <p class="text-[2.5rem] text-center font-semibold font-inter py-6 text-gr">SOLO IL MEGLIO</p>
-            <div class="relative grid grid-rows-3">
-                <div id="loghi" class="h-24 flex items-center overflow-hidden">
-                    <p v-for="n in 3" class="text-red-400 logo-anim p-2 m-2 font-bold">LOGO {{ n }}</p>
+        <div id="OnlyTheBest" class="relative py-8">
+            <p class="text-[2.5rem] text-center font-semibold font-inter text-gr">SOLO IL MEGLIO</p>
+            <div class="relative overflow-hidden flex flex-col flex-nowrap gap-y-1">
+                <div id="loghi" class="h-16 flex items-center w-fit gap-x-5 last:gap-0 logo-anim">
+                    <img src="/img/LOGHI/POLIN.png" alt="" class="h-7 w-auto">
+                    <img src="/img/LOGHI/MITTEL.png" alt="" class="h-7 w-auto">
+                    <img src="/img/LOGHI/RAM.png" alt="" class="h-7 w-auto">
                 </div>
-                <div id="loghi" class="h-24 flex items-center overflow-hidden">
-                    <p v-for="n in 3" class="text-blue-400 logo-anim-rev p-2 m-2 font-bold">LOGO {{ n + 3 }}</p>
+                <div id="loghi" class="h-16 flex items-center w-fit gap-x-5 logo-anim-rev">
+                    <img src="/img/LOGHI/VIMEK.png" alt="" class="h-7 w-auto">
+                    <img src="/img/LOGHI/MIXER.png" alt="" class="h-7 w-auto">
+                    <img src="/img/LOGHI/POLIN.png" alt="" class="h-7 w-auto">
                 </div>
-                <div id="loghi" class="h-24 flex items-center overflow-hidden">
-                    <p v-for="n in 3" class="text-red-400 logo-anim p-2 m-2 font-bold">LOGO {{ n + 6 }}</p>
+                <div id="loghi" class="h-16 flex items-center w-fit gap-x-5 logo-anim-del">
+                    <img src="/img/LOGHI/ICB.png" alt="" class="h-7 w-auto">
+                    <img src="/img/LOGHI/GIORIK.png" alt="" class="h-7 w-auto bg-black">
+                    <img src="/img/LOGHI/TECNOMAC.png" alt="" class="h-7 w-auto">
+                </div>
+                <div id="loghi" class="h-16 flex items-center w-fit gap-x-5 logo-anim-rev-del delay-500">
+                    <img src="/img/LOGHI/OSTALI.png" alt="" class="h-7 w-auto">
+                    <img src="/img/LOGHI/MIXER.png" alt="" class="h-7 w-auto">
+                    <img src="/img/LOGHI/HOONVED.png" alt="" class="h-7 w-auto">
                 </div>
             </div>
         </div>
@@ -79,11 +90,19 @@ const products = JSON.parse(JSON.stringify(data.value));
 
 <style scoped>
 .logo-anim {
-    animation: slider linear 18s infinite;
+    animation: slider linear 22s infinite;
+}
+
+.logo-anim-del {
+    animation: slider-del linear 30s infinite;
 }
 
 .logo-anim-rev {
-    animation: slider-rev linear 20s infinite;
+    animation: slider-rev linear 25s infinite;
+}
+
+.logo-anim-rev-del {
+    animation: slider-rev-del linear 32s infinite;
 }
 
 @keyframes slider {
@@ -97,9 +116,39 @@ const products = JSON.parse(JSON.stringify(data.value));
 
 }
 
+@keyframes slider-del {
+    0% {
+        transform: translateX(-120vw);
+    }
+
+    20% {
+        transform: translateX(-80vw);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+
+}
+
 @keyframes slider-rev {
     0% {
         transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(-100vw);
+    }
+
+}
+
+@keyframes slider-rev-del {
+    0% {
+        transform: translateX(120vw);
+    }
+
+    20% {
+        transform: translateX(80vw);
     }
 
     100% {

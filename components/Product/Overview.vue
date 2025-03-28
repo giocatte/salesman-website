@@ -1,5 +1,5 @@
 <template>
-    <div id="Overview_Component" v-if="products && products.length > 0" class="flex flex-col gap-y-2 px-2 mb-8">
+    <div id="Overview_Component" v-if="products && products.length > 0" class="flex flex-col gap-y-2 px-4 mb-8">
         <!-- Tabs -->
         <div class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-10 h-fit">
             <div class="p-1 w-fit rounded-full transition-all duration-150"

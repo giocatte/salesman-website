@@ -6,7 +6,8 @@
         </NuxtLink>
         <MenuBurgerAnimated @menu-trigger="handleMenuTrigger" id="menuBurger" class=""></MenuBurgerAnimated>
         <div v-show="menuOpen === true" id="Menu"
-            class="w-full min-h-lvh h-lvh fixed overflow-hidden top-[4.5rem] left-0 z-20 bg-[#00000059]">
+            class="w-full min-h-lvh h-lvh fixed overflow-hidden top-[4.5rem] left-0 z-20 bg-[#00000059]"
+            @click.self="closeMenu">
             <div class="w-full h-fit bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6 pb-8 animate__animated animate__faster"
                 :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">
                 <div class="w-full border-b-[1px] border-[#D8D8D8]" @click="showServizi = !showServizi">
@@ -63,7 +64,7 @@
 </template>
 
 <script setup lang="ts">
-import LogoMobile from '@/public/img/LOGHI/LOGO_AT_min.png';
+import LogoMobile from '@/public/img/LOGHI/LOGO_AT.png';
 
 const showServizi = ref(false);
 
@@ -94,6 +95,11 @@ const handleMenuTrigger = (event: Event) => {
 };
 
 const handleOptMenuSelected = (event: Event) => {
+    const menuBurger = document.getElementById('menuBurger');
+    menuBurger ? menuBurger.click() : null;
+};
+
+const closeMenu = () => {
     const menuBurger = document.getElementById('menuBurger');
     menuBurger ? menuBurger.click() : null;
 };
