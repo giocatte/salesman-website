@@ -18,10 +18,10 @@
                         <h1 class="text-[2.5rem]">+</h1>
                     </div>
                     <div v-show="showServizi" id="ServiziMenu" class="max-h-fit h-fit overflow-y-hidden">
-                        <NuxtLink to="/Servizi/Panetterie" @click="handleOptMenuSelected"
+                        <NuxtLink to="/Servizi/Panifici" @click="handleOptMenuSelected"
                             class="block w-fit font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
                             active-class="activeNav">
-                            Panetterie
+                            Panifici
                         </NuxtLink>
                         <NuxtLink to="/Servizi/Pasticcerie" @click="handleOptMenuSelected"
                             class="block w-fit font-nunito text-[#6E6E6E] text-[2.5rem] py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"

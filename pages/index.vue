@@ -2,19 +2,19 @@
     <div id="Home" class="w-full relative bg-white text-black">
         <div id="landing" class="w-full relative flex z-0">
             <div id="imgsBCK" class="w-full flex flex-row flex-nowrap relative">
-                <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-[80svh] brightness-75">
-                <img src="assets/img/Abbattitore_Polin.jpg" alt="" class="w-1/2 h-[80svh] brightness-75">
+                <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-[62svh] brightness-75">
+                <img src="assets/img/Abbattitore_Polin.jpg" alt="" class="w-1/2 h-[62svh] brightness-75">
             </div>
             <div id="Ellipse" class="absolute w-full h-full py-24 self-start z-10 bg-ellipse">
             </div>
             <div id="NomeCognome"
-                class="absolute w-full h-full self-start py-24 z-20 flex flex-col gap-8 items-center text-center text-white">
-                <p class="text-[4rem] font-inter font-bold">ANDREA<br>TOGNON</p>
-                <p class="text-2xl font-nunito font-semibold tracking-normal">Agente rivenditore di
-                    zona<br>Autorizzato</p>
-                <p class="text-2xl font-light tracking-wide drop-shadow-xl font-nunito leading-8 max-w-[16ch]">Vendita
-                    attrezzatura per negozi, ristoranti
-                    laboratori, panifici, pizzerie e gelaterie</p>
+                class="absolute w-full h-full self-start py-14 px-[.625rem] z-20 flex flex-col gap-y-8 items-center font-nunito text-center text-white">
+                <p class="text-[4rem] font-bold h-fit">ANDREA<br>TOGNON</p>
+                <p class="text-[2rem] font-extrabold tracking-normal max-w-[20ch]">Agente Rivenditore di zona
+                    Autorizzato</p>
+                <p class="text-lg tracking-wide drop-shadow-xl leading-8 max-w-[30ch]">
+                    Vendita macchinari e attrezzatura per:<br />
+                    Panifici, pasticcerie, pizzerie e ristorazione.</p>
             </div>
         </div>
         <div id="Services" class="w-full">
@@ -22,7 +22,7 @@
             <ProductOverview :products="products.products" />
         </div>
         <div id="ChiSono_" class="font-nunito relative w-full bg-iron-op pt-0 p-4 flex gap-2 row flex-col flex-nowrap">
-            <p class="mt-6 pt-2 text-[2.5rem] font-bold">CHI SONO</p>
+            <p class="mt-6 pt-2 text-[2.5rem] font-bold">Chi sono</p>
             <p class="text-lg">Da oltre <b>30 anni</b> mi occupo di <b>vendita</b> e <b>assistenza</b> tecnica di
                 <b>macchinari</b> nuovi e
                 usati, garantendo <b>qualità</b> e
