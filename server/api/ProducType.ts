@@ -8,7 +8,7 @@ export default defineEventHandler((event) => {
           BtnText: "Panifici",
           Title: "Macchine per Panifici<br/>Vendita e Assistenza",
           Description:
-            "Vendo <b>macchinari</b> e <b>strumenti</b> progettati per ottimizzare ogni fase della <b>panificazione</b>, dal <b>dosaggio</b> degli ingredienti alla <b>cottura perfetta</b>. Con le migliori <b>attrezzature</b> potrai sperimentare nuove <b>ricette</b>, migliorare la qualità del <b>pane</b> e garantire un prodotto <b>fragrante</b> e <b>irresistibile</b>, giorno dopo giorno.<br/>Da oltre <b>30 anni</b> mi occupo di <b>vendita</b> e <b>assistenza tecnica</b> di <b>macchinari nuovi e usati</b>, garantendo <b>qualità</b> e <b>affidabilità</b>.",
+            "<b>Vendita macchinari panificazione</b> e <b>attrezzature professionali</b> per ogni fase della lavorazione, dal <b>dosaggio degli ingredienti</b> alla <b>cottura del pane</b>. Con le <b>migliori attrezzature da forno</b> potrai sperimentare <b>nuove ricette</b>, migliorare la <b>qualità del pane</b> e offrire ogni giorno un <b>prodotto fragrante</b> e irresistibile.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_Panifici.png",
           show: [
             {
@@ -57,7 +57,7 @@ export default defineEventHandler((event) => {
           BtnText: "Pasticcerie",
           Title: "Macchine per Pasticcerie<br/>Vendita e Assistenza",
           Description:
-            "Precisione e creatività si incontrano con le attrezzature giuste. Dagli abbattitori ai forni ventilati, passando per sfogliatrici e planetarie, ogni strumento è pensato per aiutarti a realizzare dolci impeccabili, dalla più soffice crema al più raffinato impasto.",
+            "<b>Macchinari per pasticceria</b> dove <b>precisione</b> e <b>creatività</b> si incontrano. Dagli <b>abbattitori</b> ai <b>forni ventilati</b>, passando per <b>sfogliatrici</b> e <b>planetarie professionali</b>, ogni strumento ti aiuta a realizzare <b>dolci perfetti</b>.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_PASTICCERIE.png",
           show: [
             {
@@ -107,7 +107,7 @@ export default defineEventHandler((event) => {
           BtnText: "Pizzerie",
           Title: "Macchine per Pizzerie<br>Vendita e Assistenza",
           Description:
-            "Attrezzature professionali per una pizza sempre perfetta. Dai forni di ultima generazione agli impastatrici, offro strumenti che garantiscono prestazioni elevate, uniformità di cottura e la massima qualità per ogni impasto. Ideali per chi vuole innovare senza rinunciare alla tradizione.",
+            "<b>Macchinari professionali per pizzerie</b>, ideali per una <b>pizza sempre perfetta</b>. Dai <b>forni per pizza di ultima generazione</b> alle <b>impastatrici professionali</b>, offro strumenti che garantiscono <b>cottura uniforme</b>, <b>alte prestazioni</b> e <b>massima qualità dell’impasto</b>.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_PIZZERIE.png",
           show: [
             {
@@ -157,7 +157,7 @@ export default defineEventHandler((event) => {
           BtnText: "Gelaterie",
           Title: "Macchine per Gelaterie<br/>Vendita e Assistenza",
           Description:
-            "Scopri le attrezzature ideali per una produzione artigianale di alta qualità. Dai mantecatori ai banchi espositivi, ogni strumento è pensato per offrirti massima efficienza e libertà creativa. Con macchinari professionali, puoi trasformare ogni ingrediente in gelati e sorbetti unici, capaci di conquistare ogni cliente al primo assaggio.",
+            "<b>Macchinari per gelateria artigianale</b> per una <b>produzione di alta qualità</b>. Dai <b>mantecatori professionali</b> ai <b>banchi espositivi refrigerati</b>, ogni strumento è progettato per offrire <b>massima efficienza</b> e <b>libertà creativa</b>.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_GELATERIE.png",
           show: [
             {
@@ -201,12 +201,48 @@ export default defineEventHandler((event) => {
       },
       {
         Id: 5,
+        Name: "Ristorazione",
+        component: {
+          BtnText: "Ristorazione",
+          Title: "Macchine per Ristorazione Vendita e Assistenza",
+          Description:
+            "<b>Macchinari per cucine professionali</b>, progettati per garantire <b>efficienza</b> e <b>prestazioni elevate</b>. Dai <b>forni professionali</b> ai <b>sistemi di refrigerazione</b>, ogni attrezzatura semplifica la <b>gestione quotidiana</b> e ottimizza il <b>servizio in cucina</b>.",
+          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png",
+          show: [
+            {
+              shId: 1,
+              Brand: "",
+              Model: "",
+              Description: "",
+              ImgUrl: "",
+            },
+          ],
+        },
+        pages: {
+          Title: "MACCHINARI PROFESSIONALI PER LA RISTORAZIONE",
+          SubTitle: "Tecnologia e innovazione per la tua cucina",
+          Intro:
+            "Metto a tua disposizione una <b>gamma completa</b> di <b>forni</b>, <b>cucine</b> e <b>attrezzature</b> professionali per <b>ottimizzare</b> la <b>produttività</b> della tua attività. Che tu gestisca un <b>ristorante</b>, un <b>hotel</b> o un’attività di <b>ristorazione collettiva</b>, offriamo soluzioni su misura per garantire <b>efficienza, affidabilità e qualità</b> in ogni preparazione.",
+          Title_2: "Soluzioni avanzate per ogni esigenza",
+          Desc: "Collaboro con <b>Giorik</b>, marchio di riferimento nel settore, selezionando solo <b>attrezzature</b> progettate per <b>migliorare</b> le prestazioni della tua cucina. Il mio obiettivo è fornirti, a <b>Padova, Venezia</b> e in tutto il <b>Nord Est</b>, le migliori soluzioni per:",
+          list: [
+            "<b>Forni professionali</b>: elettrici e a gas, statici e ventilati, per garantire cotture uniformi ed elevate prestazioni",
+            "<b>Cucine modulari</b>: elettriche e a gas, versatili e robuste per adattarsi a ogni spazio e esigenza di cottura",
+            "<b>Friggitrici professionali</b>: ad alta efficienza per una frittura croccante e uniforme, con il massimo controllo della temperatura",
+            "<b>Brasiere e cuocipasta</b>: ideali per la ristorazione collettiva e per ottimizzare i processi di cottura",
+            "<b>Attrezzature complementari</b>: soluzioni integrate per migliorare il flusso di lavoro e garantire il massimo della produttività",
+          ],
+          ImgUrl: "/img/RISTORAZIONE/BS450B.png",
+        },
+      },
+      {
+        Id: 6,
         Name: "Attrezzature",
         component: {
           BtnText: "Attrezzature",
           Title: "Attrezzature per <br/>Laboratori e Cucine <br/>Professionali",
           Description:
-            "Propongo attrezzature professionali pensate per ottimizzare ogni area di lavoro, dalla conservazione alla refrigerazione fino al lavaggio. Ogni soluzione è studiata per aumentare l’efficienza operativa, migliorare la produttività e garantire standard elevati di igiene e qualità.",
+            "<b>Attrezzature professionali per cucine</b> e <b>laboratori</b>, studiate per ottimizzare ogni area operativa: dalla <b>conservazione</b> alla <b>refrigerazione</b> fino al <b>lavaggio professionale</b>.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_ATTREZZATURE.png",
           show: [
             {
@@ -240,23 +276,23 @@ export default defineEventHandler((event) => {
           Title_2: "Tecnologia al servizio della tua attività",
           Desc: "Collaboro con i migliori marchi di riferimento nel settore per garantirti attrezzature affidabili, performanti e durevoli Hoonved, Mittel, Longoni, Coldline<br/><br/>Che tu gestisca una piccola attività artigianale o una grande produzione, offro soluzioni su misura per:",
           list: [
-            "Conservazione e refrigerazione: armadi, banchi e vetrine refrigerate per ingredienti sempre freschi.",
-            "Lievitazione e stoccaggio: fermalievitazione, decongelatori e roll-in per una gestione ottimale dell'impasto.",
-            "Igiene e lavaggio: lavastoviglie e lavapentole per rispettare i più alti standard di pulizia.",
-            "Arredi e acciaio inox: tavoli da lavoro e scaffalature per un ambiente organizzato e funzionale.",
+            "Conservazione e refrigerazione: armadi, banchi e vetrine refrigerate per ingredienti sempre freschi",
+            "Lievitazione e stoccaggio: fermalievitazione, decongelatori e roll-in per una gestione ottimale dell'impasto",
+            "Igiene e lavaggio: lavastoviglie e lavapentole per rispettare i più alti standard di pulizia",
+            "Arredi e acciaio inox: tavoli da lavoro e scaffalature per un ambiente organizzato e funzionale",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_ATTREZZATURE.png",
         },
       },
       {
-        Id: 6,
-        Name: "Arredamento",
+        Id: 7,
+        Name: "Arredamenti",
         component: {
-          BtnText: "Arredamento",
+          BtnText: "Arredamenti",
           Title:
             "Arredamenti per <br/>Laboratori e Cucine <br/>Vendita e Progettazione <br/>su Misura",
           Description:
-            "Progetto e realizzo arredamenti su misura pensati per ottimizzare ogni ambiente di lavoro professionale. Dalla scelta dei materiali alla disposizione funzionale degli spazi, ogni soluzione è studiata per migliorare il flusso operativo, garantire comfort e durabilità e creare un ambiente efficiente e armonioso. ",
+            "<b>Arredamenti su misura per cucine e laboratori</b>, progettati per <b>ottimizzare gli spazi di lavoro</b> e migliorare il <b>flusso operativo</b>.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/SERVIZI_MOB_ARREDAMENTI.png",
           show: [
             {

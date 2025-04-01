@@ -26,7 +26,7 @@
             <p class="text-3xl font-semibold" v-html="p.component.Title"></p>
 
             <!-- Description -->
-            <p class="text-base text-justify desc pr-2" v-html="p.component.Description"></p>
+            <p class="text-base text-justify desc pr-2 min-h-40" v-html="p.component.Description"></p>
 
             <!-- Button -->
             <NuxtLink :to="`/Servizi/${p.component.BtnText}`" id="ChiSono" class="p-1 w-fit rounded-full bg-BlueToRed">

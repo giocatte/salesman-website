@@ -9,7 +9,7 @@
         <div class="w-full px-3 py-5 bg-white text-gr flex flex-col gap-2">
             <p class="title" v-html="currentProduct.pages.Title_2"></p>
             <p class="desc" v-html="currentProduct.pages.Desc"></p>
-            <ul class="desc list-disc px-8">
+            <ul class="desc list-disc px-5">
                 <li v-for="l in currentProduct.pages.list" :key="l" v-html="l"></li>
             </ul>
         </div>
