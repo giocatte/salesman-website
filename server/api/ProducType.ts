@@ -8,7 +8,7 @@ export default defineEventHandler((event) => {
           BtnText: "Panifici",
           Title: "Macchine per Panifici<br/>Vendita e Assistenza",
           Description:
-            "Vendo macchinari e strumenti progettati per ottimizzare ogni fase della panificazione, dal dosaggio degli ingredienti alla cottura perfetta. Con le migliori attrezzature potrai sperimentare nuove ricette, migliorare la qualità del pane e garantire un prodotto fragrante e irresistibile, giorno dopo giorno.",
+            "Vendo <b>macchinari</b> e <b>strumenti</b> progettati per ottimizzare ogni fase della <b>panificazione</b>, dal <b>dosaggio</b> degli ingredienti alla <b>cottura perfetta</b>. Con le migliori <b>attrezzature</b> potrai sperimentare nuove <b>ricette</b>, migliorare la qualità del <b>pane</b> e garantire un prodotto <b>fragrante</b> e <b>irresistibile</b>, giorno dopo giorno.<br/>Da oltre <b>30 anni</b> mi occupo di <b>vendita</b> e <b>assistenza tecnica</b> di <b>macchinari nuovi e usati</b>, garantendo <b>qualità</b> e <b>affidabilità</b>.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_Panifici.png",
           show: [
             {
@@ -35,7 +35,7 @@ export default defineEventHandler((event) => {
           ],
         },
         pages: {
-          Title: "MACCHINARI PROFESSIONALI PER Panifici",
+          Title: "MACCHINARI PROFESSIONALI PER PANIFICI",
           SubTitle: "Fatti in Italia, i migliori per i Panettieri.",
           Intro:
             "Offro una <b>gamma completa</b> di <b>forni</b> e <b>attrezzature</b> per <b>panifici</b>, pensata per garantire <b>qualità costante</b> e <b>massima resa produttiva</b>.<br/>Che tu gestisca un <b>panificio artigianale</b> o una produzione più strutturata, troverai <b>soluzioni adatte</b> a ogni esigenza.",
@@ -257,7 +257,7 @@ export default defineEventHandler((event) => {
             "Arredamenti per <br/>Laboratori e Cucine <br/>Vendita e Progettazione <br/>su Misura",
           Description:
             "Progetto e realizzo arredamenti su misura pensati per ottimizzare ogni ambiente di lavoro professionale. Dalla scelta dei materiali alla disposizione funzionale degli spazi, ogni soluzione è studiata per migliorare il flusso operativo, garantire comfort e durabilità e creare un ambiente efficiente e armonioso. ",
-          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_ARREDAMENTI.png",
+          ImgUrl: "/img/IMG_SERVIZI_MOBILE/SERVIZI_MOB_ARREDAMENTI.png",
           show: [
             {
               shId: 1,

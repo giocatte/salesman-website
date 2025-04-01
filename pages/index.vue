@@ -1,14 +1,14 @@
 <template>
     <div id="Home" class="w-full relative bg-white text-black">
-        <div id="landing" class="w-full relative flex z-0">
-            <div id="imgsBCK" class="w-full flex flex-row flex-nowrap relative">
-                <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-[62svh] brightness-75">
-                <img src="assets/img/Abbattitore_Polin.jpg" alt="" class="w-1/2 h-[62svh] brightness-75">
+        <div id="landing" class="w-full h-fit relative flex z-0">
+            <div id="imgsBCK" class="absolute w-full h-full flex flex-row flex-nowrap">
+                <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-full brightness-75">
+                <img src="assets/img/Abbattitore_Polin.jpg" alt="" class="w-1/2 h-full brightness-75">
             </div>
             <div id="Ellipse" class="absolute w-full h-full py-24 self-start z-10 bg-ellipse">
             </div>
             <div id="NomeCognome"
-                class="absolute w-full h-full self-start py-14 px-[.625rem] z-20 flex flex-col gap-y-8 items-center font-nunito text-center text-white">
+                class="w-full h-fit self-start py-14 px-[.625rem] z-20 flex flex-col gap-y-8 items-center font-nunito text-center text-white">
                 <p class="text-[4rem] font-bold h-fit">ANDREA<br>TOGNON</p>
                 <p class="text-[2rem] font-extrabold tracking-normal max-w-[20ch]">Agente Rivenditore di zona
                     Autorizzato</p>

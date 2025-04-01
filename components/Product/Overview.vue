@@ -1,12 +1,13 @@
 <template>
     <div id="Overview_Component" v-if="products && products.length > 0" class="flex flex-col gap-y-2 px-4 mb-8">
         <!-- Tabs -->
-        <div class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-10 h-fit">
+        <div
+            class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-10 h-fit border-b-[1px] border-gray-200 snap-x snap-proximity scroll-smooth  transition-all duration-150">
             <div class="p-1 w-fit rounded-full transition-all duration-150"
                 :class="{ 'bg-BlueToRed': activeTab === p.Name }" v-for="p in products" :key="p.Id"
                 @click="setActiveTab(p.Name)">
                 <button class="px-2 py-1 h-fit -m-[1px] text-black rounded-full"
-                    :class="activeTab === p.Name ? 'btnBlueRed-ez p-1' : null">
+                    :class="activeTab === p.Name ? 'btnBlueRed-ez p-1 snap-center snap-always' : null">
                     {{ p.component.BtnText }}
                 </button>
             </div>
@@ -69,3 +70,4 @@ const setActiveTab = (name) => {
     activeTab.value = name;
 };
 </script>
+script
