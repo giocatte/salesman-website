@@ -2,13 +2,21 @@
     <div id="ShowCarousel_Component" v-if="shows && shows.length > 0" class="px-3 py-4 bg-white">
         <div class="relative w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col felx-nowrap z-0">
             <div class="w-full h-fit bg-none bg-[#f4f4f4] rounded-t-xl">
-                <p class="text-gr font-nunito text-center text-xl font-extrabold mt-4" v-html="impresaText">
+                <p class="text-gr font-nunito text-center text-xl font-extrabold mt-5" v-html="impresaText">
                 </p>
             </div>
-            <UCarousel v-slot="{ item }" :items="shows" indicators :ui="{ item: 'basis-full' }"
-                class="CaroselloProdotti rounded-b-xl overflow-hidden w-full h-full bg-white">
+            <UCarousel id="CaroselloProdotti" class="rounded-b-xl overflow-hidden bg-[#f4f4f4]" v-slot="{ item }"
+                :items="currentCarouselData" indicators :ui="{
+                    item: 'basis-full',
+                    indicators: {
+                        wrapper: 'gap-2 bottom-2',
+                        base: 'w-2 h-2 [aspect-ratio:_1/1]',
+                        active: 'bg-BlueToRed',
+                        inactive: 'bg-gray-100 dark:bg-gray-800'
+                    }
+                }">
                 <div
-                    class="w-full h-full aspect-[8/9.1] bg-[#f4f4f4] px-4 py-6 flex flex-col flex-nowrap items-center text-gr font-nunito">
+                    class="w-full h-full aspect-[8/9.1] bg-[#f4f4f4] p-4 flex flex-col flex-nowrap items-center text-gr font-nunito">
                     <div :style="{ backgroundImage: 'url(' + item.ImgUrl + ')' }"
                         class="h-full w-full block drop-shadow-lg bg-contain bg-no-repeat bg-center"
                         alt="carousel image">
@@ -28,9 +36,9 @@
     font-weight: 600;
 }
 
-div.CaroselloProdotti {
+/* div.CaroselloProdotti {
     --color-primary-400: 251 135 82;
-}
+} */
 </style>
 
 <script setup lang="ts">
@@ -39,9 +47,11 @@ const props = defineProps({
     product: Object
 });
 
-console.log("product:", props?.product?.component.show);
 const shows = JSON.parse(JSON.stringify(props?.product?.component.show));
 const impresaText = "SOLO IL MEGLIO PER LA TUA</br> IMPRESA";
-console.log("shows:", shows);
 
+const router = useRouter();
+import carouselData from '~/assets/data/CarouselData.json';
+const currentRoute = router.currentRoute.value.path.split("/")[2];
+const currentCarouselData = carouselData[currentRoute as keyof typeof carouselData];
 </script>

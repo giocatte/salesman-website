@@ -21,7 +21,7 @@
 import { ProductShowCarousel } from '#components';
 const router = useRouter();
 
-const { data } = await useFetch("/api/ProducType");
+const { data } = await useFetch("/api/ServicesAPI");
 const currentRoute = router.currentRoute.value.path.split("/")[2];
 var currentProduct = data.value.products.filter(product => product.Name === currentRoute);
 currentProduct = JSON.parse(JSON.stringify(currentProduct[0]));

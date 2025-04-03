@@ -1,12 +1,12 @@
 <template>
-    <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.5rem] z-[1] bg-iron contrast-75"></div>
-    <div id="Navbar" class="py-3 px-5 w-full h-[4.5rem] flex justify-between items-center z-30 sticky top-0 left-0">
+    <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.125rem] z-[1] bg-iron contrast-75"></div>
+    <div id="Navbar" class="py-3 px-5 w-full h-[4.125rem] flex justify-between items-center z-30 sticky top-0 left-0">
         <NuxtLink @click="menuOpen === true ? handleOptMenuSelected($event) : ''" to="/">
             <img :src="LogoMobile" alt="LogoMobile" class="w-[3.125rem] aspect-square">
         </NuxtLink>
         <MenuBurgerAnimated @menu-trigger="handleMenuTrigger" id="menuBurger" class=""></MenuBurgerAnimated>
         <div v-show="menuOpen === true" id="Menu"
-            class="w-full min-h-lvh h-lvh fixed overflow-hidden top-[4.5rem] left-0 z-20 bg-[#00000059]"
+            class="w-full min-h-lvh h-lvh fixed overflow-hidden top-[4.125rem] left-0 z-20 bg-[#00000059]"
             @click.self="closeMenu">
             <div class="w-full h-fit bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6 pb-8 animate__animated animate__faster"
                 :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">

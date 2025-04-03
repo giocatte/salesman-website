@@ -21,34 +21,33 @@
             <p class="mt-2 p-2 text-[2.5rem] font-nunito font-semibold">Servizi:</p>
             <ProductOverview :products="products.products" />
         </div>
-        <div id="ChiSono_" class="font-nunito relative w-full bg-iron-op pt-0 p-4 flex gap-2 row flex-col flex-nowrap">
-            <p class="mt-6 pt-2 text-[2.5rem] font-bold">Chi sono</p>
-            <p class="text-lg">Da oltre <b>30 anni</b> mi occupo di <b>vendita</b> e <b>assistenza</b> tecnica di
-                <b>macchinari</b> nuovi e
-                usati, garantendo <b>qualità</b> e
-                <b>affidabilità</b>.<br />Collaboro con i <b>migliori marchi</b> del settore per offrire soluzioni su
-                misura per
+        <div id="ChiSono_" class="font-nunito relative w-full bg-iron-op px-4 py-[1.875rem] flex gap-2 row flex-col flex-nowrap">
+            <p class="text-[2rem] font-extrabold">Chi sono</p>
+            <p class="text-lg">Da oltre <b>30 anni</b> mi occupo di <b>vendita</b> e <b>assistenza tecnica</b> di
+                macchinari <b>nuovi</b> e
+                <b>usati</b>, garantendo <b>qualità</b> e
+                <b>affidabilità</b>.<br />Collaboro con i <b>migliori marchi</b> del settore per offrire
+                <b>soluzioni</b> su
+                <b>misura</b> per
                 le tue
                 esigenze.
             </p>
-            <p class="font-semibold text-[2rem]">Assistenza tecnica e consulenza dedicata</p>
-            <p class="text-lg">Offro <b>assistenza tecnica</b>, fornitura di pezzi di ricambio e manutenzione periodica
-                sui
-                macchinari che
-                commercializzo.<br />Grazie alla <b>collaborazione con tecnici</b> specializzati, potrai contare su un
-                <b>servizio
-                    professionale</b> e <b>tempestivo</b>.<br />Fornisco inoltre consulenza personalizzata per scegliere
-                la
-                soluzione più adatta al
-                tuo volume di produzione e agli spazi della tua attività.
+            <p class="mt-3 text-[2rem] font-extrabold">Assistenza tecnica e consulenza dedicata</p>
+            <p class="text-lg">Offro <b>assistenza tecnica, fornitura di pezzi di ricambio</b> e <b>manutenzione
+                    periodica</b>
+                sui <b>macchinari</b> che commercializzo.<br />Grazie alla collaborazione con <b>tecnici
+                    specializzati</b>, potrai contare su un
+                servizio <b>professionale</b> e <b>tempestivo</b>.<br />Fornisco inoltre <b>consulenza
+                    personalizzata</b> per scegliere
+                la soluzione più adatta al tuo <b>volume di produzione</b> e agli <b>spazi</b> della tua attività.
             </p>
-            <div class="p-1 mt-2 w-fit rounded-full bg-BlueToRed">
+            <!-- <div class="p-1 mt-2 w-fit rounded-full bg-BlueToRed">
                 <NuxtLink to="/#Contatti">
                     <button class="btnBlueRed active">
                         CONTATTAMI
                     </button>
                 </NuxtLink>
-            </div>
+            </div> -->
         </div>
         <div id="OnlyTheBest" class="relative py-8">
             <p class="text-[2.5rem] text-center font-semibold font-inter text-gr">SOLO IL MEGLIO</p>
@@ -83,7 +82,7 @@
 import ProductOverview from '../components/Product/Overview.vue';
 import 'animate.css';
 
-const { data } = await useFetch("/api/ProducType");
+const { data } = await useFetch("/api/ServicesAPI");
 const products = JSON.parse(JSON.stringify(data.value));
 
 </script>

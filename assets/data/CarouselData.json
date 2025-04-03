@@ -1,0 +1,460 @@
+{
+    "Panifici": [
+        {
+            "shId": 1,
+            "Brand": "MIXER",
+            "Model": "ASE_EVO",
+            "Description": "IMPASTATRICE A SPIRALE",
+            "ImgUrl": "/img/Panifici/ASE_EVO.png"
+        },
+        {
+            "shId": 2,
+            "Brand": "MIXER",
+            "Model": "ASM_EVO_RS",
+            "Description": "IMPASTATRICE A SPIRALE",
+            "ImgUrl": "/img/Panifici/ASM_EVO_RS.png"
+        },
+        {
+            "shId": 3,
+            "Brand": "RAM",
+            "Model": "BA450S",
+            "Description": "TAGLIERINA AUTOMATICA",
+            "ImgUrl": "/img/Panifici/BA450S.png"
+        },
+        {
+            "shId": 4,
+            "Brand": "TECNOMAC",
+            "Model": "BANCOLEV+2",
+            "Description": "BANCO DA LAVORO",
+            "ImgUrl": "/img/Panifici/BANCOLEV+2.png"
+        },
+        {
+            "shId": 5,
+            "Brand": "POLIN",
+            "Model": "BRAVO_2_VIE",
+            "Description": "MACCHINA PER PANE",
+            "ImgUrl": "/img/Panifici/BRAVO_2_VIE.png"
+        },
+        {
+            "shId": 6,
+            "Brand": "RAM",
+            "Model": "BS450B",
+            "Description": "TAGLIERINA AUTOMATICA",
+            "ImgUrl": "/img/Panifici/BS450B.png"
+        },
+        {
+            "shId": 7,
+            "Brand": "POLIN",
+            "Model": "VBS_BC_AIR",
+            "Description": "LINEA PRODUZIONE PANE",
+            "ImgUrl": "/img/Panifici/VBS_CB_AIR.png"
+        },
+        {
+            "shId": 8,
+            "Brand": "POLIN",
+            "Model": "TV_AVANT_PELLET",
+            "Description": "FORNO A PELLET PER PANE",
+            "ImgUrl": "/img/Panifici/TV_AVANT_PELLET.png"
+        },
+        {
+            "shId": 9,
+            "Brand": "POLIN",
+            "Model": "TV_AVANT",
+            "Description": "FORNO A TUBI A VAPORE PER PANE",
+            "ImgUrl": "/img/Panifici/TV_AVANT.png"
+        },
+        {
+            "shId": 10,
+            "Brand": "POLIN",
+            "Model": "DRAGO_890",
+            "Description": "FORNO CICLOTERMICO PER PANE",
+            "ImgUrl": "/img/Panifici/DRAGO_890.png"
+        },
+        {
+            "shId": 11,
+            "Brand": "POLIN",
+            "Model": "ELETTRODRAGO_AVANT",
+            "Description": "FORNO ELETTRICO PER PANE",
+            "ImgUrl": "/img/Panifici/ELETTRODRAGO_AVANT.png"
+        },
+        {
+            "shId": 12,
+            "Brand": "POLIN",
+            "Model": "INDUSTRY_40_AVANT",
+            "Description": "FRERMALIEVITAZIONE",
+            "ImgUrl": "/img/Panifici/INDUSTRY_40_AVANT.png"
+        },
+        {
+            "shId": 13,
+            "Brand": "POLIN",
+            "Model": "ROTO_AVANT",
+            "Description": "FORNO ROTATIVO PER PANE",
+            "ImgUrl": "/img/Panifici/ROTO_AVANT.png"
+        },
+        {
+            "shId": 14,
+            "Brand": "RAM",
+            "Model": "DSA_DOUBLE_CUT",
+            "Description": "SPEZZATRICE QUADRA AUTOMATICA",
+            "ImgUrl": "/img/Panifici/DSA_DOUBLE_CUT.png"
+        },
+        {
+            "shId": 15,
+            "Brand": "POLIN",
+            "Model": "ROTO_AVANT_HR_6080",
+            "Description": "FORNO ROTATIVO PER PANE",
+            "ImgUrl": "/img/Panifici/ROTO_AVANT_HR_6080.png"
+        },
+        {
+            "shId": 16,
+            "Brand": "POLIN",
+            "Model": "ROTO_PELLET_AVANT_80120",
+            "Description": "FORNO ROTATIVO A PELLET PER PANE",
+            "ImgUrl": "/img/Panifici/ROTO_PELLET_AVANT_80120.png"
+        },
+        {
+            "shId": 17,
+            "Brand": "POLIN",
+            "Model": "ROTOAVANT_FB_80100",
+            "Description": "FORNO ROTATIVO PER PANE",
+            "ImgUrl": "/img/Panifici/ROTOAVANT_FB_80100.png"
+        },
+        {
+            "shId": 18,
+            "Brand": "POLIN",
+            "Model": "S",
+            "Description": "SPEZZATRICE",
+            "ImgUrl": "/img/Panifici/S.png"
+        },
+        {
+            "shId": 19,
+            "Brand": "POLIN",
+            "Model": "SPEZZATRICI_SPIN",
+            "Description": "MACCHINA PER CIABATTE",
+            "ImgUrl": "/img/Panifici/SPEZZATRICI_SPIN.png"
+        }
+    ],
+    "Pizzerie": [
+        {
+            "shId": 1,
+            "Brand": "MECNOSOUND",
+            "Model": "ARROTONDATRICE_SERIE_AR",
+            "Description": "ARROTONDATRICE",
+            "ImgUrl": "/img/Pizzerie/ARROTONDATRICE_SERIE_AR.png"
+        },
+        {
+            "shId": 2,
+            "Brand": "MIXER",
+            "Model": "ASM_EVO",
+            "Description": "IMPASTATRICE A SPIRALE",
+            "ImgUrl": "/img/Pizzerie/ASM_EVO.png"
+        },
+        {
+            "shId": 3,
+            "Brand": "DELL",
+            "Model": "B_COMPACT",
+            "Description": "ARROTONDATRICE",
+            "ImgUrl": "/img/Pizzerie/B_COMPACT.png"
+        },
+        {
+            "shId": 4,
+            "Brand": "MECNOSOUND",
+            "Model": "MASSIMA_M30_M40_M50",
+            "Description": "IMPASTATRICE",
+            "ImgUrl": "/img/Pizzerie/MASSIMA_M30_M40_M50.png"
+        },
+        {
+            "shId": 5,
+            "Brand": "POLIN",
+            "Model": "STRATOS_PIZZA",
+            "Description": "FORNO PIZZA",
+            "ImgUrl": "/img/Pizzerie/STRATOS_PIZZA.png"
+        },
+        {
+            "shId": 6,
+            "Brand": "POLIN",
+            "Model": "STRATOS_XP",
+            "Description": "FORNO PIZZA",
+            "ImgUrl": "/img/Pizzerie/STRATOS_XP.png"
+        },
+        {
+            "shId": 7,
+            "Brand": "MECNOSOUND",
+            "Model": "UNICA_SA",
+            "Description": "ARROTONDATRICE",
+            "ImgUrl": "/img/Pizzerie/UNICA_SA.png"
+        }
+    ],
+    "Gelaterie": [
+        {
+            "shId": 1,
+            "Brand": "ICB",
+            "Model": "CHOCOTEMPER",
+            "Description": "TEMPERATRICE PER CIOCCOLATO",
+            "ImgUrl": "/img/Gelaterie/CHOCOTEMPER.png"
+        },
+        {
+            "shId": 2,
+            "Brand": "CATABRIGA",
+            "Model": "COMPACTA_4",
+            "Description": "MACHINA PER GELATO",
+            "ImgUrl": "/img/Gelaterie/COMPACTA_4.png"
+        },
+        {
+            "shId": 3,
+            "Brand": "CATABRIGA",
+            "Model": "CREMOMATIC_60",
+            "Description": "MACCHINA CUOCICREMA",
+            "ImgUrl": "/img/Gelaterie/CREMOMATIC_60.png"
+        },
+        {
+            "shId": 4,
+            "Brand": "ICB",
+            "Model": "DOSICREAM",
+            "Description": "RIEMPITRICE E DOSATRICE",
+            "ImgUrl": "/img/Gelaterie/DOSICREAM.png"
+        },
+        {
+            "shId": 5,
+            "Brand": "ICB",
+            "Model": "ICBELT",
+            "Description": "NASTRO RICOPRITORE PER CIOCCOLATO",
+            "ImgUrl": "/img/Gelaterie/ICBELT.png"
+        },
+        {
+            "shId": 6,
+            "Brand": "CATABRIGA",
+            "Model": "LINE_F",
+            "Description": "MACCHINE PER GELATO",
+            "ImgUrl": "/img/Gelaterie/LINE_F.png"
+        },
+        {
+            "shId": 7,
+            "Brand": "CATABRIGA",
+            "Model": "MASTERCHEF",
+            "Description": "MACCHINA MULTIFUNZIONE",
+            "ImgUrl": "/img/Gelaterie/MASTERCHEF.png"
+        },
+        {
+            "shId": 8,
+            "Brand": "CATABRIGA",
+            "Model": "MULTIFREEZE_8_PRO",
+            "Description": "MANTECATORE PER GELATO",
+            "ImgUrl": "/img/Gelaterie/MULTIFREEZE_8_PRO.png"
+        },
+        {
+            "shId": 9,
+            "Brand": "TECNOMAC",
+            "Model": "RAPIDMAC_50",
+            "Description": "REFRIGERATORE D'ACQUA",
+            "ImgUrl": "/img/Gelaterie/RAPIDMAC_50.png"
+        },
+        {
+            "shId": 10,
+            "Brand": "TECNOMAC",
+            "Model": "TECNOCEL",
+            "Description": "ARMADIO REFRIGERATO",
+            "ImgUrl": "/img/Gelaterie/TECNOCEL.png"
+        }
+    ],
+    "Pasticcerie": [
+        {
+            "shId": 1,
+            "Brand": "MIXER",
+            "Model": "ASM_EVO",
+            "Description": "IMPASTATRICE A SPIRALE",
+            "ImgUrl": "/img/Pasticcerie/ASM_EVO.png"
+        },
+        {
+            "shId": 2,
+            "Brand": "RAM",
+            "Model": "AVV200",
+            "Description": "AVVOLGITRICE CROISSANT",
+            "ImgUrl": "/img/Pasticcerie/AVV200.png"
+        },
+        {
+            "shId": 3,
+            "Brand": "TECNOMAC",
+            "Model": "CHOCOTEMPER",
+            "Description": "TEMPERATRICE PER CIOCCOLATO",
+            "ImgUrl": "/img/Pasticcerie/CHOCOTEMPER.png"
+        },
+        {
+            "shId": 4,
+            "Brand": "TECNOMAC",
+            "Model": "DOSICREAM",
+            "Description": "RIEMPITRICE E DOSATRICE",
+            "ImgUrl": "/img/Pasticcerie/DOSICREAM.png"
+        },
+        {
+            "shId": 5,
+            "Brand": "MIXER",
+            "Model": "IBT_EVO",
+            "Description": "IMPASTATRICE A BRACCI",
+            "ImgUrl": "/img/Pasticcerie/IBT_EVO.png"
+        },
+        {
+            "shId": 6,
+            "Brand": "TECNOMAC",
+            "Model": "ICBELT",
+            "Description": "NASTRO RICOPRITORE PER CIOCCOLATO",
+            "ImgUrl": "/img/Pasticcerie/ICBELT.png"
+        },
+        {
+            "shId": 7,
+            "Brand": "RAM",
+            "Model": "K60",
+            "Description": "MESCOLATRICE PLANETARIA",
+            "ImgUrl": "/img/Pasticcerie/K60.png"
+        },
+        {
+            "shId": 8,
+            "Brand": "RAM",
+            "Model": "K160",
+            "Description": "MESCOLATRICE PLANETARIA",
+            "ImgUrl": "/img/Pasticcerie/K160.png"
+        },
+        {
+            "shId": 9,
+            "Brand": "POLIN",
+            "Model": "MULTIDROP_NORMAL",
+            "Description": "MACCHINA PER BISCOTTI",
+            "ImgUrl": "/img/Pasticcerie/MULTIDROP_NORMAL.png"
+        },
+        {
+            "shId": 10,
+            "Brand": "POLIN",
+            "Model": "POCKET_4060",
+            "Description": "FORNO ROTATIVO PER PASTICCERIA",
+            "ImgUrl": "/img/Pasticcerie/POCKET_4060.png"
+        },
+        {
+            "shId": 11,
+            "Brand": "RAM",
+            "Model": "Q600",
+            "Description": "SFOGLIATRICE AUTOMATICA",
+            "ImgUrl": "/img/Pasticcerie/Q600.png"
+        },
+        {
+            "shId": 12,
+            "Brand": "RAM",
+            "Model": "Q500",
+            "Description": "SFOGLIATRICE MANUALE",
+            "ImgUrl": "/img/Pasticcerie/Q500.png"
+        },
+        {
+            "shId": 13,
+            "Brand": "RAM",
+            "Model": "QTP715",
+            "Description": "SFOGLIATRICE AUTOMATICA",
+            "ImgUrl": "/img/Pasticcerie/QTP715.png"
+        },
+        {
+            "shId": 14,
+            "Brand": "POLIN",
+            "Model": "SCOOTER_4060",
+            "Description": "FORNO ROTATIVO PER PASTICCERIA",
+            "ImgUrl": "/img/Pasticcerie/SCOOTER_4060.png"
+        },
+        {
+            "shId": 15,
+            "Brand": "POLIN",
+            "Model": "SMART_WIND",
+            "Description": "FORNO VENTILATO PER PASTICCERIA",
+            "ImgUrl": "/img/Pasticcerie/SMART_WIND.png"
+        },
+        {
+            "shId": 16,
+            "Brand": "POLIN",
+            "Model": "SMART_WIND_4060",
+            "Description": "FORNO VENTILATO PER PASTICCERIA",
+            "ImgUrl": "/img/Pasticcerie/SMART_WIND_4060.png"
+        },
+        {
+            "shId": 17,
+            "Brand": "POLIN",
+            "Model": "STRATOS_XP",
+            "Description": "FORNO PASTICCERIA",
+            "ImgUrl": "/img/Pasticcerie/STRATOS_XP.png"
+        },
+        {
+            "shId": 18,
+            "Brand": "LONGONI",
+            "Model": "LONGONI_SHOW1",
+            "Description": "FRIGHI",
+            "ImgUrl": "/img/Pasticcerie/LONGONI_SHOW1.png"
+        },
+        {
+            "shId": 19,
+            "Brand": "LONGONI",
+            "Model": "LONGONI_SHOW2",
+            "Description": "FRIGHI",
+            "ImgUrl": "/img/Pasticcerie/LONGONI_SHOW2.png"
+        }
+    ],
+    "Ristorazione": [
+        {
+            "shId": 1,
+            "Brand": "GIORIK",
+            "Model": "MINITOUCH",
+            "Description": "FORNO PER POLLO",
+            "ImgUrl": "/img/Ristorazione/MINITOUCH.png"
+        },
+        {
+            "shId": 2,
+            "Brand": "GIORIK",
+            "Model": "UNIKA_900_E",
+            "Description": "CUCINA ELETTRICA",
+            "ImgUrl": "/img/Ristorazione/UNIKA_900_E.png"
+        },
+        {
+            "shId": 3,
+            "Brand": "GIORIK",
+            "Model": "UNIKA_900_F",
+            "Description": "CUCINA A GAS",
+            "ImgUrl": "/img/Ristorazione/UNIKA_900_F.png"
+        },
+        {
+            "shId": 4,
+            "Brand": "GIORIK",
+            "Model": "UNIKA_900",
+            "Description": "CUOCIPASTA",
+            "ImgUrl": "/img/Ristorazione/UNIKA_900.png"
+        },
+        {
+            "shId": 5,
+            "Brand": "GIORIK",
+            "Model": "UNIKA_900_M",
+            "Description": "FRIGGITRICE",
+            "ImgUrl": "/img/Ristorazione/UNIKA_900_M.png"
+        },
+        {
+            "shId": 6,
+            "Brand": "GIORIK",
+            "Model": "MINITOUCH_STAND",
+            "Description": "FORNO ELETTRICO",
+            "ImgUrl": "/img/Ristorazione/MINITOUCH_STAND.png"
+        },
+        {
+            "shId": 7,
+            "Brand": "GIORIK",
+            "Model": "STEAMBOX",
+            "Description": "FORNO ELETTRICO",
+            "ImgUrl": "/img/Ristorazione/STEAMBOX.png"
+        },
+        {
+            "shId": 8,
+            "Brand": "GIORIK",
+            "Model": "SEMF062",
+            "Description": "FORNO A GAS",
+            "ImgUrl": "/img/Ristorazione/SEMF062.png"
+        },
+        {
+            "shId": 9,
+            "Brand": "GIORIK",
+            "Model": "UNIKA_900_p3",
+            "Description": "CUCINA COMBINATA",
+            "ImgUrl": "/img/Ristorazione/UNIKA_900_p3.png"
+        }
+    ]
+}

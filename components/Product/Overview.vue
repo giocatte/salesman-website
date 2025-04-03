@@ -2,8 +2,8 @@
     <div id="Overview_Component" v-if="products && products.length > 0" class="flex flex-col gap-y-2 px-4 mb-8">
         <!-- Tabs -->
         <div
-            class="flex items-end gap-1 overflow-x-auto no-scrollbar min-h-10 h-fit border-b-[1px] border-gray-200 snap-x snap-proximity scroll-smooth  transition-all duration-150">
-            <div class="p-1 w-fit rounded-full transition-all duration-150"
+            class="overflow-x-scroll flex items-end gap-x-1 min-h-10 h-fit snap-x snap-proximity scroll-smooth transition-all duration-150">
+            <div class="p-1 mb-2 w-fit rounded-full transition-all duration-150"
                 :class="{ 'bg-BlueToRed': activeTab === p.Name }" v-for="p in products" :key="p.Id"
                 @click="setActiveTab(p.Name)">
                 <button class="px-2 py-1 h-fit -m-[1px] text-black rounded-full"
@@ -19,7 +19,7 @@
 
             <!-- Image -->
             <div class="relative self-center w-full max-w-[400px] rounded-[1.25rem] bg-no-repeat bg-center bg-cover"
-                :style="{ backgroundImage: `url(${p.component.ImgUrl})`, aspectRatio: '1 / 1' }">
+                :style="{ backgroundImage: `url(${p.component.ImgUrl})`, aspectRatio: '372 / 250' }">
             </div>
 
             <!-- Title -->
@@ -38,7 +38,7 @@
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .desc b {
     font-weight: 600;
 }
