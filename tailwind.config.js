@@ -45,7 +45,7 @@ export default {
           color: '#3A3939',
         },
         '.btnBlueRed-ez': {
-          'color': '#000',
+          'color': '#3A3939',
           'width': 'fit-content',
           'font-weight': 'bold',
           'background-color': '#fff',
@@ -54,8 +54,8 @@ export default {
           'border-radius': '9999px'
         },
         '.btnBlueRed': {
-          'color': '#000',
-          'width': 'fit-content',
+          'color': '#3A3939',
+        // 'width': 'fit-content',
           'font-weight': 'bold',
           'background-color': '#fff',
           'font-size': '1rem',

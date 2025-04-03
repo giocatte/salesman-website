@@ -48,10 +48,10 @@
                             active-class="activeNav">
                             Attrezzature
                         </NuxtLink>
-                        <NuxtLink to="/Servizi/Arredamenti" @click="handleOptMenuSelected"
+                        <NuxtLink to="/Servizi/Progettazione" @click="handleOptMenuSelected"
                             class="block w-fit font-nunito text-[#6E6E6E] text-2xl py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
                             active-class="activeNav">
-                            Arredamenti
+                            Progettazione
                         </NuxtLink>
                     </div>
                 </div>

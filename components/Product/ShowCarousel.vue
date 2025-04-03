@@ -1,6 +1,7 @@
 <template>
     <div id="ShowCarousel_Component" v-if="shows && shows.length > 0" class="px-3 py-4 bg-white">
-        <div class="relative w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col felx-nowrap z-0">
+        <div v-if="currentCarouselData[0].hasOwnProperty('Brand')"
+            class="relative w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col felx-nowrap z-0">
             <div class="w-full h-fit bg-none bg-[#f4f4f4] rounded-t-xl">
                 <p class="text-gr font-nunito text-center text-xl font-extrabold mt-5" v-html="impresaText">
                 </p>
@@ -27,6 +28,26 @@
                 </div>
             </UCarousel>
         </div>
+        <div v-else class="relative w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col felx-nowrap z-0">
+            <UCarousel id="CaroselloProdotti" class="rounded-xl overflow-hidden bg-[#f4f4f4]" v-slot="{ item }"
+                :items="currentCarouselData" indicators :ui="{
+                    item: 'basis-full',
+                    indicators: {
+                        wrapper: 'gap-2 bottom-2',
+                        base: 'w-2 h-2 [aspect-ratio:_1/1]',
+                        active: 'bg-BlueToRed',
+                        inactive: 'bg-gray-100 dark:bg-gray-800'
+                    }
+                }">
+                <div
+                    class="w-full h-full aspect-[8/9.1] bg-[#f4f4f4] flex items-center">
+                    <div :style="{ backgroundImage: 'url(' + item.ImgUrl + ')' }"
+                        class="h-full w-full block drop-shadow-lg bg-cover bg-no-repeat bg-center"
+                        alt="carousel image">
+                    </div>
+                </div>
+            </UCarousel>
+        </div>
     </div>
 </template>
 
@@ -35,10 +56,6 @@
 .desc b {
     font-weight: 600;
 }
-
-/* div.CaroselloProdotti {
-    --color-primary-400: 251 135 82;
-} */
 </style>
 
 <script setup lang="ts">

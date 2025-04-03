@@ -41,13 +41,6 @@
                     personalizzata</b> per scegliere
                 la soluzione più adatta al tuo <b>volume di produzione</b> e agli <b>spazi</b> della tua attività.
             </p>
-            <!-- <div class="p-1 mt-2 w-fit rounded-full bg-BlueToRed">
-                <NuxtLink to="/#Contatti">
-                    <button class="btnBlueRed active">
-                        CONTATTAMI
-                    </button>
-                </NuxtLink>
-            </div> -->
         </div>
         <div id="OnlyTheBest" class="relative py-8">
             <p class="text-[2.5rem] text-center font-semibold font-inter text-gr">SOLO IL MEGLIO</p>

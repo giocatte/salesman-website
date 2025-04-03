@@ -40,7 +40,7 @@ export default defineEventHandler((event) => {
           Intro:
             "Offro una <b>gamma completa</b> di <b>forni</b> e <b>attrezzature</b> per <b>panifici</b>, pensata per garantire <b>qualità costante</b> e <b>massima resa produttiva</b>.<br/>Che tu gestisca un <b>panificio artigianale</b> o una produzione più strutturata, troverai <b>soluzioni adatte</b> a ogni esigenza.",
           Title_2: "Affidabilità e qualità per la tua attività",
-          Desc: "Collaboro con <b>Polin</b>, uno dei <b>marchi di riferimento</b> nel settore, per offrirti <b>attrezzature</b> che uniscono <b>tecnologia avanzata</b> e <b>durabilità</b>.<br/>Nel <b>Padova, Venezia e nel Nord Est</b> fornisco:",
+          Desc: "Collaboro con <b>Polin</b>, uno dei <b>marchi di riferimento</b> nel settore, per offrirti <b>attrezzature</b> che uniscono <b>tecnologia avanzata</b> e <b>durabilità</b>.<br/>A <b>Padova, Venezia e nel Nord Est</b> fornisco:",
           list: [
             "<b>Forni a tunnel</b>, a <b>vapore</b> e a <b>cupola</b>, per adattarsi a differenti modalità di <b>cottura</b>",
             "<b>Forni ventilati</b>, ideali per una <b>distribuzione uniforme</b> del calore",
@@ -90,7 +90,7 @@ export default defineEventHandler((event) => {
           Intro:
             "Metto a disposizione un’ampia selezione di <b>macchinari professionali</b> e <b>attrezzature</b> per <b>pasticceria</b>, studiati per migliorare l’<b>efficienza</b> e garantire <b>risultati eccellenti</b>.<br/>Dalle <b>pasticcerie artigianali</b> ai laboratori più strutturati, offro <b>soluzioni personalizzate</b> per ogni <b>necessità produttiva</b>.",
           Title_2: "Soddisfa e sorprendi i tuoi clienti",
-          Desc: "Collaboro con i <b>migliori marchi</b> del settore, tra cui <b>Polin</b>, <b>RAM</b>, <b>OSTALI</b> e <b>Longoni</b>, selezionando <b>macchinari</b> che combinano <b>innovazione</b>, <b>prestazioni elevate</b> e <b>affidabilità</b> nel tempo.<br/>Nel <b>Padova, Venezia e nel Nord Est</b> fornisco:",
+          Desc: "Collaboro con i <b>migliori marchi</b> del settore, tra cui <b>Polin</b>, <b>RAM</b>, <b>OSTALI</b> e <b>Longoni</b>, selezionando <b>macchinari</b> che combinano <b>innovazione</b>, <b>prestazioni elevate</b> e <b>affidabilità</b> nel tempo.<br/>A <b>Padova, Venezia e nel Nord Est</b> fornisco:",
           list: [
             "<b>Forni statici</b> ed <b>elettrici</b>, disponibili in varie configurazioni per una <b>cottura ottimale</b>",
             "<b>Forni ventilati</b>, a <b>gas</b> ed <b>elettrici</b>, ideali per <b>lavorazioni specifiche</b>",
@@ -139,7 +139,7 @@ export default defineEventHandler((event) => {
           Intro:
             "Metto a tua disposizione una vasta gamma di <b>forni</b> e <b>macchinari per pizzeria</b> che ti permetteranno di <b>ottimizzare</b> la tua attività e dare vita a nuove <b>ricette</b>.<br/>Dalle <b>pizzerie artigianali</b> alle grandi catene di <b>ristoranti</b>, offro <b>soluzioni su misura</b> per soddisfare ogni <b>esigenza produttiva</b>.",
           Title_2: "La soluzione giusta per ogni esigenza",
-          Desc: "Collaboro con il <b>brand più prestigioso</b> del settore, <b>Polin</b>, e seleziono solo <b>attrezzature</b> in grado di garantire <b>qualità</b>, <b>efficienza</b> e <b>affidabilità</b>.<br/>Il mio obiettivo è fornirti nel <b>Padova, Venezia e nel Nord Est</b>:",
+          Desc: "Collaboro con il <b>brand più prestigioso</b> del settore, <b>Polin</b>, e seleziono solo <b>attrezzature</b> in grado di garantire <b>qualità</b>, <b>efficienza</b> e <b>affidabilità</b>.<br/>Il mio obiettivo è fornirti a <b>Padova, Venezia e nel Nord Est</b>:",
           list: [
             "<b>Forni statici</b> ed <b>elettrici</b> (modulari, a tunnel, a cupola)",
             "<b>Forni ventilati</b> per cotture più rapide e omogenee",
@@ -190,7 +190,7 @@ export default defineEventHandler((event) => {
           Intro:
             "Metto a tua disposizione una vasta selezione di <b>macchinari</b> e <b>soluzioni per gelaterie</b>, perfette per trasformare la tua attività in un ambiente ideale dove produrre <b>gelato artigianale</b> di altissima <b>qualità</b>.",
           Title_2: "Distinguiti con attrezzature d’eccellenza",
-          Desc: "Collaboro con i <b>brand più affidabili</b> del settore per assicurarti <b>efficienza</b>, <b>facilità d’uso</b> e risultati <b>costanti nel tempo</b>.<br/>Grazie a <b>partnership</b> con aziende leader, come <b>Catabriga</b> per le <b>macchine gelato</b> e <b>Polin, RAM, OSTALI</b> e <b>Longoni</b> per <b>frigoriferi</b>, <b>armadi refrigerati</b>, <b>vetrine</b> e <b>banchi freddi</b>.<br/>Il mio obiettivo è fornirti nel <b>Padova, Venezia e nel Nord Est</b>:",
+          Desc: "Collaboro con i <b>brand più affidabili</b> del settore per assicurarti <b>efficienza</b>, <b>facilità d’uso</b> e risultati <b>costanti nel tempo</b>.<br/>Grazie a <b>partnership</b> con aziende leader, come <b>Catabriga</b> per le <b>macchine gelato</b> e <b>Polin, RAM, OSTALI</b> e <b>Longoni</b> per <b>frigoriferi</b>, <b>armadi refrigerati</b>, <b>vetrine</b> e <b>banchi freddi</b>.<br/>Il mio obiettivo è fornirti a <b>Padova, Venezia e nel Nord Est</b>:",
           list: [
             "<b>Macchine per gelato</b> di ultima generazione, progettate per mantenere la massima <b>cremosità</b> e garantire la corretta <b>pastorizzazione</b>",
             "<b>Sistemi di refrigerazione</b> e <b>conservazione</b> (<b>armadi</b>, <b>vetrine</b>, <b>banchi freddi</b>) per mantenere il <b>gelato</b> sempre alla <b>temperatura ideale</b>",
@@ -232,7 +232,7 @@ export default defineEventHandler((event) => {
             "<b>Brasiere e cuocipasta</b>: ideali per la ristorazione collettiva e per ottimizzare i processi di cottura",
             "<b>Attrezzature complementari</b>: soluzioni integrate per migliorare il flusso di lavoro e garantire il massimo della produttività",
           ],
-          ImgUrl: "/img/RISTORAZIONE/BS450B.png",
+          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png",
         },
       },
       {
@@ -286,9 +286,9 @@ export default defineEventHandler((event) => {
       },
       {
         Id: 7,
-        Name: "Arredamenti",
+        Name: "Progettazione",
         component: {
-          BtnText: "Arredamenti",
+          BtnText: "Progettazione",
           Title:
             "Arredamenti per <br/>Laboratori e Cucine <br/>Vendita e Progettazione <br/>su Misura",
           Description:

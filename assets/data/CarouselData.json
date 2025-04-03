@@ -80,9 +80,9 @@
         {
             "shId": 12,
             "Brand": "POLIN",
-            "Model": "INDUSTRY_40_AVANT",
+            "Model": "FERMALIEVITAZIONE_INDUSTRY_40_AVANT",
             "Description": "FRERMALIEVITAZIONE",
-            "ImgUrl": "/img/Panifici/INDUSTRY_40_AVANT.png"
+            "ImgUrl": "/img/Panifici/FERMALIEVITAZIONE_INDUSTRY_40_AVANT.png"
         },
         {
             "shId": 13,
@@ -137,7 +137,7 @@
     "Pizzerie": [
         {
             "shId": 1,
-            "Brand": "MECNOSOUND",
+            "Brand": "MECNOSUD",
             "Model": "ARROTONDATRICE_SERIE_AR",
             "Description": "ARROTONDATRICE",
             "ImgUrl": "/img/Pizzerie/ARROTONDATRICE_SERIE_AR.png"
@@ -158,10 +158,10 @@
         },
         {
             "shId": 4,
-            "Brand": "MECNOSOUND",
-            "Model": "MASSIMA_M30_M40_M50",
+            "Brand": "MECNOSUD",
+            "Model": "MASSIMA_M30-M40-M50",
             "Description": "IMPASTATRICE",
-            "ImgUrl": "/img/Pizzerie/MASSIMA_M30_M40_M50.png"
+            "ImgUrl": "/img/Pizzerie/MASSIMA_M30-M40-M50.png"
         },
         {
             "shId": 5,
@@ -179,7 +179,7 @@
         },
         {
             "shId": 7,
-            "Brand": "MECNOSOUND",
+            "Brand": "MECNOSUD",
             "Model": "UNICA_SA",
             "Description": "ARROTONDATRICE",
             "ImgUrl": "/img/Pizzerie/UNICA_SA.png"
@@ -245,9 +245,9 @@
         {
             "shId": 9,
             "Brand": "TECNOMAC",
-            "Model": "RAPIDMAC_50",
+            "Model": "RAPIDMATIC_50",
             "Description": "REFRIGERATORE D'ACQUA",
-            "ImgUrl": "/img/Gelaterie/RAPIDMAC_50.png"
+            "ImgUrl": "/img/Gelaterie/RAPIDMATIC_50.png"
         },
         {
             "shId": 10,
@@ -317,9 +317,9 @@
         {
             "shId": 9,
             "Brand": "POLIN",
-            "Model": "MULTIDROP_NORMAL",
+            "Model": "MULTIDROP",
             "Description": "MACCHINA PER BISCOTTI",
-            "ImgUrl": "/img/Pasticcerie/MULTIDROP_NORMAL.png"
+            "ImgUrl": "/img/Pasticcerie/MULTIDROP.png"
         },
         {
             "shId": 10,
@@ -455,6 +455,82 @@
             "Model": "UNIKA_900_p3",
             "Description": "CUCINA COMBINATA",
             "ImgUrl": "/img/Ristorazione/UNIKA_900_p3.png"
+        }
+    ],
+    "Attrezzature": [
+        {
+            "shId": 1,
+            "ImgUrl": "/img/ATTREZZATURE/ABBATTITORE_MODI.png"
+        },
+        {
+            "shId": 2,
+            "ImgUrl": "/img/ATTREZZATURE/ABBATTITORI.png"
+        },
+        {
+            "shId": 3,
+            "ImgUrl": "/img/ATTREZZATURE/APX.png"
+        },
+        {
+            "shId": 4,
+            "ImgUrl": "/img/ATTREZZATURE/ARMADIO_SMART.png"
+        },
+        {
+            "shId": 5,
+            "ImgUrl": "/img/ATTREZZATURE/BANCO_LAVORO.png"
+        },
+        {
+            "shId": 6,
+            "ImgUrl": "/img/ATTREZZATURE/FRIGHI_LONGONI.png"
+        },
+        {
+            "shId": 7,
+            "ImgUrl": "/img/ATTREZZATURE/HPW_40.png"
+        },
+        {
+            "shId": 8,
+            "ImgUrl": "/img/ATTREZZATURE/HPW_80.png"
+        },
+        {
+            "shId": 9,
+            "ImgUrl": "/img/ATTREZZATURE/HT 150.png"
+        },
+        {
+            "shId": 10,
+            "ImgUrl": "/img/ATTREZZATURE/THAW_PRO.png"
+        },
+        {
+            "shId": 11,
+            "ImgUrl": "/img/ATTREZZATURE/TLX.png"
+        }
+    ],
+    "Progettazione": [
+        {
+            "shId": 1,
+            "ImgUrl": "/img/ARREDAMENTI/ARREDAMENTO_1.png"
+        },
+        {
+            "shId": 2,
+            "ImgUrl": "/img/ARREDAMENTI/ARREDAMENTO_2.png"
+        },
+        {
+            "shId": 3,
+            "ImgUrl": "/img/ARREDAMENTI/ARREDAMENTO_3.png"
+        },
+        {
+            "shId": 4,
+            "ImgUrl": "/img/ARREDAMENTI/ARREDAMENTO_4.png"
+        },
+        {
+            "shId": 5,
+            "ImgUrl": "/img/ARREDAMENTI/ARREDAMENTO_5.png"
+        },
+        {
+            "shId": 6,
+            "ImgUrl": "/img/ARREDAMENTI/ARREDAMENTO_6.png"
+        },
+        {
+            "shId": 7,
+            "ImgUrl": "/img/ARREDAMENTI/ARREDAMENTO_7.png"
         }
     ]
 }

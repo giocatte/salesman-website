@@ -14,6 +14,21 @@
             </ul>
         </div>
         <ProductShowCarousel :product="currentProduct" />
+        <div class="bg-white pt-8 text-gr font-nunito flex flex-col flex-nowrap gap-y-3 items-center">
+            <p class="text-2xl font-bold">Potrebbe interessarti anche:</p>
+            <div class="w-full pb-4 px-6 flex justify-between">
+                <NuxtLink to="/Servizi/Attrezzature" class="p-1 w-[47%] rounded-full bg-BlueToRed">
+                    <button class="w-full btnBlueRed">
+                        Attrezzature
+                    </button>
+                </NuxtLink>
+                <NuxtLink to="/Servizi/Pizzerie" class="p-1 w-[47%] rounded-full bg-BlueToRed">
+                    <button class="w-full btnBlueRed">
+                        Pizzerie
+                    </button>
+                </NuxtLink>
+            </div>
+        </div>
     </div>
 </template>
 

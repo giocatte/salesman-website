@@ -30,7 +30,7 @@
 
             <!-- Button -->
             <NuxtLink :to="`/Servizi/${p.component.BtnText}`" id="ChiSono" class="p-1 w-fit rounded-full bg-BlueToRed">
-                <button class="btnBlueRed">
+                <button class="btnBlueRed w-fit">
                     SCOPRI DI PIÙ
                 </button>
             </NuxtLink>
