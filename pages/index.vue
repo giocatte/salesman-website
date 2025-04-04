@@ -21,7 +21,8 @@
             <p class="mt-2 p-2 text-[2.5rem] font-nunito font-semibold">Servizi:</p>
             <ProductOverview :products="products.products" />
         </div>
-        <div id="ChiSono_" class="font-nunito relative w-full bg-iron-op px-4 py-[1.875rem] flex gap-2 row flex-col flex-nowrap">
+        <div id="ChiSono_"
+            class="font-nunito relative w-full bg-iron-op px-4 py-[1.875rem] flex gap-2 row flex-col flex-nowrap">
             <p class="text-[2rem] font-extrabold">Chi sono</p>
             <p class="text-lg">Da oltre <b>30 anni</b> mi occupo di <b>vendita</b> e <b>assistenza tecnica</b> di
                 macchinari <b>nuovi</b> e
@@ -43,29 +44,11 @@
             </p>
         </div>
         <div id="OnlyTheBest" class="relative py-8">
-            <p class="text-[2.5rem] text-center font-semibold font-inter text-gr">SOLO IL MEGLIO</p>
-            <div class="relative overflow-hidden flex flex-col flex-nowrap gap-y-1">
-                <div id="loghi" class="h-16 flex items-center w-fit gap-x-5 last:gap-0 logo-anim">
-                    <img src="/img/LOGHI/POLIN.png" alt="" class="h-7 w-auto">
-                    <img src="/img/LOGHI/MITTEL.png" alt="" class="h-7 w-auto">
-                    <img src="/img/LOGHI/RAM.png" alt="" class="h-7 w-auto">
-                </div>
-                <div id="loghi" class="h-16 flex items-center w-fit gap-x-5 logo-anim-rev">
-                    <img src="/img/LOGHI/VIMEK.png" alt="" class="h-7 w-auto">
-                    <img src="/img/LOGHI/MIXER.png" alt="" class="h-7 w-auto">
-                    <img src="/img/LOGHI/POLIN.png" alt="" class="h-7 w-auto">
-                </div>
-                <div id="loghi" class="h-16 flex items-center w-fit gap-x-5 logo-anim-del">
-                    <img src="/img/LOGHI/ICB.png" alt="" class="h-7 w-auto">
-                    <img src="/img/LOGHI/GIORIK.png" alt="" class="h-7 w-auto bg-black">
-                    <img src="/img/LOGHI/TECNOMAC.png" alt="" class="h-7 w-auto">
-                </div>
-                <div id="loghi" class="h-16 flex items-center w-fit gap-x-5 logo-anim-rev-del delay-500">
-                    <img src="/img/LOGHI/OSTALI.png" alt="" class="h-7 w-auto">
-                    <img src="/img/LOGHI/MIXER.png" alt="" class="h-7 w-auto">
-                    <img src="/img/LOGHI/HOONVED.png" alt="" class="h-7 w-auto">
-                </div>
-            </div>
+            <p class="text-[2rem] text-center font-extrabold font-nunito text-gr">SOLO IL MEGLIO</p>
+            <UCarousel v-if="loghi" id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }"
+                :items="loghi" :ui="{ item: 'basis-1/3', container: 'items-center gap-x-5' }">
+                <img :src="item" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-20" draggable="false" />
+            </UCarousel>
         </div>
     </div>
 </template>
@@ -77,6 +60,21 @@ import 'animate.css';
 
 const { data } = await useFetch("/api/ServicesAPI");
 const products = JSON.parse(JSON.stringify(data.value));
+
+
+const { data: loghi } = await useFetch('/api/getLoghi');
+const carouseLoghiRef = ref();
+
+onMounted(() => {
+    setInterval(() => {
+        if (!carouseLoghiRef.value) return;
+
+        if (carouseLoghiRef.value.page === carouseLoghiRef.value.pages) {
+            return carouseLoghiRef.value.select(0);
+        }
+        carouseLoghiRef.value.next()
+    }, 3500)
+})
 
 </script>
 

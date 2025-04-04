@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     families: {
       Roboto: true,
       Inter: "200..700",
-      "Nunito+Sans": "200..700",
+      "Nunito+Sans": "200..900",
     },
     display: "swap",
   },

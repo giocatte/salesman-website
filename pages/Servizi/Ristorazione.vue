@@ -54,6 +54,6 @@ p.subTitle {
 }
 
 .desc {
-    @apply font-inter text-lg
+    @apply font-nunito text-lg
 }
 </style>

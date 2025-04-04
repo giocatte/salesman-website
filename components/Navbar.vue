@@ -69,7 +69,7 @@
 </template>
 
 <script setup lang="ts">
-import LogoMobile from '@/public/img/LOGHI/LOGO_AT.png';
+import LogoMobile from '~/assets/img/LOGO_AT.png';
 
 const showServizi = ref(false);
 
