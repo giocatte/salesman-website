@@ -14,7 +14,7 @@
                     Autorizzato</p>
                 <p class="text-lg tracking-wide drop-shadow-xl leading-8 max-w-[30ch]">
                     Vendita macchinari e attrezzatura per:<br />
-                    Panifici, pasticcerie, pizzerie e ristorazione.</p>
+                    Panifici, pasticcerie, pizzerie, gelaterie e ristorazione.</p>
             </div>
         </div>
         <div id="Services" class="w-full">

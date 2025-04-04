@@ -445,9 +445,9 @@
         {
             "shId": 8,
             "Brand": "GIORIK",
-            "Model": "SEMF062",
+            "Model": "SEMG062",
             "Description": "FORNO A GAS",
-            "ImgUrl": "/img/Ristorazione/SEMF062.png"
+            "ImgUrl": "/img/Ristorazione/SEMG062.png"
         },
         {
             "shId": 9,
@@ -492,7 +492,7 @@
         },
         {
             "shId": 9,
-            "ImgUrl": "/img/ATTREZZATURE/HT 150.png"
+            "ImgUrl": "/img/ATTREZZATURE/HT_150.png"
         },
         {
             "shId": 10,
