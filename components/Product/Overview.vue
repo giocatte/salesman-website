@@ -45,7 +45,7 @@
 </style>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue';
+import { ref, watch } from 'vue';
 
 // Define the props
 const props = defineProps({

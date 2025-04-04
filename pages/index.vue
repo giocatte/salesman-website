@@ -14,7 +14,7 @@
                     Autorizzato</p>
                 <p class="text-lg tracking-wide drop-shadow-xl leading-8 max-w-[30ch]">
                     Vendita macchinari e attrezzatura per:<br />
-                    Panifici, pasticcerie, pizzerie e ristorazione.</p>
+                    Panifici, pasticcerie, pizzerie, gelaterie e ristorazione.</p>
             </div>
         </div>
         <div id="Services" class="w-full">
@@ -49,6 +49,7 @@
                 :items="loghi" :ui="{ item: 'basis-1/3', container: 'items-center gap-x-5' }">
                 <img :src="item" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-20" draggable="false" />
             </UCarousel>
+            <p v-else>loghi didn't loaded correctly, sorry</p>
         </div>
     </div>
 </template>
