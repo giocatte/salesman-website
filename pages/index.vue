@@ -43,13 +43,12 @@
                 la soluzione più adatta al tuo <b>volume di produzione</b> e agli <b>spazi</b> della tua attività.
             </p>
         </div>
-        <div id="OnlyTheBest" class="relative py-8">
+        <div v-if="loghi" id="OnlyTheBest" class="relative py-8">
             <p class="text-[2rem] text-center font-extrabold font-nunito text-gr">SOLO IL MEGLIO</p>
-            <UCarousel v-if="loghi" id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }"
-                :items="loghi" :ui="{ item: 'basis-1/3', container: 'items-center gap-x-5' }">
+            <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi"
+                :ui="{ item: 'basis-1/3', container: 'items-center gap-x-5' }">
                 <img :src="item" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-20" draggable="false" />
             </UCarousel>
-            <p v-else>loghi didn't loaded correctly, sorry</p>
         </div>
     </div>
 </template>
