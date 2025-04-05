@@ -45,9 +45,9 @@
         </div>
         <div v-if="loghi" id="OnlyTheBest" class="relative py-8">
             <p class="text-[2rem] text-center font-extrabold font-nunito text-gr">SOLO IL MEGLIO</p>
-            <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi"
+            <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi.Loghi"
                 :ui="{ item: 'basis-1/3', container: 'items-center gap-x-5' }">
-                <img :src="item" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-20" draggable="false" />
+                <img :src="item.imgUrl" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-20" draggable="false" />
             </UCarousel>
         </div>
     </div>
@@ -62,7 +62,9 @@ const { data } = await useFetch("/api/ServicesAPI");
 const products = JSON.parse(JSON.stringify(data.value));
 
 
-const { data: loghi } = await useFetch('/api/getLoghi');
+import loghi from '~/assets/data/LoghiPaths.json';
+console.log(loghi.Loghi);
+// const { data: loghi } = await useFetch('/api/getLoghi');
 const carouseLoghiRef = ref();
 
 onMounted(() => {
