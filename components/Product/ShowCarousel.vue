@@ -1,13 +1,13 @@
 <template>
-    <div id="ShowCarousel_Component" v-if="shows && shows.length > 0" class="px-3 py-4 bg-white">
+    <div id="ShowCarousel_Component" v-if="carouselData" class="px-3 py-4 bg-white">
         <div class="relative w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col felx-nowrap z-0">
-            <div v-if="currentCarouselData[0].hasOwnProperty('Brand')"
+            <div v-if="sortedCarouselData[0].hasOwnProperty('Brand')"
                 class="w-full h-fit bg-none bg-[#f4f4f4] rounded-t-xl">
                 <p class="text-gr font-nunito text-center text-xl font-extrabold mt-5" v-html="impresaText">
                 </p>
             </div>
-            <UCarousel v-if="currentCarouselData[0].hasOwnProperty('Brand')" id="CaroselloProdotti"
-                class="rounded-b-xl overflow-hidden bg-[#f4f4f4]" v-slot="{ item }" :items="currentCarouselData"
+            <UCarousel v-if="sortedCarouselData[0].hasOwnProperty('Brand')" id="CaroselloProdotti"
+                class="rounded-b-xl overflow-hidden bg-[#f4f4f4]" v-slot="{ item }" :items="sortedCarouselData"
                 indicators :ui="{
                     item: 'basis-full',
                     indicators: {
@@ -61,11 +61,15 @@ const props = defineProps({
     product: Object
 });
 
-const shows = JSON.parse(JSON.stringify(props?.product?.component.show));
 const impresaText = "SOLO IL MEGLIO PER LA TUA</br> IMPRESA";
 
 const router = useRouter();
 import carouselData from '~/assets/data/CarouselData.json';
 const currentRoute = router.currentRoute.value.path.split("/")[2];
 const currentCarouselData = carouselData[currentRoute as keyof typeof carouselData];
+
+const sortedCarouselData = computed(() => {
+    return [...currentCarouselData].sort((a, b) => a.orderId - b.orderId);
+});
+console.log("Sorted Carousel Data:", sortedCarouselData.value);
 </script>

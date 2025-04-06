@@ -10,29 +10,6 @@ export default defineEventHandler((event) => {
           Description:
             "<b>Vendita macchinari panificazione</b> e <b>attrezzature professionali</b> per ogni fase della lavorazione, dal <b>dosaggio degli ingredienti</b> alla <b>cottura del pane</b>. Con le <b>migliori attrezzature da forno</b> potrai sperimentare <b>nuove ricette</b>, migliorare la <b>qualità del pane</b> e offrire ogni giorno un <b>prodotto fragrante</b> e irresistibile.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_Panifici.png",
-          show: [
-            {
-              shId: 1,
-              Brand: "POLIN",
-              Model: "STRATOS OLD STYLE",
-              Description: "FORNO PIZZA MODULARE",
-              ImgUrl: "/img/Panifici/ROTO_AVANT.png",
-            },
-            {
-              shId: 2,
-              Brand: "MIXER",
-              Model: "ASM EVO RS",
-              Description: "IMPASTATRICE A SPIRALE",
-              ImgUrl: "/img/Panifici/ASM_EVO_RS.png",
-            },
-            {
-              shId: 3,
-              Brand: "POLIN",
-              Model: "ELETTRODRAGO AVANT",
-              Description: "FORNO ELETTRICO PER PANE",
-              ImgUrl: "/img/Panifici/ELETTRODRAGO_AVANT.png",
-            },
-          ],
         },
         pages: {
           Title: "MACCHINARI PROFESSIONALI PER PANIFICI",
@@ -47,7 +24,7 @@ export default defineEventHandler((event) => {
             "<b>Impastatrici professionali</b>, adatte alla preparazione di qualsiasi tipo di <b>impasto</b>",
             "<b>Accessori</b> e <b>macchinari ausiliari</b> per <b>ottimizzare</b> i flussi di lavoro e migliorare l’<b>efficienza</b>",
           ],
-          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png",
+          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png"
         },
       },
       {
@@ -59,29 +36,6 @@ export default defineEventHandler((event) => {
           Description:
             "<b>Macchinari per pasticceria</b> dove <b>precisione</b> e <b>creatività</b> si incontrano. Dagli <b>abbattitori</b> ai <b>forni ventilati</b>, passando per <b>sfogliatrici</b> e <b>planetarie professionali</b>, ogni strumento ti aiuta a realizzare <b>dolci perfetti</b>.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_PASTICCERIE.png",
-          show: [
-            {
-              shId: 1,
-              Brand: "POLIN",
-              Model: "SCOOTER 4060",
-              Description: "FORNO ROTATIVO PER PASTICCERIA",
-              ImgUrl: "/img/PASTICCERIE/SCOOTER_4060.png",
-            },
-            {
-              shId: 2,
-              Brand: "ICB",
-              Model: "DOSICREAM",
-              Description: "RIEMPITRICE E DOSATRICE",
-              ImgUrl: "/img/PASTICCERIE/DOSICREAM.png",
-            },
-            {
-              shId: 3,
-              Brand: "POLIN",
-              Model: "MULTIDROP",
-              Description: "MACCHINA PER BISCOTTI",
-              ImgUrl: "/img/PASTICCERIE/MULTIDROP_NORMAL.png",
-            },
-          ],
         },
         pages: {
           Title: "MACCHINARI PROFESSIONALI PER PASTICCERIE",
@@ -97,7 +51,7 @@ export default defineEventHandler((event) => {
             "<b>Impastatrici planetarie</b>, <b>sfogliatrici</b> e <b>spezzatrici</b>, progettate per facilitare la preparazione di <b>impasti</b> e <b>creme</b>",
             "<b>Macchinari complementari</b> per migliorare l’<b>organizzazione</b> del laboratorio e <b>ottimizzare</b> la produzione",
           ],
-          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png",
+          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png"
         },
       },
       {
@@ -108,30 +62,7 @@ export default defineEventHandler((event) => {
           Title: "Macchine per Pizzerie<br>Vendita e Assistenza",
           Description:
             "<b>Macchinari professionali per pizzerie</b>, ideali per una <b>pizza sempre perfetta</b>. Dai <b>forni per pizza di ultima generazione</b> alle <b>impastatrici professionali</b>, offro strumenti che garantiscono <b>cottura uniforme</b>, <b>alte prestazioni</b> e <b>massima qualità dell’impasto</b>.",
-          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_PIZZERIE.png",
-          show: [
-            {
-              shId: 1,
-              Brand: "POLIN",
-              Model: "STRATOS OLD STYLE",
-              Description: "FORNO PIZZA MODULARE",
-              ImgUrl: "/img/Panifici/ROTO_AVANT.png",
-            },
-            {
-              shId: 2,
-              Brand: "POLIN",
-              Model: "STRATOS OLD STYLE",
-              Description: "FORNO PIZZA MODULARE",
-              ImgUrl: "/img/Panifici/ROTO_AVANT.png",
-            },
-            {
-              shId: 3,
-              Brand: "POLIN",
-              Model: "STRATOS OLD STYLE",
-              Description: "FORNO PIZZA MODULARE",
-              ImgUrl: "/img/Panifici/ROTO_AVANT.png",
-            },
-          ],
+          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_PIZZERIE.png"
         },
         pages: {
           Title: "MACCHINARI PROFESSIONALI PER PIZZERIE",
@@ -158,30 +89,7 @@ export default defineEventHandler((event) => {
           Title: "Macchine per Gelaterie<br/>Vendita e Assistenza",
           Description:
             "<b>Macchinari per gelateria artigianale</b> per una <b>produzione di alta qualità</b>. Dai <b>mantecatori professionali</b> ai <b>banchi espositivi refrigerati</b>, ogni strumento è progettato per offrire <b>massima efficienza</b> e <b>libertà creativa</b>.",
-          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_GELATERIE.png",
-          show: [
-            {
-              shId: 1,
-              Brand: "CATTABRIGA",
-              Model: "MASTERCHEF",
-              Description: "MACCHINA MULTIFUNZIONE",
-              ImgUrl: "/img/GELATERIE/MASTERCHEF.png",
-            },
-            {
-              shId: 2,
-              Brand: "ICB",
-              Model: "CHOCOTEMPER TOP",
-              Description: "TEMPERATRICE DA BANCO",
-              ImgUrl: "/img/GELATERIE/CHOCOTEMPER.png",
-            },
-            {
-              shId: 3,
-              Brand: "CATTABRIGA",
-              Model: "MULTIFREEZE 8 PRO",
-              Description: "MANTECATORE PER GELATO",
-              ImgUrl: "/img/GELATERIE/MULTIFREEZE_8_PRO.png",
-            },
-          ],
+          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_GELATERIE.png"
         },
         pages: {
           Title: "MACCHINARI PROFESSIONALI PER GELATERIE",
@@ -207,16 +115,7 @@ export default defineEventHandler((event) => {
           Title: "Macchine per Ristorazione Vendita e Assistenza",
           Description:
             "<b>Macchinari per cucine professionali</b>, progettati per garantire <b>efficienza</b> e <b>prestazioni elevate</b>. Dai <b>forni professionali</b> ai <b>sistemi di refrigerazione</b>, ogni attrezzatura semplifica la <b>gestione quotidiana</b> e ottimizza il <b>servizio in cucina</b>.",
-          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png",
-          show: [
-            {
-              shId: 1,
-              Brand: "",
-              Model: "",
-              Description: "",
-              ImgUrl: "",
-            },
-          ],
+          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png"
         },
         pages: {
           Title: "MACCHINARI PROFESSIONALI PER LA RISTORAZIONE",
@@ -243,30 +142,7 @@ export default defineEventHandler((event) => {
           Title: "Attrezzature per <br/>Laboratori e Cucine <br/>Professionali",
           Description:
             "<b>Attrezzature professionali per cucine</b> e <b>laboratori</b>, studiate per ottimizzare ogni area operativa: dalla <b>conservazione</b> alla <b>refrigerazione</b> fino al <b>lavaggio professionale</b>.",
-          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_ATTREZZATURE.png",
-          show: [
-            {
-              shId: 1,
-              Brand: "COLDLINE",
-              Model: "THAW PRO",
-              Description: "DECONGELATORE",
-              ImgUrl: "/img/ATTREZZATURE/THAW_PRO.png",
-            },
-            {
-              shId: 2,
-              Brand: "HOONVED",
-              Model: "HPW 80",
-              Description: "LAVAOGGETTI",
-              ImgUrl: "/img/ATTREZZATURE/HPW_80.PNG",
-            },
-            {
-              shId: 3,
-              Brand: "COLDLINE",
-              Model: "MODI",
-              Description: "ABBATTITORE",
-              ImgUrl: "/img/ATTREZZATURE/ABBATTITORE_MODI.png",
-            },
-          ],
+          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_ATTREZZATURE.png"
         },
         pages: {
           Title: "ATTREZZATURE PROFESSIONALI PER LABORATORI E RISTORAZIONE",
@@ -281,7 +157,7 @@ export default defineEventHandler((event) => {
             "Igiene e lavaggio: lavastoviglie e lavapentole per rispettare i più alti standard di pulizia",
             "Arredi e acciaio inox: tavoli da lavoro e scaffalature per un ambiente organizzato e funzionale",
           ],
-          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_ATTREZZATURE.png",
+          ImgUrl: "/img/ATTREZZATURE/HPW_80.png",
         },
       },
       {
@@ -293,21 +169,7 @@ export default defineEventHandler((event) => {
             "Arredamenti per <br/>Laboratori e Cucine <br/>Vendita e Progettazione <br/>su Misura",
           Description:
             "<b>Arredamenti su misura per cucine e laboratori</b>, progettati per <b>ottimizzare gli spazi di lavoro</b> e migliorare il <b>flusso operativo</b>.",
-          ImgUrl: "/img/IMG_SERVIZI_MOBILE/SERVIZI_MOB_ARREDAMENTI.png",
-          show: [
-            {
-              shId: 1,
-              ImgUrl: "/img/ARREDAMENTI/ARREDAMENTO_7.png",
-            },
-            {
-              shId: 2,
-              ImgUrl: "/img/ARREDAMENTI/ARREDAMENTO_2.png",
-            },
-            {
-              shId: 3,
-              ImgUrl: "/img/ARREDAMENTI/ARREDAMENTO_3.png",
-            },
-          ],
+          ImgUrl: "/img/IMG_SERVIZI_MOBILE/SERVIZI_MOB_ARREDAMENTI.png"
         },
         pages: {
           Title: "PROGETTAZIONE DI LABORATORI E ARREDAMENTI",

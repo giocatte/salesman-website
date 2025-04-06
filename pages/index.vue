@@ -63,7 +63,6 @@ const products = JSON.parse(JSON.stringify(data.value));
 
 
 import loghi from '~/assets/data/LoghiPaths.json';
-console.log(loghi.Loghi);
 // const { data: loghi } = await useFetch('/api/getLoghi');
 const carouseLoghiRef = ref();
 
