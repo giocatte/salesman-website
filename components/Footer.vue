@@ -32,10 +32,13 @@
         <div id="CompanyInfo" class="bg-[#D4D4D4] pb-5 font-nunito text-gr text-lg">
             <div id="footerdivider" class="bg-BlueToRed w-full h-1"></div>
             <div class="flex flex-row flex-wrap justify-center gap-3">
-                <p class="flex items-center pt-2">
-                    <Icon name="meteor-icons:copyright" size="16" class="inline-block">
-                    </Icon> 2025 Andrea Tognon - Tutti i diritti riservati
-                </p>
+                <div class="flex items-start pt-2">
+                    <Icon name="meteor-icons:copyright" size="16" class="mt-[6px] inline-block">
+                    </Icon>
+                    <p>2025 Andrea Tognon - P.IVA 02703360285 <br />
+                        Via S. Bellino, 4 - 35020 Albignasego (PD)
+                    </p>
+                </div>
                 <p class="w-fit inline-block mr-2">Privacy Policy</p>
                 <p>Made by <a class="underline" target="_blank"
                         href="https://www.ethoswebstudio.it">ethoswebstudio.it</a></p>

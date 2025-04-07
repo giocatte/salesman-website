@@ -143,18 +143,25 @@
     ],
     "Pizzerie": [
         {
-            "orderId": 10,
+            "orderId": 20,
             "Brand": "MECNOSUD",
             "Model": "ARROTONDATRICE_SERIE_AR",
             "Description": "ARROTONDATRICE",
             "ImgUrl": "/img/Pizzerie/ARROTONDATRICE_SERIE_AR.png"
         },
         {
-            "orderId": 20,
+            "orderId": 10,
             "Brand": "MIXER",
             "Model": "ASM_EVO",
             "Description": "IMPASTATRICE A SPIRALE",
             "ImgUrl": "/img/Pizzerie/ASM_EVO.png"
+        },
+        {
+            "orderId": 29,
+            "Brand": "COLDLINE",
+            "Model": "BANCOPIZZA",
+            "Description": "BANCO PIZZA",
+            "ImgUrl": "/img/Pizzerie/BANCOPIZZA.png"
         },
         {
             "orderId": 30,
@@ -252,6 +259,55 @@
     ],
     "Pasticcerie": [
         {
+            "orderId": 1,
+            "Brand": "POLIN",
+            "Model": "SCOOTER_4060",
+            "Description": "FORNO ROTATIVO PER PASTICCERIA",
+            "ImgUrl": "/img/Pasticcerie/SCOOTER_4060.png"
+        },
+        {
+            "orderId": 2,
+            "Brand": "POLIN",
+            "Model": "SMART_WIND",
+            "Description": "FORNO VENTILATO PER PASTICCERIA",
+            "ImgUrl": "/img/Pasticcerie/SMART_WIND.png"
+        },
+        {
+            "orderId": 3,
+            "Brand": "POLIN",
+            "Model": "SMART_WIND_4060",
+            "Description": "FORNO VENTILATO PER PASTICCERIA",
+            "ImgUrl": "/img/Pasticcerie/SMART_WIND_4060.png"
+        },
+        {
+            "orderId": 4,
+            "Brand": "POLIN",
+            "Model": "STRATOS_XP",
+            "Description": "FORNO PASTICCERIA",
+            "ImgUrl": "/img/Pasticcerie/STRATOS_XP.png"
+        },
+        {
+            "orderId": 5,
+            "Brand": "VIMEK",
+            "Model": "FORNO_A_TUNNEL",
+            "Description": "FORNO A TUNNEL",
+            "ImgUrl": "/img/Pasticcerie/FORNO_A_TUNNEL.png"
+        },
+        {
+            "orderId": 6,
+            "Brand": "VIMEK",
+            "Model": "FORNO_A_TUNNEL",
+            "Description": "DETTAGLIO FORNO A TUNNEL",
+            "ImgUrl": "/img/Pasticcerie/FORNO_A_TUNNEL2.png"
+        },
+        {
+            "orderId": 7,
+            "Brand": "VIMEK",
+            "Model": "FORNO_A_TUNNEL",
+            "Description": "DETTAGLIO FORNO A TUNNEL",
+            "ImgUrl": "/img/Pasticcerie/FORNO_A_TUNNEL3.png"
+        },
+        {
             "orderId": 10,
             "Brand": "MIXER",
             "Model": "ASM_EVO",
@@ -341,34 +397,6 @@
             "Model": "QTP715",
             "Description": "SFOGLIATRICE AUTOMATICA",
             "ImgUrl": "/img/Pasticcerie/QTP715.png"
-        },
-        {
-            "orderId": 1,
-            "Brand": "POLIN",
-            "Model": "SCOOTER_4060",
-            "Description": "FORNO ROTATIVO PER PASTICCERIA",
-            "ImgUrl": "/img/Pasticcerie/SCOOTER_4060.png"
-        },
-        {
-            "orderId": 2,
-            "Brand": "POLIN",
-            "Model": "SMART_WIND",
-            "Description": "FORNO VENTILATO PER PASTICCERIA",
-            "ImgUrl": "/img/Pasticcerie/SMART_WIND.png"
-        },
-        {
-            "orderId": 3,
-            "Brand": "POLIN",
-            "Model": "SMART_WIND_4060",
-            "Description": "FORNO VENTILATO PER PASTICCERIA",
-            "ImgUrl": "/img/Pasticcerie/SMART_WIND_4060.png"
-        },
-        {
-            "orderId": 4,
-            "Brand": "POLIN",
-            "Model": "STRATOS_XP",
-            "Description": "FORNO PASTICCERIA",
-            "ImgUrl": "/img/Pasticcerie/STRATOS_XP.png"
         },
         {
             "orderId": 180,

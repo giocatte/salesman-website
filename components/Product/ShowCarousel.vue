@@ -20,7 +20,7 @@
                 <div
                     class="w-full h-full aspect-[8/9.1] bg-[#f4f4f4] p-4 flex flex-col flex-nowrap items-center text-gr font-nunito">
                     <div :style="{ backgroundImage: 'url(' + item.ImgUrl + ')' }"
-                        class="h-full w-full block drop-shadow-lg bg-contain bg-no-repeat bg-center"
+                        class="h-full w-full block drop-shadow-lg bg-cover rounded-md bg-no-repeat bg-center"
                         alt="carousel image">
                     </div>
                     <p class="text-center text-xl font-extrabold">{{ item.Brand }}</p>

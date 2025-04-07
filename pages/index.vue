@@ -47,7 +47,7 @@
             <p class="text-[2rem] text-center font-extrabold font-nunito text-gr">SOLO IL MEGLIO</p>
             <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi.Loghi"
                 :ui="{ item: 'basis-1/3', container: 'items-center gap-x-5' }">
-                <img :src="item.imgUrl" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-20" draggable="false" />
+                <img :src="item.imgUrl" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-10" draggable="false" />
             </UCarousel>
         </div>
     </div>
