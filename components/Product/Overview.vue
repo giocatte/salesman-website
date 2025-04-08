@@ -12,6 +12,11 @@
                 </button>
             </div>
         </div>
+        <!-- <UCarousel id="CaroselloTest" ref="carouselTest" v-slot="{ item }" indicators :items="products" class="w-full py-8">
+            <button class="px-2 py-1 w-fit h-fit text-black rounded-full">
+                {{ item.component.BtnText }}
+            </button>
+        </UCarousel> -->
 
         <!-- Product Content -->
         <div v-for="p in products" :key="p.Id" v-show="p.Name === activeTab"

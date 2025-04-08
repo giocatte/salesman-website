@@ -24,7 +24,7 @@ export default defineEventHandler((event) => {
             "<b>Impastatrici professionali</b>, adatte alla preparazione di qualsiasi tipo di <b>impasto</b>",
             "<b>Accessori</b> e <b>macchinari ausiliari</b> per <b>ottimizzare</b> i flussi di lavoro e migliorare l’<b>efficienza</b>",
           ],
-          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png"
+          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png",
         },
       },
       {
@@ -51,7 +51,7 @@ export default defineEventHandler((event) => {
             "<b>Impastatrici planetarie</b>, <b>sfogliatrici</b> e <b>spezzatrici</b>, progettate per facilitare la preparazione di <b>impasti</b> e <b>creme</b>",
             "<b>Macchinari complementari</b> per migliorare l’<b>organizzazione</b> del laboratorio e <b>ottimizzare</b> la produzione",
           ],
-          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png"
+          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png",
         },
       },
       {
@@ -62,7 +62,7 @@ export default defineEventHandler((event) => {
           Title: "Macchine per Pizzerie<br>Vendita e Assistenza",
           Description:
             "<b>Macchinari professionali per pizzerie</b>, ideali per una <b>pizza sempre perfetta</b>. Dai <b>forni per pizza di ultima generazione</b> alle <b>impastatrici professionali</b>, offro strumenti che garantiscono <b>cottura uniforme</b>, <b>alte prestazioni</b> e <b>massima qualità dell’impasto</b>.",
-          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_PIZZERIE.png"
+          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_PIZZERIE.png",
         },
         pages: {
           Title: "MACCHINARI PROFESSIONALI PER PIZZERIE",
@@ -89,7 +89,7 @@ export default defineEventHandler((event) => {
           Title: "Macchine per Gelaterie<br/>Vendita e Assistenza",
           Description:
             "<b>Macchinari per gelateria artigianale</b> per una <b>produzione di alta qualità</b>. Dai <b>mantecatori professionali</b> ai <b>banchi espositivi refrigerati</b>, ogni strumento è progettato per offrire <b>massima efficienza</b> e <b>libertà creativa</b>.",
-          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_GELATERIE.png"
+          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_GELATERIE.png",
         },
         pages: {
           Title: "MACCHINARI PROFESSIONALI PER GELATERIE",
@@ -115,7 +115,7 @@ export default defineEventHandler((event) => {
           Title: "Macchine per Ristorazione Vendita e Assistenza",
           Description:
             "<b>Macchinari per cucine professionali</b>, progettati per garantire <b>efficienza</b> e <b>prestazioni elevate</b>. Dai <b>forni professionali</b> ai <b>sistemi di refrigerazione</b>, ogni attrezzatura semplifica la <b>gestione quotidiana</b> e ottimizza il <b>servizio in cucina</b>.",
-          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png"
+          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png",
         },
         pages: {
           Title: "MACCHINARI PROFESSIONALI PER LA RISTORAZIONE",
@@ -142,22 +142,22 @@ export default defineEventHandler((event) => {
           Title: "Attrezzature per <br/>Laboratori e Cucine <br/>Professionali",
           Description:
             "<b>Attrezzature professionali per cucine</b> e <b>laboratori</b>, studiate per ottimizzare ogni area operativa: dalla <b>conservazione</b> alla <b>refrigerazione</b> fino al <b>lavaggio professionale</b>.",
-          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_ATTREZZATURE.png"
+          ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_ATTREZZATURE.png",
         },
         pages: {
-          Title: "ATTREZZATURE PROFESSIONALI PER LABORATORI E RISTORAZIONE",
+          Title: "ATTREZZATURE PER LABORATORI E RISTORAZIONE",
           SubTitle: "Qualità e innovazione per ogni esigenza professionale",
           Intro:
-            "Per ottimizzare il tuo spazio di lavoro e garantire efficienza, offro una selezione di attrezzature professionali dedicate alla conservazione, refrigerazione, lavaggio<br/><br/>Dai banchi refrigerati agli armadi di stoccaggio, ogni soluzione è pensata per migliorare la produttività e mantenere elevati standard di igiene e qualità.",
+            "Per garantire <b>efficienza operativa</b> e mantenere <b>standard elevati</b>, propongo <b>attrezzature dedicate</b> alla <b>conservazione</b>, <b>refrigerazione</b> e <b>lavaggio</b>. Ogni <b>soluzione</b> è progettata per <b>ottimizzare lo spazio di lavoro</b> e <b>semplificare la gestione quotidiana</b>.",
           Title_2: "Tecnologia al servizio della tua attività",
-          Desc: "Collaboro con i migliori marchi di riferimento nel settore per garantirti attrezzature affidabili, performanti e durevoli Hoonved, Mittel, Longoni, Coldline<br/><br/>Che tu gestisca una piccola attività artigianale o una grande produzione, offro soluzioni su misura per:",
+          Desc: "Collaboro con <b>Hoonved</b>, <b>Mittel</b>, <b>Longoni</b> e <b>Coldline</b>, <b>aziende leader</b> nella produzione di <b>attrezzature affidabili e durevoli</b>. Offro <b>soluzioni</b> per:",
           list: [
-            "Conservazione e refrigerazione: armadi, banchi e vetrine refrigerate per ingredienti sempre freschi",
-            "Lievitazione e stoccaggio: fermalievitazione, decongelatori e roll-in per una gestione ottimale dell'impasto",
-            "Igiene e lavaggio: lavastoviglie e lavapentole per rispettare i più alti standard di pulizia",
-            "Arredi e acciaio inox: tavoli da lavoro e scaffalature per un ambiente organizzato e funzionale",
+            "<b>Refrigerazione e stoccaggio</b>: <b>armadi</b> e <b>vetrine refrigerate</b> per ingredienti sempre freschi",
+            "<b>Gestione dell’impasto</b>: <b>fermalievitazione</b> e <b>decongelatori</b> per una <b>lievitazione controllata</b>",
+            "Igiene e pulizia</b>: <b>lavastoviglie professionali</b> per garantire il massimo della <b>sanificazione</b>",
+            "Arredi in acciaio inox</b>: <b>banchi</b> e <b>scaffali</b> per un <b>ambiente di lavoro funzionale</b>",
           ],
-          ImgUrl: "/img/ATTREZZATURE/HPW_80.png",
+          ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_ATTREZZATURE.png",
         },
       },
       {
@@ -169,14 +169,14 @@ export default defineEventHandler((event) => {
             "Arredamenti per <br/>Laboratori e Cucine <br/>Vendita e Progettazione <br/>su Misura",
           Description:
             "<b>Arredamenti su misura per cucine e laboratori</b>, progettati per <b>ottimizzare gli spazi di lavoro</b> e migliorare il <b>flusso operativo</b>.",
-          ImgUrl: "/img/IMG_SERVIZI_MOBILE/SERVIZI_MOB_ARREDAMENTI.png"
+          ImgUrl: "/img/IMG_SERVIZI_MOBILE/SERVIZI_MOB_ARREDAMENTI.png",
         },
         pages: {
           Title: "PROGETTAZIONE DI LABORATORI E ARREDAMENTI",
           SubTitle:
             "Funzionalità, design e innovazione per il tuo spazio di lavoro",
           Intro:
-            "Offro soluzioni complete per l’arredamento e la progettazione di laboratori e cucine professionali.<br/>Dalla scelta dei materiali alla disposizione degli spazi, ogni progetto è studiato per ottimizzare il flusso di lavoro, migliorare l’efficienza e garantire il massimo comfort operativo.<br/>Ogni elemento è pensato per rispondere alle tue esigenze specifiche, con un perfetto equilibrio tra estetica, praticità e resistenza nel tempo.",
+            "<b>Progetto laboratori</b> e <b>cucine professionali su misura</b>, curando ogni dettaglio per migliorare il <b>flusso di lavoro</b> e garantire un <b>ambiente pratico e confortevole</b>.Dalla <b>disposizione degli spazi</b> alla <b>scelta dei materiali</b>, ogni elemento è pensato per combinare <b>design moderno</b> e <b>funzionalità</b>.<br/>Propongo <b>banchi da lavoro ergonomici</b>, <b>arredi personalizzati</b> e <b>soluzioni per ottimizzare spazio e organizzazione</b>, garantendo un equilibrio tra <b>estetica</b>, <b>resistenza</b> e <b>praticità</b>.",
           Title_2: "",
           Desc: "",
           list: [],

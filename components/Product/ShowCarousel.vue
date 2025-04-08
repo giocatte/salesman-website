@@ -71,5 +71,4 @@ const currentCarouselData = carouselData[currentRoute as keyof typeof carouselDa
 const sortedCarouselData = computed(() => {
     return [...currentCarouselData].sort((a, b) => a.orderId - b.orderId);
 });
-console.log("Sorted Carousel Data:", sortedCarouselData.value);
 </script>

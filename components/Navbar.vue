@@ -12,10 +12,14 @@
                 :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">
                 <div class="w-full border-b-[1px] border-[#D8D8D8]" @click="showServizi = !showServizi">
                     <div
-                        class="flex items-center gap-x-4 font-nunito text-gr py-1 font-bold w-fit h-fit cursor-pointer">
-                        <h1 class="text-[3.5rem]">Servizi
-                        </h1>
-                        <h1 class="text-[2.5rem]">+</h1>
+                        class="flex items-center gap-x-4 font-nunito text-gr py-1 font-bold w-full h-fit cursor-pointer">
+                        <p class="text-[3.5rem]">Servizi</p>
+                        <Icon v-show="showServizi == false" name="ion:plus-round" size="30"
+                            class="animate__animated animate__fadeIn animate__faster"></Icon>
+                        <Icon v-show="showServizi == true" name="ion:minus-round" size="30"
+                            class="animate__animated animate__fadeIn"></Icon>
+                        <!-- <p class="text-[2.5rem] animate__animated animate__fadeIn animate__faster">+</p>
+                        <p v-show="showServizi===true" class="text-[2.5rem] animate__animated animate__fadeIn animate__faster">-</p> -->
                     </div>
                     <div v-show="showServizi" id="ServiziMenu" class="max-h-fit h-fit overflow-y-hidden">
                         <NuxtLink to="/Servizi/Panifici" @click="handleOptMenuSelected"
@@ -88,14 +92,15 @@ const handleMenuTrigger = (event: Event) => {
     }
     const Navbar = document.getElementById('Navbar');
     const Home = document.getElementById('Home');
+    const Service = document.getElementById('Service');
     if (Navbar && closeAnimation.value === true) {
         Navbar.classList.remove('bg-backdrop-blur-sm');
         Navbar.classList.add('bg-white');
-        Home?.classList.add('blur-sm');
+        Home ? Home.classList.add('blur-sm') : Service?.classList.add('blur-sm');
     } else if (Navbar && closeAnimation.value === false) {
         Navbar.classList.remove('bg-white');
         Navbar.classList.add('backdrop-blur-sm');
-        Home?.classList.remove('blur-sm');
+        Home ? Home.classList.remove('blur-sm') : Service?.classList.remove('blur-sm');
     }
 };
 
