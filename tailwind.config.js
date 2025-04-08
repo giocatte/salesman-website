@@ -34,6 +34,14 @@ export default {
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
+        '.tab-size-0': {
+          tabSize: '0',
+        },
+        '.h2-Desktop': {
+          fontSize: '2.25rem',
+          lineHeight: '3rem',
+          fontWeight: '700',
+        },
         '.no-scrollbar': {
           '-ms-overflow-style': 'none', // IE and Edge
           'scrollbar-width': 'none', // Firefox
@@ -55,7 +63,7 @@ export default {
         },
         '.btnBlueRed': {
           'color': '#3A3939',
-        // 'width': 'fit-content',
+          // 'width': 'fit-content',
           'font-weight': 'bold',
           'background-color': '#fff',
           'font-size': '1rem',

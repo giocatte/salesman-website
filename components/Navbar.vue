@@ -1,11 +1,16 @@
 <template>
-    <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.125rem] z-[1] bg-iron contrast-75"></div>
-    <div id="Navbar" class="py-3 px-5 w-full h-[4.125rem] flex justify-between items-center z-30 sticky top-0 left-0">
+    <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.125rem] xl:h-32 z-[1] bg-iron contrast-75"></div>
+    <div id="Navbar"
+        class="py-3 px-5 xl:px-44 w-full h-[4.125rem] xl:h-32 flex justify-between items-center z-30 sticky top-0 left-0">
         <NuxtLink @click="menuOpen === true ? handleOptMenuSelected($event) : ''" to="/">
-            <img :src="LogoMobile" alt="LogoMobile" class="w-[3.125rem] aspect-square">
+            <img :src="LogoMobile" alt="LogoMobile" class="w-[3.125rem] xl:w-[6.25rem] aspect-square">
         </NuxtLink>
-        <MenuBurgerAnimated @menu-trigger="handleMenuTrigger" id="menuBurger" class=""></MenuBurgerAnimated>
-        <div v-show="menuOpen === true" id="Menu"
+        <MenuBurgerAnimated v-if="isMobile" @menu-trigger="handleMenuTrigger" id="menuBurger" class="xl:hidden">
+        </MenuBurgerAnimated>
+        <div v-else-if="isDesktop">
+
+        </div>
+        <div v-if="menuOpen === true && isMobile" id="Menu"
             class="w-full min-h-lvh h-lvh fixed overflow-hidden top-[4.125rem] left-0 z-20 bg-[#00000059]"
             @click.self="closeMenu">
             <div class="w-full h-fit bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6 pb-8 animate__animated animate__faster"
@@ -18,8 +23,6 @@
                             class="animate__animated animate__fadeIn animate__faster"></Icon>
                         <Icon v-show="showServizi == true" name="ion:minus-round" size="30"
                             class="animate__animated animate__fadeIn"></Icon>
-                        <!-- <p class="text-[2.5rem] animate__animated animate__fadeIn animate__faster">+</p>
-                        <p v-show="showServizi===true" class="text-[2.5rem] animate__animated animate__fadeIn animate__faster">-</p> -->
                     </div>
                     <div v-show="showServizi" id="ServiziMenu" class="max-h-fit h-fit overflow-y-hidden">
                         <NuxtLink to="/Servizi/Panifici" @click="handleOptMenuSelected"
@@ -69,12 +72,59 @@
                 </NuxtLink>
             </div>
         </div>
+        <div v-else-if="isDesktop" id="MenuDesktop" class="">
+            <div
+                class="flex gap-x-10 items-center text-black text-2xl leading-[2rem] font-nunito font-extrabold cursor-pointer">
+                <UPopover :ui="{
+                    rounded: 'rounded-2xl',
+                    base: 'bg-RedToBlue p-1',
+                    overlay: {
+                        background: 'bg-blue-300 dark:bg-blue-300'
+                    }
+                }">
+                    <p>SERVIZI</p>
+                    <template #panel>
+                        <div
+                            class="size-[30rem] p-12 bg-none bg-[#f4f4f4] rounded-xl flex flex-col felx-nowrap gap-y-2 h2-Desktop">
+                            <NuxtLink to="/Servizi/Panifici" class="w-full" active-class="activeNav">
+                                Panifici
+                            </NuxtLink>
+                            <NuxtLink to="/Servizi/Pasticcerie" class="" active-class="activeNav">
+                                Pasticcerie
+                            </NuxtLink>
+                            <NuxtLink to="/Servizi/Pizzerie" class="" active-class="activeNav">
+                                Pizzerie
+                            </NuxtLink>
+                            <NuxtLink to="/Servizi/Gelaterie" class="" active-class="activeNav">
+                                Gelaterie
+                            </NuxtLink>
+                            <NuxtLink to="/Servizi/Ristorazione" class="" active-class="activeNav">
+                                Ristorazione
+                            </NuxtLink>
+                            <NuxtLink to="/Servizi/Attrezzature" class="" active-class="activeNav">
+                                Attrezzature
+                            </NuxtLink>
+                            <NuxtLink to="/Servizi/Progettazione" class="" active-class="activeNav">
+                                Progettazione
+                            </NuxtLink>
+                        </div>
+                    </template>
+                </UPopover>
+                <NuxtLink to="/#ChiSono">
+                    CHI SONO
+                </NuxtLink>
+                <NuxtLink to="/#Contatti">
+                    CONTATTI
+                </NuxtLink>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import LogoMobile from '~/assets/img/LOGO_AT.png';
 
+const { width, isMobile, isDesktop } = useDeviceWidth()
 const showServizi = ref(false);
 
 const closeAnimation = ref(false);
