@@ -480,55 +480,74 @@
     ],
     "Attrezzature": [
         {
+            "orderId": 1,
+            "Brand": "HOONVED",
+            "Model": "TL X2",
+            "Description": "LAVAOGGETTI",
+            "ImgUrl": "/img/Attrezzature/TLX.png"
+        },
+        {
+            "orderId": 2,
+            "Brand": "COLDLINE",
+            "Model": "THAW PRO",
+            "Description": "Decongelatore",
+            "ImgUrl": "/img/Attrezzature/THAW_PRO.png"
+        },
+        {
+            "orderId": 3,
+            "Brand": "HOONVED",
+            "Model": "HT 150",
+            "Description": "Lavastoviglie a traino",
+            "ImgUrl": "/img/Attrezzature/HT_150.png"
+        },
+        {
+            "orderId": 4,
+            "Brand": "HOONVED",
+            "Model": "HPW_80",
+            "Description": "Lavaoggetti",
+            "ImgUrl": "/img/Attrezzature/HPW_80.png"
+        },
+        {
+            "orderId": 5,
+            "Brand": "HOONVED",
+            "Model": "HPW_40",
+            "Description": "Lavaoggetti",
+            "ImgUrl": "/img/Attrezzature/HPW_40.png"
+        },
+        {
+            "orderId": 6,
+            "Brand": "COLDLINE",
+            "Model": "BANCO_LAVORO",
+            "Description": "BANCO_LAVORO",
+            "ImgUrl": "/img/Attrezzature/BANCO_LAVORO.png"
+        },
+        {
+            "orderId": 7,
+            "Brand": "COLDLINE",
+            "Model": "ARMADIO_SMART",
+            "Description": "Conservatore",
+            "ImgUrl": "/img/Attrezzature/ARMADIO_SMART.png"
+        },
+        {
+            "orderId": 8,
+            "Brand": "HOONVED",
+            "Model": "APK_EXTREME",
+            "Description": "Lavastovile",
+            "ImgUrl": "/img/Attrezzature/APX.png"
+        },
+        {
+            "orderId": 9,
+            "Brand": "COLDINE",
+            "Model": "ABBATTITORE_MODI",
+            "Description": "Abbattitore multifunzione",
+            "ImgUrl": "/img/Attrezzature/ABBATTITORE_MODI.png"
+        },
+        {
             "orderId": 10,
-            "ImgUrl": "/img/ATTREZZATURE/ABBATTITORE_MODI.png"
-        },
-        {
-            "orderId": 20,
-            "ImgUrl": "/img/ATTREZZATURE/ABBATTITORI.png"
-        },
-        {
-            "orderId": 30,
-            "ImgUrl": "/img/ATTREZZATURE/APX.png"
-        },
-        {
-            "orderId": 40,
-            "ImgUrl": "/img/ATTREZZATURE/ARMADIO_SMART.png"
-        },
-        {
-            "orderId": 50,
-            "ImgUrl": "/img/ATTREZZATURE/BANCO_LAVORO.png"
-        },
-        {
-            "orderId": 60,
-            "ImgUrl": "/img/ATTREZZATURE/FRIGHI_LONGONI.png"
-        },
-        {
-            "orderId": 70,
-            "ImgUrl": "/img/ATTREZZATURE/HPW_40.png"
-        },
-        {
-            "orderId": 80,
-            "ImgUrl": "/img/ATTREZZATURE/HPW_80.png"
-        },
-        {
-            "orderId": 90,
-            "ImgUrl": "/img/ATTREZZATURE/HT_150.png"
-        },
-        {
-            "orderId": 91,
-            "Brandd": "TECNOMAC",
-            "Model": "TECNOCEL",
-            "Description": "ARMADIO REFRIGERATO",
-            "ImgUrl": "/img/Gelaterie/TECNOCEL.png"
-        },
-        {
-            "orderId": 100,
-            "ImgUrl": "/img/ATTREZZATURE/THAW_PRO.png"
-        },
-        {
-            "orderId": 110,
-            "ImgUrl": "/img/ATTREZZATURE/TLX.png"
+            "Brand": "COLDLINE",
+            "Model": "ABBATTITORI",
+            "Description": "ABBATTITORI",
+            "ImgUrl": "/img/Attrezzature/ABBATTITORI.png"
         }
     ],
     "Progettazione": [
