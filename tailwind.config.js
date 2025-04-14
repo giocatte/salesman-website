@@ -37,10 +37,20 @@ export default {
         '.tab-size-0': {
           tabSize: '0',
         },
+        '.h1-Desktop': {
+          fontSize: '3rem',
+          lineHeight: '4.094rem',
+          fontWeight: '800',
+        },
         '.h2-Desktop': {
           fontSize: '2.25rem',
           lineHeight: '3rem',
           fontWeight: '700',
+        },
+        '.h3-Desktop': {
+          fontSize: '2rem',
+          lineHeight: '2.725rem',
+          fontWeight: '400',
         },
         '.no-scrollbar': {
           '-ms-overflow-style': 'none', // IE and Edge

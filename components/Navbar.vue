@@ -1,11 +1,11 @@
 <template>
-    <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.125rem] xl:h-32 z-[1] bg-iron contrast-75"></div>
+    <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.125rem] xl:h-32 z-[1] bg-iron xl:bg-none xl:bg-white contrast-75 xl:contrast-100"></div>
     <div id="Navbar"
         class="py-3 px-5 xl:px-44 w-full h-[4.125rem] xl:h-32 flex justify-between items-center z-30 sticky top-0 left-0">
         <NuxtLink @click="menuOpen === true ? handleOptMenuSelected($event) : ''" to="/">
             <img :src="LogoMobile" alt="LogoMobile" class="w-[3.125rem] xl:w-[6.25rem] aspect-square">
         </NuxtLink>
-        <MenuBurgerAnimated v-if="isMobile" @menu-trigger="handleMenuTrigger" id="menuBurger" class="xl:hidden">
+        <MenuBurgerAnimated v-if="isMobile" @menu-trigger="handleMenuTrigger" id="menuBurger">
         </MenuBurgerAnimated>
         <div v-else-if="isDesktop">
 
@@ -72,7 +72,7 @@
                 </NuxtLink>
             </div>
         </div>
-        <div v-else-if="isDesktop" id="MenuDesktop" class="">
+        <div v-else-if="isDesktop" id="MenuDesktop">
             <div
                 class="flex gap-x-10 items-center text-black text-2xl leading-[2rem] font-nunito font-extrabold cursor-pointer">
                 <UPopover :ui="{
@@ -85,26 +85,26 @@
                     <p>SERVIZI</p>
                     <template #panel>
                         <div
-                            class="size-[30rem] p-12 bg-none bg-[#f4f4f4] rounded-xl flex flex-col felx-nowrap gap-y-2 h2-Desktop">
-                            <NuxtLink to="/Servizi/Panifici" class="w-full" active-class="activeNav">
+                            class="size-[30rem] p-12 bg-none bg-[#f4f4f4] rounded-xl flex flex-col felx-nowrap gap-y-2 h2-Desktop text-gr font-semibold cursor-default">
+                            <NuxtLink to="/Servizi/Panifici" class="w-full cursor-pointer" active-class="activeService">
                                 Panifici
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Pasticcerie" class="" active-class="activeNav">
+                            <NuxtLink to="/Servizi/Pasticcerie" class="w-full cursor-pointer" active-class="activeService">
                                 Pasticcerie
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Pizzerie" class="" active-class="activeNav">
+                            <NuxtLink to="/Servizi/Pizzerie" class="w-full cursor-pointer" active-class="activeService">
                                 Pizzerie
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Gelaterie" class="" active-class="activeNav">
+                            <NuxtLink to="/Servizi/Gelaterie" class="w-full cursor-pointer" active-class="activeService">
                                 Gelaterie
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Ristorazione" class="" active-class="activeNav">
+                            <NuxtLink to="/Servizi/Ristorazione" class="w-full cursor-pointer" active-class="activeService">
                                 Ristorazione
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Attrezzature" class="" active-class="activeNav">
+                            <NuxtLink to="/Servizi/Attrezzature" class="w-full cursor-pointer" active-class="activeService">
                                 Attrezzature
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Progettazione" class="" active-class="activeNav">
+                            <NuxtLink to="/Servizi/Progettazione" class="w-full cursor-pointer" active-class="activeService">
                                 Progettazione
                             </NuxtLink>
                         </div>
@@ -182,6 +182,10 @@ onMounted(() => {
 <style lang="scss" scoped>
 .activeNav {
     @apply text-black font-semibold
+}
+
+.activeService {
+    @apply text-black font-extrabold
 }
 
 #ServiziMenu {

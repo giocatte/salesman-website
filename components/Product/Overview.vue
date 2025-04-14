@@ -1,5 +1,7 @@
 <template>
-    <div id="Overview_Component" v-if="products && products.length > 0" class="flex flex-col gap-y-2 px-4 mb-8">
+    <div id="Overview_Component" v-if="products && products.length > 0 && isMobile"
+        class="w-full flex flex-col gap-y-2 px-4 mb-8">
+        <p class="mt-2 p-2 text-[2.5rem] font-nunito font-semibold">Servizi</p>
         <!-- Tabs -->
         <div
             class="overflow-x-scroll flex items-end gap-x-1 min-h-10 h-fit snap-x snap-proximity scroll-smooth transition-all duration-150">
@@ -12,11 +14,6 @@
                 </button>
             </div>
         </div>
-        <!-- <UCarousel id="CaroselloTest" ref="carouselTest" v-slot="{ item }" indicators :items="products" class="w-full py-8">
-            <button class="px-2 py-1 w-fit h-fit text-black rounded-full">
-                {{ item.component.BtnText }}
-            </button>
-        </UCarousel> -->
 
         <!-- Product Content -->
         <div v-for="p in products" :key="p.Id" v-show="p.Name === activeTab"
@@ -41,6 +38,13 @@
             </NuxtLink>
         </div>
     </div>
+    <div v-else-if="isDesktop">
+        <p class="font-nunito font-semibold h1-Desktop">Servizi</p>
+        <div class="grid grid-cols-2 w-full">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -51,6 +55,8 @@
 
 <script setup>
 import { ref, watch } from 'vue';
+
+const { width, isMobile, isDesktop } = useDeviceWidth()
 
 // Define the props
 const props = defineProps({
