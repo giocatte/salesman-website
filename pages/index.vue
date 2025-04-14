@@ -1,6 +1,6 @@
 <template>
     <div id="Home" class="w-full relative bg-white text-black">
-        <div id="landing" class="w-full h-fit relative flex z-0">
+        <div v-if="isMobile" id="landing" class="w-full h-fit relative flex z-0">
             <div id="imgsBCK" class="absolute w-full h-full flex flex-row flex-nowrap">
                 <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-full brightness-75">
                 <img src="assets/img/Abbattitore_Polin.jpg" alt="" class="w-1/2 h-full brightness-75">
@@ -17,10 +17,20 @@
                     Panifici, pasticcerie, pizzerie, gelaterie e ristorazione.</p>
             </div>
         </div>
-        <div id="Services" class="w-full">
-            <p class="mt-2 p-2 text-[2.5rem] font-nunito font-semibold">Servizi:</p>
-            <ProductOverview :products="products.products" />
+        <div v-else-if="isDesktop" id="HomeDesktop">
+            <div id="landingDesktop" class="relative grid grid-cols-2 w-full bg-iron text-gr">
+                <div id="NomeCognomeDesktop" class="py-24 pl-44 flex flex-col gap-y-7">
+                    <p class="font-bold text-[6.25rem] leading-[7.144rem]">ANDREA<br />TOGNON</p>
+                    <p class="h2-Desktop">Agente rivenditore di zona Autorizzato</p>
+                    <p class="h3-Desktop">Vendita macchinari e attrezzatura per:<br />Panifici, pasticcerie, pizzerie,
+                        gelaterie e ristoranti
+                    </p>
+                </div>
+                <div id="imgBCKDesktop" class="col-start-2">
+                </div>
+            </div>
         </div>
+        <ProductOverview :products="products.products" />
         <div id="ChiSono_"
             class="font-nunito relative w-full bg-iron-op px-4 py-[1.875rem] flex gap-2 row flex-col flex-nowrap">
             <p class="text-[2rem] font-extrabold">Chi sono</p>
@@ -47,7 +57,8 @@
             <p class="text-[2rem] text-center font-extrabold font-nunito text-gr">SOLO IL MEGLIO</p>
             <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi.Loghi"
                 :ui="{ item: 'basis-1/3', container: 'items-center gap-x-5' }">
-                <img :src="item.imgUrl" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-10" draggable="false" />
+                <img :src="item.imgUrl" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-10"
+                    draggable="false" />
             </UCarousel>
         </div>
     </div>
@@ -57,6 +68,8 @@
 <script setup lang="ts">
 import ProductOverview from '../components/Product/Overview.vue';
 import 'animate.css';
+
+const { width, isMobile, isDesktop } = useDeviceWidth()
 
 const { data } = await useFetch("/api/ServicesAPI");
 const products = JSON.parse(JSON.stringify(data.value));
