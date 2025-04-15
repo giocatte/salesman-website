@@ -24,7 +24,7 @@
                     <p class="h2-Desktop">Agente rivenditore di zona Autorizzato</p>
                     <p class="h3-Desktop">Vendita macchinari e attrezzatura per:<br />Panifici, pasticcerie, pizzerie,
                         gelaterie e ristoranti
-                    </p>
+                    </p> 
                 </div>
                 <div id="imgBCKDesktop" class="col-start-2 flex items-center justify-center">
                     <img src="/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/ATTREZZATURE.png">
