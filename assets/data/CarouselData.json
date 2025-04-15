@@ -548,6 +548,48 @@
             "Model": "ABBATTITORI",
             "Description": "ABBATTITORI",
             "ImgUrl": "/img/Attrezzature/ABBATTITORI.png"
+        },
+        {
+            "orderId": 11,
+            "Brand": "MCE",
+            "Model": "Teglia_lamiera_alluminata",
+            "Description": "Teglia in alluminio",
+            "ImgUrl": "/img/ATTREZZATURE/Attrezzature_mce/Teglia_lamiera_alluminata.png"
+        },
+        {
+            "orderId": 12,
+            "Brand": "MCE",
+            "Model": "Teglia_alluminio_forato_stampata",
+            "Description": "Teglia in alluminio forata",
+            "ImgUrl": "/img/ATTREZZATURE/Attrezzature_mce/Teglia_alluminio_forato_stampata.png"
+        },
+        {
+            "orderId": 13,
+            "Brand": "MCE",
+            "Model": "Teglia_alluminio",
+            "Description": "Teglia in alluminio",
+            "ImgUrl": "/img/ATTREZZATURE/Attrezzature_mce/Teglia_alluminio.png"
+        },
+        {
+            "orderId": 14,
+            "Brand": "MCE",
+            "Model": "Carrello_portateglie_guide_angolari",
+            "Description": "Carrello portateglie a guide angolari",
+            "ImgUrl": "/img/ATTREZZATURE/Attrezzature_mce/Carrello_portateglie_guide_angolari.png"
+        },
+        {
+            "orderId": 15,
+            "Brand": "MCE",
+            "Model": "Carrello_portateglie_forno_rotativo",
+            "Description": "Carrello portateglie per forno rotativo",
+            "ImgUrl": "/img/ATTREZZATURE/Attrezzature_mce/carrello_portateglie_forno_rotativo.png"
+        },
+        {
+            "orderId": 16,
+            "Brand": "MCE",
+            "Model": "Carrello_pioli",
+            "Description": "Carrello a pioli",
+            "ImgUrl": "/img/ATTREZZATURE/Attrezzature_mce/Carrello_pioli.png"
         }
     ],
     "Progettazione": [
