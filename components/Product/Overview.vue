@@ -40,10 +40,9 @@
     </div>
     <div v-else-if="products && products.length > 0 && isDesktop">
         <div class="relative w-full h-fit py-14 px-44 flex flex-row flex-wrap content-center justify-start">
-            <div v-if="comp" class="relative w-7/12 h-fit flex flex-col gap-y-5">
+            <div v-if="comp" class="relative w-4/6 h-fit flex flex-col gap-y-5">
                 <p class="font-nunito font-semibold h1-Desktop">Servizi</p>
-                <div
-                    class="overflow-x-auto flex items-center gap-x-4 min-h-10 h-fit">
+                <div class="overflow-x-auto flex items-center gap-x-4 min-h-10 h-fit">
                     <div class="py-1 w-fit rounded-full transition-all duration-150"
                         :class="{ 'bg-BlueToRed px-1': activeTab === p.Name }" v-for="p in products" :key="p.Id"
                         @click="setActiveTab(p)">
@@ -54,7 +53,7 @@
                         </button>
                     </div>
                 </div>
-                <p class="font-nunito font-semibold h2-Desktop text-gr" v-html="comp.Title"></p>
+                <p class="font-nunito font-semibold h2-Desktop text-gr" v-html="desktopTitle"></p>
                 <p class="font-nunito font-semibold h3-Desktop text-gr" v-html="comp.Description"></p>
                 <!-- Button -->
                 <NuxtLink :to="`/Servizi/${comp.BtnText}`" id="ChiSono"
@@ -64,7 +63,7 @@
                     </button>
                 </NuxtLink>
             </div>
-            <div class="w-4/12 rounded-2xl bg-yellow-400">
+            <div class="w-2/6 rounded-2xl bg-yellow-400">
                 <img :src="comp.ImgUrl" alt="" class="w-full h-full rounded-xl" />
             </div>
         </div>
@@ -93,12 +92,15 @@ const props = defineProps({
 // Reactive state
 const activeTab = ref(1);
 const comp = ref(null);
+const desktopTitle = ref(null);
 
 onMounted(() => {
     // Set the initial active tab based on the first product
     if (props.products && props.products.length > 0) {
         activeTab.value = props.products[0].Name; // Imposta il primo tab
         comp.value = props.products[0].component; // Imposta il primo componente
+        desktopTitle.value = props.products[0].component.Title; // Imposta il titolo desktop
+        desktopTitle.value = desktopTitle.value.replace(/<[^>]+>/g, ' '); // Rimuovi i tag HTML
     }
 });
 
@@ -114,6 +116,11 @@ const setActiveTab = (p) => {
     console.log(p);
     activeTab.value = p.Name;
     comp.value = p.component;
+    desktopTitle.value = p.component.Title; // Imposta il titolo desktop
+    desktopTitle.value = desktopTitle.value.replace(/<[^>]+>/g, ' '); // Rimuovi i tag HTML
+    if (p.Id == 7) {
+        desktopTitle.value = "Arredamenti per Laboratori e Cucine <br/>Vendita e Progettazione su Misura";
+    }
 };
 </script>
 script
