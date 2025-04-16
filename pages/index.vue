@@ -26,8 +26,9 @@
                         gelaterie e ristoranti
                     </p> 
                 </div>
-                <div id="imgBCKDesktop" class="col-start-2 flex items-center justify-center">
-                    <img src="/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/ATTREZZATURE.png">
+                <div id="imgBCKDesktop" class="col-start-2 flex items-center justify-start py-10 pr-24">
+                    <img src="/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.png" class="drop-shadow-[0_36px_50px_rgba(0,0,0,0.25)]"
+                        alt="Immagine di sfondo" />
                 </div>
             </div>
         </div>

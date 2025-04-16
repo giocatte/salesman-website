@@ -52,6 +52,11 @@ export default {
           lineHeight: '2.725rem',
           fontWeight: '400',
         },
+        '.button-Desktop': {
+          fontSize: '1.5rem',
+          lineHeight: '2rem',
+          fontWeight: '800',
+        },
         '.no-scrollbar': {
           '-ms-overflow-style': 'none', // IE and Edge
           'scrollbar-width': 'none', // Firefox
@@ -65,11 +70,11 @@ export default {
         '.btnBlueRed-ez': {
           'color': '#3A3939',
           'width': 'fit-content',
-          'font-weight': 'bold',
           'background-color': '#fff',
-          'font-size': '1rem',
           'padding': '.25rem .5rem',
-          'border-radius': '9999px'
+          'border-radius': '9999px',
+          'font-weight': 'bold',
+          'font-size': '1rem',
         },
         '.btnBlueRed': {
           'color': '#3A3939',

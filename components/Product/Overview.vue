@@ -38,11 +38,35 @@
             </NuxtLink>
         </div>
     </div>
-    <div v-else-if="isDesktop">
-        <p class="font-nunito font-semibold h1-Desktop">Servizi</p>
-        <div class="grid grid-cols-2 w-full">
-            <div></div>
-            <div></div>
+    <div v-else-if="products && products.length > 0 && isDesktop">
+        <div class="relative w-full h-fit py-14 px-44 flex flex-row flex-wrap content-center justify-start">
+            <div v-if="comp" class="relative w-7/12 h-fit flex flex-col gap-y-5">
+                <p class="font-nunito font-semibold h1-Desktop">Servizi</p>
+                <div
+                    class="overflow-x-auto flex items-center gap-x-4 min-h-10 h-fit">
+                    <div class="py-1 w-fit rounded-full transition-all duration-150"
+                        :class="{ 'bg-BlueToRed px-1': activeTab === p.Name }" v-for="p in products" :key="p.Id"
+                        @click="setActiveTab(p)">
+                        <button
+                            class="w-fit bg-[#fff] rounded-full px-2 py-[1px] h-fit -m-[1px] text-black text-xl font-bold"
+                            :class="activeTab === p.Name ? 'snap-center snap-always' : ''">
+                            {{ p.component.BtnText }}
+                        </button>
+                    </div>
+                </div>
+                <p class="font-nunito font-semibold h2-Desktop text-gr" v-html="comp.Title"></p>
+                <p class="font-nunito font-semibold h3-Desktop text-gr" v-html="comp.Description"></p>
+                <!-- Button -->
+                <NuxtLink :to="`/Servizi/${comp.BtnText}`" id="ChiSono"
+                    class="p-1 w-fit rounded-2xl transition-all duration-150 bg-BlueToRed">
+                    <button class="px-2 py-1 h-fit -m-[1px] text-black bg-white rounded-xl font-bold text-2xl">
+                        SCOPRI DI PIÙ
+                    </button>
+                </NuxtLink>
+            </div>
+            <div class="w-4/12 rounded-2xl bg-yellow-400">
+                <img :src="comp.ImgUrl" alt="" class="w-full h-full rounded-xl" />
+            </div>
         </div>
     </div>
 </template>
@@ -67,7 +91,16 @@ const props = defineProps({
 });
 
 // Reactive state
-const activeTab = ref(null);
+const activeTab = ref(1);
+const comp = ref(null);
+
+onMounted(() => {
+    // Set the initial active tab based on the first product
+    if (props.products && props.products.length > 0) {
+        activeTab.value = props.products[0].Name; // Imposta il primo tab
+        comp.value = props.products[0].component; // Imposta il primo componente
+    }
+});
 
 // Watch per impostare il primo tab automaticamente
 watch(() => props.products, (newProducts) => {
@@ -77,8 +110,9 @@ watch(() => props.products, (newProducts) => {
 }, { immediate: true });
 
 // Function to change active tab
-const setActiveTab = (name) => {
-    activeTab.value = name;
+const setActiveTab = (p) => {
+    activeTab.value = p.Name;
+    comp.value = p.component;
 };
 </script>
 script

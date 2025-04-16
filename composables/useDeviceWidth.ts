@@ -18,7 +18,7 @@ export const useDeviceWidth = () => {
 
   return {
     width,
-    isMobile: computed(() => width.value < 768), // breakpoint tipico di Tailwind md: 768px
+    isMobile: computed(() => width.value < 1024), // breakpoint tipico di Tailwind md: 768px
     isTablet: computed(() => width.value >= 768 && width.value < 1024),
     isDesktop: computed(() => width.value >= 1024)
   }
