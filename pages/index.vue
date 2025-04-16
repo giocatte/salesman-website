@@ -18,7 +18,7 @@
             </div>
         </div>
         <div v-else-if="isDesktop" id="HomeDesktop">
-            <div id="landingDesktop" class="relative grid grid-cols-2 w-full bg-iron text-gr">
+            <div id="landingDesktop" class="relative grid grid-cols-2 w-full bg-iron text-gr font-nunito">
                 <div id="NomeCognomeDesktop" class="py-24 pl-44 flex flex-col gap-y-7">
                     <p class="font-bold text-[6.25rem] leading-[7.144rem]">ANDREA<br />TOGNON</p>
                     <p class="h2-Desktop">Agente rivenditore di zona Autorizzato</p>
@@ -26,7 +26,9 @@
                         gelaterie e ristoranti
                     </p> 
                 </div>
-                <div id="imgBCKDesktop" class="col-start-2">
+                <div id="imgBCKDesktop" class="col-start-2 flex items-center justify-start py-10 pr-24">
+                    <img src="/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.png" class="drop-shadow-[0_36px_50px_rgba(0,0,0,0.25)]"
+                        alt="Immagine di sfondo" />
                 </div>
             </div>
         </div>
