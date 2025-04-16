@@ -7,7 +7,7 @@
             class="overflow-x-scroll flex items-end gap-x-1 min-h-10 h-fit snap-x snap-proximity scroll-smooth transition-all duration-150">
             <div class="p-1 mb-2 w-fit rounded-full transition-all duration-150"
                 :class="{ 'bg-BlueToRed': activeTab === p.Name }" v-for="p in products" :key="p.Id"
-                @click="setActiveTab(p.Name)">
+                @click="setActiveTab(p)">
                 <button class="px-2 py-1 h-fit -m-[1px] text-black rounded-full"
                     :class="activeTab === p.Name ? 'btnBlueRed-ez p-1 snap-center snap-always' : null">
                     {{ p.component.BtnText }}
@@ -78,7 +78,7 @@
 </style>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 
 const { width, isMobile, isDesktop } = useDeviceWidth()
 
@@ -111,6 +111,7 @@ watch(() => props.products, (newProducts) => {
 
 // Function to change active tab
 const setActiveTab = (p) => {
+    console.log(p);
     activeTab.value = p.Name;
     comp.value = p.component;
 };
