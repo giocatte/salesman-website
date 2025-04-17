@@ -24,19 +24,21 @@
                     <p class="h2-Desktop">Agente rivenditore di zona Autorizzato</p>
                     <p class="h3-Desktop">Vendita macchinari e attrezzatura per:<br />Panifici, pasticcerie, pizzerie,
                         gelaterie e ristoranti
-                    </p> 
+                    </p>
                 </div>
                 <div id="imgBCKDesktop" class="col-start-2 flex items-center justify-start py-10 pr-24">
-                    <img src="/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.png" class="drop-shadow-[0_36px_50px_rgba(0,0,0,0.25)]"
-                        alt="Immagine di sfondo" />
+                    <img src="/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.png"
+                        class="drop-shadow-[0_36px_50px_rgba(0,0,0,0.25)]" alt="Immagine di sfondo" />
                 </div>
             </div>
         </div>
         <ProductOverview :products="products.products" />
         <div id="ChiSono_"
-            class="font-nunito relative w-full bg-iron-op px-4 py-[1.875rem] flex gap-2 row flex-col flex-nowrap">
-            <p class="text-[2rem] font-extrabold">Chi sono</p>
-            <p class="text-lg">Da oltre <b>30 anni</b> mi occupo di <b>vendita</b> e <b>assistenza tecnica</b> di
+            class="relative w-full font-nunito bg-iron-op px-4 py-[1.875rem] flex gap-2 xl:px-44 xl:pt-[3.75rem] xl:pb-20 xl:grid xl:grid-cols-2 xl:grid-rows-[fit,fit] xl:gap-x-12 xl:gap-y-7 flex-col flex-nowrap">
+            <p class="text-[2rem] font-extrabold xl:h1-Desktop xl:row-start-1 xl:col-start-1">Chi sono</p>
+            <p class="text-lg xl:h3-Desktop xl:row-start-2 xl:col-start-1">Da oltre <b>30 anni</b> mi occupo di
+                <b>vendita</b> e <b>assistenza
+                    tecnica</b> di
                 macchinari <b>nuovi</b> e
                 <b>usati</b>, garantendo <b>qualità</b> e
                 <b>affidabilità</b>.<br />Collaboro con i <b>migliori marchi</b> del settore per offrire
@@ -45,8 +47,11 @@
                 le tue
                 esigenze.
             </p>
-            <p class="mt-3 text-[2rem] font-extrabold">Assistenza tecnica e consulenza dedicata</p>
-            <p class="text-lg">Offro <b>assistenza tecnica, fornitura di pezzi di ricambio</b> e <b>manutenzione
+            <p class="mt-3 text-[2rem] font-extrabold xl:mt-0 xl:h1-Desktop xl:row-start-1 xl:col-start-2">Assistenza
+                tecnica e consulenza</p>
+            <p class="text-lg xl:h3-Desktop xl:row-start-2 xl:col-start-2">Offro <b>assistenza tecnica, fornitura di
+                    pezzi di ricambio</b> e
+                <b>manutenzione
                     periodica</b>
                 sui <b>macchinari</b> che commercializzo.<br />Grazie alla collaborazione con <b>tecnici
                     specializzati</b>, potrai contare su un
@@ -55,10 +60,16 @@
                 la soluzione più adatta al tuo <b>volume di produzione</b> e agli <b>spazi</b> della tua attività.
             </p>
         </div>
-        <div v-if="loghi" id="OnlyTheBest" class="relative py-8">
-            <p class="text-[2rem] text-center font-extrabold font-nunito text-gr">SOLO IL MEGLIO</p>
-            <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi.Loghi"
-                :ui="{ item: 'basis-1/3', container: 'items-center gap-x-5' }">
+        <div v-if="loghi" id="OnlyTheBest" class="relative py-8 xl:py-[3.75rem]">
+            <p class="text-[2rem] text-center font-extrabold font-nunito text-gr xl:h1-Desktop">SOLO IL MEGLIO</p>
+            <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi"
+                :ui="{ item: 'basis-1/3 xl:basis-[15.625rem]', container: 'items-center gap-x-5 xl:gap-x-[9.688rem]' }">
+                <img :src="item.imgUrl" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-10"
+                    draggable="false" />
+            </UCarousel>
+            <UCarousel v-show="isDesktop" id="CaroselloLoghi_Desktop" ref="carouseLoghiRef_Desktop" class="py-8"
+                v-slot="{ item }" :items="loghi2"
+                :ui="{ item: 'basis-1/3 xl:basis-[15.625rem]', container: 'items-center gap-x-5 xl:gap-x-[9.688rem]' }">
                 <img :src="item.imgUrl" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-10"
                     draggable="false" />
             </UCarousel>
@@ -77,18 +88,40 @@ const { data } = await useFetch("/api/ServicesAPI");
 const products = JSON.parse(JSON.stringify(data.value));
 
 
-import loghi from '~/assets/data/LoghiPaths.json';
+import loghiData from '~/assets/data/LoghiPaths.json';
+// Estraggo l'array dei loghi
+const loghi = loghiData.Loghi;
+
+// Funzione per mischiare un array
+function shuffle<T>(array: T[]): T[] {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+}
+
+// Creo una versione randomizzata dei loghi
+const loghi2 = shuffle(loghi);
 // const { data: loghi } = await useFetch('/api/getLoghi');
 const carouseLoghiRef = ref();
+const carouseLoghiRef_Desktop = ref();
 
 onMounted(() => {
     setInterval(() => {
-        if (!carouseLoghiRef.value) return;
+        if (!carouseLoghiRef.value || !carouseLoghiRef_Desktop.value) return;
 
         if (carouseLoghiRef.value.page === carouseLoghiRef.value.pages) {
             return carouseLoghiRef.value.select(0);
         }
         carouseLoghiRef.value.next()
+        setTimeout(() => {
+            if (carouseLoghiRef_Desktop.value.page === carouseLoghiRef_Desktop.value.pages) {
+                return carouseLoghiRef_Desktop.value.select(0);
+            }
+            carouseLoghiRef_Desktop.value.next()
+        }, 1750)
     }, 3500)
 })
 
