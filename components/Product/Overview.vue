@@ -39,8 +39,8 @@
         </div>
     </div>
     <div v-else-if="products && products.length > 0 && isDesktop">
-        <div class="relative w-full h-fit py-14 px-44 flex flex-row flex-wrap content-center justify-start">
-            <div v-if="comp" class="relative w-4/6 h-fit flex flex-col gap-y-5">
+        <div class="relative w-full h-fit py-14 px-44 flex content-center">
+            <div v-if="comp && compPrev && compNext" class="relative w-7/12 h-fit flex flex-col gap-y-5">
                 <p class="font-nunito font-semibold h1-Desktop">Servizi</p>
                 <div class="overflow-x-auto flex items-center gap-x-4 min-h-10 h-fit">
                     <div class="py-1 w-fit rounded-full transition-all duration-150"
@@ -63,8 +63,14 @@
                     </button>
                 </NuxtLink>
             </div>
-            <div class="w-2/6 rounded-2xl bg-yellow-400">
-                <img :src="comp.ImgUrl" alt="" class="w-full h-full rounded-xl" />
+            <div class="w-5/12 relative flex justify-center">
+                <img :src="compPrev.ImgUrl" alt=""
+                    class="h-[23.8rem] w-[23.8rem] absolute top-10 left-0 z-0 blur-sm rounded-3xl animate__animated animate__faster" />
+                <img :src="comp.ImgUrl" alt="" id="compImg"
+                    class="h-[29.75rem] w-[29.5rem] relative left-5 z-10 rounded-3xl animate__animated animate__faster"
+                    :class="closeAnimation ? 'animate__flipOutY' : 'animate__flipInY'" />
+                <img :src="compNext.ImgUrl" alt=""
+                    class="h-[23.8rem] w-[23.8rem] absolute top-10 right-0 z-0 blur-sm rounded-3xl animate__animated animate__faster" />
             </div>
         </div>
     </div>
@@ -92,7 +98,10 @@ const props = defineProps({
 // Reactive state
 const activeTab = ref(1);
 const comp = ref(null);
+const compPrev = ref(null);
+const compNext = ref(null);
 const desktopTitle = ref(null);
+const closeAnimation = ref(false); // Animation state for the component
 
 onMounted(() => {
     // Set the initial active tab based on the first product
@@ -101,6 +110,8 @@ onMounted(() => {
         comp.value = props.products[0].component; // Imposta il primo componente
         desktopTitle.value = props.products[0].component.Title; // Imposta il titolo desktop
         desktopTitle.value = desktopTitle.value.replace(/<[^>]+>/g, ' '); // Rimuovi i tag HTML
+        compPrev.value = props.products[6].component; // Imposta il primo componente per desktop
+        compNext.value = props.products[6].component; // Imposta il primo componente per desktop
     }
 });
 
@@ -113,14 +124,25 @@ watch(() => props.products, (newProducts) => {
 
 // Function to change active tab
 const setActiveTab = (p) => {
-    console.log(p);
-    activeTab.value = p.Name;
-    comp.value = p.component;
-    desktopTitle.value = p.component.Title; // Imposta il titolo desktop
-    desktopTitle.value = desktopTitle.value.replace(/<[^>]+>/g, ' '); // Rimuovi i tag HTML
-    if (p.Id == 7) {
-        desktopTitle.value = "Arredamenti per Laboratori e Cucine <br/>Vendita e Progettazione su Misura";
-    }
+    closeAnimation.value = true; // Imposta l'animazione di chiusura
+    setTimeout(() => {
+        closeAnimation.value = false; // Ripristina l'animazione di apertura
+        activeTab.value = p.Name;
+        comp.value = p.component;
+        desktopTitle.value = p.component.Title; // Imposta il titolo desktop
+        desktopTitle.value = desktopTitle.value.replace(/<[^>]+>/g, ' '); // Rimuovi i tag HTML
+        if (p.Id == 1) {
+            compPrev.value = props.products[6].component;
+            compNext.value = props.products[1].component;
+        } else if (p.Id == 7) {
+            desktopTitle.value = "Arredamenti per Laboratori e Cucine <br/>Vendita e Progettazione su Misura";
+            compPrev.value = props.products[5].component;
+            compNext.value = props.products[0].component;
+        } else {
+            compPrev.value = props.products[p.Id - 2].component;
+            compNext.value = props.products[p.Id].component;
+        }
+    }, 75);
 };
 </script>
 script
