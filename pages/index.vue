@@ -34,7 +34,7 @@
         </div>
         <ProductOverview :products="products.products" />
         <div id="ChiSono_"
-            class="relative w-full font-nunito bg-iron-op px-4 py-[1.875rem] flex gap-2 xl:px-44 xl:pt-[3.75rem] xl:pb-20 xl:grid xl:grid-cols-2 xl:grid-rows-[fit,fit] xl:gap-x-12 xl:gap-y-7 flex-col flex-nowrap">
+            class="relative w-full font-nunito bg-iron-op px-4 py-[1.875rem] flex gap-2 xl:px-Desktop xl:pt-[3.75rem] xl:pb-20 xl:grid xl:grid-cols-2 xl:grid-rows-[fit,fit] xl:gap-x-12 xl:gap-y-7 flex-col flex-nowrap">
             <p class="text-[2rem] font-extrabold xl:h1-Desktop xl:row-start-1 xl:col-start-1">Chi sono</p>
             <p class="text-lg xl:h3-Desktop xl:row-start-2 xl:col-start-1">Da oltre <b>30 anni</b> mi occupo di
                 <b>vendita</b> e <b>assistenza

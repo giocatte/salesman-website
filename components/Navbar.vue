@@ -1,9 +1,9 @@
 <template>
     <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.125rem] xl:h-32 z-[1] bg-iron xl:bg-none xl:bg-white contrast-75 xl:contrast-100"></div>
     <div id="Navbar"
-        class="py-3 px-5 xl:px-44 w-full h-[4.125rem] xl:h-32 flex justify-between items-center z-30 sticky top-0 left-0">
+        class="py-3 px-5 xl:px-Desktop w-full h-[4.125rem] xl:h-32 flex justify-between items-center z-30 sticky top-0 left-0">
         <NuxtLink @click="menuOpen === true ? handleOptMenuSelected($event) : ''" to="/">
-            <img :src="LogoMobile" alt="LogoMobile" class="w-[3.125rem] xl:w-[6.25rem] aspect-square">
+            <img :src="Logo" alt="Logo" class="w-[3.125rem] xl:w-[6.25rem] aspect-square">
         </NuxtLink>
         <MenuBurgerAnimated v-if="isMobile" @menu-trigger="handleMenuTrigger" id="menuBurger">
         </MenuBurgerAnimated>
@@ -122,7 +122,7 @@
 </template>
 
 <script setup lang="ts">
-import LogoMobile from '~/assets/img/LOGO_AT.png';
+import Logo from '~/assets/img/LOGO_AT.png';
 
 const { width, isMobile, isDesktop } = useDeviceWidth()
 const showServizi = ref(false);
