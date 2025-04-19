@@ -23,7 +23,7 @@
             <NuxtLink to="/Servizi/Attrezzature" class="p-1 w-[47%] rounded-full bg-BlueToRed">
               <button class="w-full btnBlueRed">Attrezzature</button>
             </NuxtLink>
-            <NuxtLink to="/Servizi/Pizzerie" class="p-1 w-[47%] rounded-full bg-BlueToRed">
+            <NuxtLink to="/Servizi/Panifici" class="p-1 w-[47%] rounded-full bg-BlueToRed">
               <button class="w-full btnBlueRed">Panifici</button>
             </NuxtLink>
           </div>
