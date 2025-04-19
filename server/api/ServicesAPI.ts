@@ -25,6 +25,7 @@ export default defineEventHandler((event) => {
             "<b>Accessori</b> e <b>macchinari ausiliari</b> per <b>ottimizzare</b> i flussi di lavoro e migliorare l’<b>efficienza</b>",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png",
+          ImgUrlDesktop: "/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/PANIFICI.png" //modifica immagine desktop
         },
       },
       {
@@ -52,6 +53,7 @@ export default defineEventHandler((event) => {
             "<b>Macchinari complementari</b> per migliorare l’<b>organizzazione</b> del laboratorio e <b>ottimizzare</b> la produzione",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png",
+          ImgUrlDesktop: "/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/PASTICCERIE.png" //modifica immagine desktop
         },
       },
       {
@@ -79,6 +81,7 @@ export default defineEventHandler((event) => {
             "<b>Macchinari ausiliari</b> e complementi per <b>ottimizzare</b> il tuo spazio di lavoro",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PIZZERIA.png",
+          ImgUrlDesktop: "/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/PIZZERIE.png" //modifica immagine desktop
         },
       },
       {
@@ -105,6 +108,7 @@ export default defineEventHandler((event) => {
             "<b>Soluzioni modulari</b> e <b>personalizzabili</b>, in base allo <b>spazio disponibile</b> e al <b>volume di produzione</b> della tua attività",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_GELATERIE.png",
+          ImgUrlDesktop: "/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/GELATERIE.png" //modifica immagine desktop
         },
       },
       {
@@ -132,6 +136,7 @@ export default defineEventHandler((event) => {
             "<b>Attrezzature complementari</b>: soluzioni integrate per migliorare il flusso di lavoro e garantire il massimo della produttività",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png",
+          ImgUrlDesktop: "/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/RISTORAZIONE.png" //modifica immagine desktop
         },
       },
       {
@@ -158,6 +163,7 @@ export default defineEventHandler((event) => {
             "Arredi in acciaio inox</b>: <b>banchi</b> e <b>scaffali</b> per un <b>ambiente di lavoro funzionale</b>",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_ATTREZZATURE.png",
+          ImgUrlDesktop: "/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/ATTREZZATURE.png" //modifica immagine desktop
         },
       },
       {
@@ -181,6 +187,7 @@ export default defineEventHandler((event) => {
           Desc: "",
           list: [],
           ImgUrl: "/img/ARREDAMENTI/IMG_ARREDAMENTO.jpg",
+          ImgUrlDesktop: "/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/IMG_ARREDAMENTO_DSK.JPG", //modifica immagine desktop
         },
       },
     ],

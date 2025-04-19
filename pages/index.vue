@@ -83,6 +83,8 @@ import ProductOverview from '../components/Product/Overview.vue';
 import 'animate.css';
 
 const { width, isMobile, isDesktop } = useDeviceWidth()
+// Rilevamento se siamo pronti a mostrare la vista corretta
+const isReady = ref(false)
 
 const { data } = await useFetch("/api/ServicesAPI");
 const products = JSON.parse(JSON.stringify(data.value));

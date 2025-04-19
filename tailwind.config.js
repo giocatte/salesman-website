@@ -38,17 +38,17 @@ export default {
           tabSize: '0',
         },
         '.h1-Desktop': {
-          fontSize: '3rem',
+          fontSize: '2.5rem',
           lineHeight: '4.094rem',
           fontWeight: '800',
         },
         '.h2-Desktop': {
-          fontSize: '2.25rem',
+          fontSize: '2rem',
           lineHeight: '3rem',
           fontWeight: '700',
         },
         '.h3-Desktop': {
-          fontSize: '2rem',
+          fontSize: '1.5rem',
           lineHeight: '2.725rem',
           fontWeight: '400',
         },

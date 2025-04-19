@@ -1,5 +1,7 @@
 <template>
     <div id="Service" v-if="currentProduct !== undefined">
+        <!-- MOBILE -->
+        <div v-if="!isDesktop">
         <img :src="currentProduct.pages.ImgUrl" alt="" class="relative top-0 left-0 w-full bg-white aspect-[5/4]">
         <div class="w-full px-3 py-5 bg-white text-gr flex flex-col gap-2">
             <p class="title" v-html="currentProduct.pages.Title"></p>
@@ -18,23 +20,56 @@
             <p class="text-2xl font-bold">Potrebbe interessarti anche:</p>
             <div class="w-full pb-4 px-6 flex justify-between">
                 <NuxtLink to="/Servizi/Attrezzature" class="p-1 w-[47%] rounded-full bg-BlueToRed">
-                    <button class="w-full btnBlueRed">
-                        Attrezzature
-                    </button>
+                    <button class="w-full btnBlueRed">Attrezzature</button>
                 </NuxtLink>
                 <NuxtLink to="/Servizi/Gelaterie" class="p-1 w-[47%] rounded-full bg-BlueToRed">
-                    <button class="w-full btnBlueRed">
-                        Gelaterie
-                    </button>
+                    <button class="w-full btnBlueRed">Gelaterie</button>
                 </NuxtLink>
+                 </div>
             </div>
         </div>
+
+    <!-- DESKTOP -->
+    <div v-else>
+      <!-- BLOCCO 1: Testo + immagine -->
+      <div class="w-full bg-iron flex flex-row items-center md:px-[11.25rem] px-4 py-[3.75rem] gap-[1.25rem]">
+        <!-- Colonna sinistra -->
+        <div class="w-1/2 text-gr font-nunito flex flex-col gap-3">
+          <p class="text-3xl xl:h1-Desktop font-bold" v-html="currentProduct.pages.Title"></p>
+          <p class="text-xl xl:h2-Desktop font-semibold" v-html="currentProduct.pages.SubTitle"></p>
+          <p class="text-lg xl:h3-Desktop" v-html="currentProduct.pages.Intro"></p>
+        </div>
+
+        <!-- Colonna destra: immagine -->
+        <div class="w-1/2">
+          <img
+            :src="currentProduct.pages.ImgUrlDesktop"
+            alt="Macchinari per pasticcerie"
+            class="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+
+      <!-- BLOCCO 2: Testo + lista -->
+      <div class="w-full md:px-[11.25rem] px-4 py-[3.75rem] bg-white text-gr font-nunito flex flex-col gap-4">
+        <p class="text-3xl font-bold xl:h1-Desktop" v-html="currentProduct.pages.Title_2"></p>
+        <p class="text-lg xl:h3-Desktop" v-html="currentProduct.pages.Desc"></p>
+        <ul class="list-disc px-5 text-lg xl:h3-Desktop">
+          <li v-for="item in currentProduct.pages.list" :key="item" v-html="item"></li>
+        </ul>
+      </div>
+        <!-- BLOCCO 3: Carosello -->
+      <ProductShowCarousel :product="currentProduct" />
+      
+        
     </div>
+  </div>
 </template>
 
 <script setup>
 import { ProductShowCarousel } from '#components';
 const router = useRouter();
+const { isDesktop } = useDeviceWidth();
 
 const { data } = await useFetch("/api/ServicesAPI");
 const currentRoute = router.currentRoute.value.path.split("/")[2];
