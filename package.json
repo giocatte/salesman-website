@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "embla-carousel-class-names": "^8.6.0",
     "nuxt": "^3.6.0",
     "vue": "^3.5.13",
     "vue-router": "latest"

@@ -26,9 +26,9 @@
         <div class="w-full bg-iron flex flex-row items-center md:px-[11.25rem] px-4 py-[3.75rem] gap-[1.25rem]">
           <!-- Colonna sinistra -->
           <div class="w-1/2 text-gr font-nunito flex flex-col gap-3">
-            <p class="text-3xl xl:h1-Desktop font-bold" v-html="currentProduct.pages.Title"></p>
-            <p class="text-xl xl:h2-Desktop font-semibold" v-html="currentProduct.pages.SubTitle"></p>
-            <p class="text-lg xl:h3-Desktop" v-html="currentProduct.pages.Intro"></p>
+            <p class="text-3xl lg:h1-Desktop font-bold" v-html="currentProduct.pages.Title"></p>
+            <p class="text-xl lg:h2-Desktop font-semibold" v-html="currentProduct.pages.SubTitle"></p>
+            <p class="text-lg lg:h3-Desktop" v-html="currentProduct.pages.Intro"></p>
           </div>
   
           <!-- Colonna destra: immagine -->
@@ -43,9 +43,9 @@
   
         <!-- BLOCCO 2: Testo + lista -->
         <div class="w-full md:px-[11.25rem] px-4 py-[3.75rem] bg-white text-gr font-nunito flex flex-col gap-4">
-          <p class="text-3xl font-bold xl:h1-Desktop" v-html="currentProduct.pages.Title_2"></p>
-          <p class="text-lg xl:h3-Desktop" v-html="currentProduct.pages.Desc"></p>
-          <ul class="list-disc px-5 text-lg xl:h3-Desktop">
+          <p class="text-3xl font-bold lg:h1-Desktop" v-html="currentProduct.pages.Title_2"></p>
+          <p class="text-lg lg:h3-Desktop" v-html="currentProduct.pages.Desc"></p>
+          <ul class="list-disc px-5 text-lg lg:h3-Desktop">
             <li v-for="item in currentProduct.pages.list" :key="item" v-html="item"></li>
           </ul>
         </div>

@@ -65,7 +65,7 @@
             </div>
             <div class="w-5/12 relative flex justify-center">
                 <img :src="compPrev.ImgUrl" alt=""
-                    class="h-[23.8rem] w-[23.8rem] absolute top-10 left-0 z-0 blur-sm rounded-3xl animate__animated animate__faster" />
+                    class="h-[23.8rem] w-[23.8rem] absolute top-10 left-10 z-0 blur-sm rounded-3xl animate__animated animate__faster" />
                 <img :src="comp.ImgUrl" alt="" id="compImg"
                     class="h-[29.75rem] w-[29.5rem] relative left-5 z-10 rounded-3xl animate__animated animate__faster"
                     :class="closeAnimation ? 'animate__flipOutY' : 'animate__flipInY'" />

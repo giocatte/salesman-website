@@ -1,9 +1,11 @@
 <template>
-    <div id="sfondoNav" class="absolute top-0 left-0 w-full h-[4.125rem] xl:h-32 z-[1] bg-iron xl:bg-none xl:bg-white contrast-75 xl:contrast-100"></div>
+    <div id="sfondoNav"
+        class="absolute top-0 left-0 w-full h-[4.125rem] lg:h-32 z-[1] bg-iron lg:bg-none lg:bg-white contrast-75 lg:contrast-100">
+    </div>
     <div id="Navbar"
-        class="py-3 px-5 xl:px-Desktop w-full h-[4.125rem] xl:h-32 flex justify-between items-center z-30 sticky top-0 left-0">
+        class="py-3 px-5 lg:px-Desktop w-full h-[4.125rem] lg:h-32 flex justify-between items-center z-30 sticky top-0 left-0">
         <NuxtLink @click="menuOpen === true ? handleOptMenuSelected($event) : ''" to="/">
-            <img :src="Logo" alt="Logo" class="w-[3.125rem] xl:w-[6.25rem] aspect-square">
+            <img :src="Logo" alt="Logo" class="w-[3.125rem] lg:w-[6.25rem] aspect-square">
         </NuxtLink>
         <MenuBurgerAnimated v-if="isMobile" @menu-trigger="handleMenuTrigger" id="menuBurger">
         </MenuBurgerAnimated>
@@ -83,28 +85,35 @@
                     }
                 }">
                     <p>SERVIZI</p>
-                    <template #panel>
+                    <template #panel="{ close }">
                         <div
                             class="size-[30rem] p-12 bg-none bg-[#f4f4f4] rounded-xl flex flex-col felx-nowrap gap-y-2 h2-Desktop text-gr font-semibold cursor-default">
-                            <NuxtLink to="/Servizi/Panifici" class="w-full cursor-pointer" active-class="activeService">
+                            <NuxtLink to="/Servizi/Panifici" class="w-full cursor-pointer" active-class="activeService"
+                                @click="close">
                                 Panifici
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Pasticcerie" class="w-full cursor-pointer" active-class="activeService">
+                            <NuxtLink to="/Servizi/Pasticcerie" class="w-full cursor-pointer"
+                                active-class="activeService" @click="close">
                                 Pasticcerie
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Pizzerie" class="w-full cursor-pointer" active-class="activeService">
+                            <NuxtLink to="/Servizi/Pizzerie" class="w-full cursor-pointer" active-class="activeService"
+                                @click="close">
                                 Pizzerie
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Gelaterie" class="w-full cursor-pointer" active-class="activeService">
+                            <NuxtLink to="/Servizi/Gelaterie" class="w-full cursor-pointer" active-class="activeService"
+                                @click="close">
                                 Gelaterie
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Ristorazione" class="w-full cursor-pointer" active-class="activeService">
+                            <NuxtLink to="/Servizi/Ristorazione" class="w-full cursor-pointer"
+                                active-class="activeService" @click="close">
                                 Ristorazione
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Attrezzature" class="w-full cursor-pointer" active-class="activeService">
+                            <NuxtLink to="/Servizi/Attrezzature" class="w-full cursor-pointer"
+                                active-class="activeService" @click="close">
                                 Attrezzature
                             </NuxtLink>
-                            <NuxtLink to="/Servizi/Progettazione" class="w-full cursor-pointer" active-class="activeService">
+                            <NuxtLink to="/Servizi/Progettazione" class="w-full cursor-pointer"
+                                active-class="activeService" @click="close">
                                 Progettazione
                             </NuxtLink>
                         </div>

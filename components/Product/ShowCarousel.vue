@@ -1,12 +1,12 @@
 <template>
     <div id="ShowCarousel_Component" v-if="carouselData" class="px-3 py-4 bg-white">
-        <div class="relative w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col felx-nowrap z-0">
+        <div class="relative w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col felx-nowrap z-0 lg:aspect-auto lg:p-0">
             <div v-if="sortedCarouselData[0].hasOwnProperty('Brand')"
-                class="w-full h-fit bg-none bg-[#f4f4f4] rounded-t-xl">
-                <p class="text-gr font-nunito text-center text-xl font-extrabold mt-5" v-html="impresaText">
-                </p>
+                class="w-full h-fit bg-none bg-[#f4f4f4] rounded-t-xl text-gr font-nunito text-center  lg:bg-white lg:rounded-t-none">
+                <p v-show="isMobile" class="text-xl font-extrabold mt-5">SOLO IL MEGLIO PER LA TUA</br> IMPRESA</p>
+                <p v-show="isDesktop" class="h1-Desktop py-[1.875rem]">Solo il meglio per la tua impresa</p>
             </div>
-            <UCarousel v-if="sortedCarouselData[0].hasOwnProperty('Brand')" id="CaroselloProdotti"
+            <UCarousel v-if="sortedCarouselData[0].hasOwnProperty('Brand') && isMobile" id="CaroselloProdotti"
                 class="rounded-b-xl overflow-hidden bg-[#f4f4f4]" v-slot="{ item }" :items="sortedCarouselData"
                 indicators :ui="{
                     item: 'basis-full',
@@ -28,7 +28,7 @@
                     <p class="text-center text-[13px] font-normal pb-2">{{ item.Description }}</p>
                 </div>
             </UCarousel>
-            <UCarousel v-else id="CaroselloProdotti" class="rounded-xl overflow-hidden bg-[#f4f4f4]" v-slot="{ item }"
+            <UCarousel v-else-if="isMobile" id="CaroselloProdotti" class="rounded-xl overflow-hidden bg-[#f4f4f4]" v-slot="{ item }"
                 :items="currentCarouselData" indicators :ui="{
                     item: 'basis-full',
                     indicators: {
@@ -44,6 +44,7 @@
                     </div>
                 </div>
             </UCarousel>
+            <div v-else-if="isDesktop"></div>
         </div>
     </div>
 </template>
@@ -57,11 +58,11 @@
 
 <script setup lang="ts">
 
+const { width, isMobile, isDesktop } = useDeviceWidth()
+
 const props = defineProps({
     product: Object
 });
-
-const impresaText = "SOLO IL MEGLIO PER LA TUA</br> IMPRESA";
 
 const router = useRouter();
 import carouselData from '~/assets/data/CarouselData.json';

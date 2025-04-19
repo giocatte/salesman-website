@@ -1,5 +1,9 @@
 <template>
-    <div id="Home" class="w-full relative bg-white text-black">
+    <div v-show="!isReady" class="w-full h-[calc(100vh_-_8rem)] flex items-center justify-center bg-white">
+        <div class="w-1/2">
+        <UProgress animation="carousel" /></div>
+    </div>
+    <div id="Home" v-show="isReady" class="w-full relative bg-white text-black">
         <div v-if="isMobile" id="landing" class="w-full h-fit relative flex z-0">
             <div id="imgsBCK" class="absolute w-full h-full flex flex-row flex-nowrap">
                 <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-full brightness-75">
@@ -34,9 +38,9 @@
         </div>
         <ProductOverview :products="products.products" />
         <div id="ChiSono_"
-            class="relative w-full font-nunito bg-iron-op px-4 py-[1.875rem] flex gap-2 xl:px-Desktop xl:pt-[3.75rem] xl:pb-20 xl:grid xl:grid-cols-2 xl:grid-rows-[fit,fit] xl:gap-x-12 xl:gap-y-7 flex-col flex-nowrap">
-            <p class="text-[2rem] font-extrabold xl:h1-Desktop xl:row-start-1 xl:col-start-1">Chi sono</p>
-            <p class="text-lg xl:h3-Desktop xl:row-start-2 xl:col-start-1">Da oltre <b>30 anni</b> mi occupo di
+            class="relative w-full font-nunito bg-iron-op px-4 py-[1.875rem] flex gap-2 lg:px-Desktop lg:pt-[3.75rem] lg:pb-20 lg:grid lg:grid-cols-2 lg:grid-rows-[fit,fit] lg:gap-x-12 lg:gap-y-7 flex-col flex-nowrap">
+            <p class="text-[2rem] font-extrabold lg:h1-Desktop lg:row-start-1 lg:col-start-1">Chi sono</p>
+            <p class="text-lg lg:h3-Desktop lg:row-start-2 lg:col-start-1">Da oltre <b>30 anni</b> mi occupo di
                 <b>vendita</b> e <b>assistenza
                     tecnica</b> di
                 macchinari <b>nuovi</b> e
@@ -47,9 +51,9 @@
                 le tue
                 esigenze.
             </p>
-            <p class="mt-3 text-[2rem] font-extrabold xl:mt-0 xl:h1-Desktop xl:row-start-1 xl:col-start-2">Assistenza
+            <p class="mt-3 text-[2rem] font-extrabold lg:mt-0 lg:h1-Desktop lg:row-start-1 lg:col-start-2">Assistenza
                 tecnica e consulenza</p>
-            <p class="text-lg xl:h3-Desktop xl:row-start-2 xl:col-start-2">Offro <b>assistenza tecnica, fornitura di
+            <p class="text-lg lg:h3-Desktop lg:row-start-2 lg:col-start-2">Offro <b>assistenza tecnica, fornitura di
                     pezzi di ricambio</b> e
                 <b>manutenzione
                     periodica</b>
@@ -60,17 +64,17 @@
                 la soluzione più adatta al tuo <b>volume di produzione</b> e agli <b>spazi</b> della tua attività.
             </p>
         </div>
-        <div v-if="loghi" id="OnlyTheBest" class="relative py-8 xl:py-[3.75rem]">
-            <p class="text-[2rem] text-center font-extrabold font-nunito text-gr xl:h1-Desktop">SOLO IL MEGLIO</p>
+        <div v-if="loghi" id="OnlyTheBest" class="relative py-8 lg:py-[3.75rem]">
+            <p class="text-[2rem] text-center font-extrabold font-nunito text-gr lg:h1-Desktop">SOLO IL MEGLIO</p>
             <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi"
-                :ui="{ item: 'basis-1/3 xl:basis-[15.625rem]', container: 'items-center gap-x-5 xl:gap-x-[9.688rem]' }">
-                <img :src="item.imgUrl" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-10"
+                :ui="{ item: 'basis-1/3 lg:basis-[15.625rem]', container: 'items-center gap-x-5 lg:gap-x-[9.688rem]' }">
+                <img :src="item.imgUrl" alt="carousel logo" class="aspect-[auto] w-full h-auto min-h-12 max-h-16"
                     draggable="false" />
             </UCarousel>
             <UCarousel v-show="isDesktop" id="CaroselloLoghi_Desktop" ref="carouseLoghiRef_Desktop" class="py-8"
                 v-slot="{ item }" :items="loghi2"
-                :ui="{ item: 'basis-1/3 xl:basis-[15.625rem]', container: 'items-center gap-x-5 xl:gap-x-[9.688rem]' }">
-                <img :src="item.imgUrl" alt="carousel logo" class="w-full aspect-[auto] h-auto max-h-10"
+                :ui="{ item: 'basis-1/3 lg:basis-[15.625rem]', container: 'items-center gap-x-5 lg:gap-x-[9.688rem]' }">
+                <img :src="item.imgUrl" alt="carousel logo" class="aspect-[auto] w-full h-auto min-h-12 max-h-16"
                     draggable="false" />
             </UCarousel>
         </div>
@@ -111,6 +115,7 @@ const carouseLoghiRef = ref();
 const carouseLoghiRef_Desktop = ref();
 
 onMounted(() => {
+    isReady.value = true
     setInterval(() => {
         if (!carouseLoghiRef.value || !carouseLoghiRef_Desktop.value) return;
 
