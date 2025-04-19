@@ -39,7 +39,7 @@
         </div>
     </div>
     <div v-else-if="products && products.length > 0 && isDesktop">
-        <div class="relative w-full h-fit py-14 px-44 flex content-center">
+        <div class="relative w-full h-fit py-14 px-Desktop flex content-center">
             <div class="relative w-7/12 h-fit flex flex-col gap-y-5" v-if="comp && compPrev && compNext">
                 <p class="font-nunito font-semibold h1-Desktop">Servizi</p>
                 <div class="overflow-x-auto flex items-center gap-x-4 min-h-10 h-fit">

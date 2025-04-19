@@ -57,6 +57,9 @@ export default {
           lineHeight: '2rem',
           fontWeight: '800',
         },
+        '.px-Desktop':{
+          'padding-inline' : '11.25rem'
+        },
         '.no-scrollbar': {
           '-ms-overflow-style': 'none', // IE and Edge
           'scrollbar-width': 'none', // Firefox
