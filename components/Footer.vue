@@ -6,8 +6,8 @@
             <div id="AndreaTognon" class="mt-2 lg:mt-0">
                 <p class="text-center text-[2rem] font-black font-nunito leading-7 lg:h2-Desktop">ANDREA TOGNON</p>
                 <p v-show="isMobile" class="mt-1 text-center text-lg font-semibold font-nunito">Agente
-                    Rivenditore Autorizzato<br />Per Padova, Venezia e il Nord Est</p>
-                <p v-show="isDesktop" class="mt-1 text-center font-semibold font-nunito button-Desktop min-w-[27ch]">Agente Rivenditore autorizzato <br/>Per il Nord-Est, Padova e Venezia</p>
+                    Rivenditore Autorizzato<br />per Padova, Venezia e il Nord Est</p>
+                <p v-show="isDesktop" class="mt-1 text-center font-semibold font-nunito button-Desktop min-w-[27ch]">Agente Rivenditore autorizzato <br/>per il Nord-Est, Padova e Venezia</p>
             </div>
             <div id="Telefono">
                 <p class="text-center text-[2rem] font-black font-nunito leading-7 lg:h2-Desktop">Telefono</p>
@@ -40,12 +40,10 @@
                     <p v-show="isMobile">2025 Andrea Tognon - P.IVA 02703360285 <br />
                         Via S. Bellino, 4 - 35020 Albignasego (PD)
                     </p>
-                    <p v-show="isDesktop">2025 Andrea Tognon - P.IVA 02703360285 Via S. Bellino, 4 - 35020 Albignasego (PD)
-                    </p>
+                    <p v-show="isDesktop">2025 Andrea Tognon | P.IVA 02703360285 | Via S. Bellino, 4 - 35020 Albignasego (PD)</p>
                 </div>
-                <p class="w-fit inline-block mr-2 lg:mr-0">Privacy Policy</p>
-                <p>Made by <a class="underline" target="_blank"
-                        href="https://www.ethoswebstudio.it">ethoswebstudio.it</a></p>
+                <p class="w-fit inline-block mr-2 lg:mr-0">| Privacy Policy |</p>
+                <p>Made by <a class="underline" target="_blank" href="https://www.ethoswebstudio.it">ethoswebstudio.it</a></p>
             </div>
         </div>
     </div>

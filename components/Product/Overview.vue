@@ -135,7 +135,7 @@ const setActiveTab = (p) => {
             compPrev.value = props.products[6].component;
             compNext.value = props.products[1].component;
         } else if (p.Id == 7) {
-            desktopTitle.value = "Arredamenti per Laboratori e Cucine <br/>Vendita e Progettazione su Misura";
+            desktopTitle.value = "Progettazione di laboratori e arredamenti";
             compPrev.value = props.products[5].component;
             compNext.value = props.products[0].component;
         } else {

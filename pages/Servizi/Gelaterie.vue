@@ -1,6 +1,6 @@
 <template>
     <div id="Service" v-if="currentProduct !== undefined && isReady">
-  
+      
       <!-- MOBILE -->
       <div v-if="!isDesktop">
         <img :src="currentProduct.pages.ImgUrl" alt="" class="relative top-0 left-0 w-full bg-white aspect-[5/4]" />
