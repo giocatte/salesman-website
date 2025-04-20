@@ -1,13 +1,18 @@
 <template>
     <div id="ShowCarousel_Component" v-if="carouselData" class="px-3 py-4 lg:px-0 lg:py-0 bg-white">
         <div
-            class="relative w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col flex-nowrap z-0 lg:bg-none lg:aspect-[9/4] lg:rounded-none lg:p-0">
+            class="relative w-full aspect-[8/9.1] bg-RedToBlue p-1 rounded-2xl flex flex-col flex-nowrap z-0 lg:bg-none lg:aspect-[5/2] lg:rounded-none lg:p-0">
             <div v-if="sortedCarouselData[0].hasOwnProperty('Brand')"
                 class="w-full h-fit bg-none bg-[#f4f4f4] rounded-t-xl text-gr font-nunito text-center  lg:bg-white lg:rounded-t-none">
                 <p v-show="isMobile" class="text-xl font-extrabold mt-5">SOLO IL MEGLIO PER LA TUA</br> IMPRESA</p>
                 <p v-show="isDesktop" class="h1-Desktop py-[1.875rem]">Solo il meglio per la tua impresa</p>
             </div>
-            <UCarousel v-if="sortedCarouselData[0].hasOwnProperty('Brand') && isMobile" id="CaroselloProdotti"
+            <div v-else
+                class="w-full h-fit bg-none bg-[#f4f4f4] rounded-t-xl text-gr font-nunito text-center  lg:bg-white lg:rounded-t-none">
+                <p v-show="isMobile" class="text-xl font-extrabold mt-5">SOLO IL MEGLIO PER LA TUA</br> IMPRESA</p>
+                <p v-show="isDesktop" class="h1-Desktop pt-10">LE REALIZZAZIONI</p>
+            </div>
+            <UCarousel v-if="isMobile && sortedCarouselData[0].hasOwnProperty('Brand')" id="CaroselloProdotti"
                 class="rounded-b-xl overflow-hidden bg-[#f4f4f4]" v-slot="{ item }" :items="sortedCarouselData"
                 indicators :ui="{
                     item: 'basis-full',
@@ -29,8 +34,9 @@
                     <p class="text-center text-[13px] font-normal pb-2">{{ item.Description }}</p>
                 </div>
             </UCarousel>
-            <UCarousel v-else-if="isMobile" id="CaroselloProdotti" class="rounded-xl overflow-hidden bg-[#f4f4f4]"
-                v-slot="{ item }" :items="currentCarouselData" indicators :ui="{
+            <UCarousel v-else-if="isMobile && !sortedCarouselData[0].hasOwnProperty('Brand')" id="CaroselloProdotti"
+                class="rounded-xl overflow-hidden bg-[#f4f4f4]" v-slot="{ item }" :items="currentCarouselData"
+                indicators :ui="{
                     item: 'basis-full',
                     indicators: {
                         wrapper: 'gap-2 bottom-2',
@@ -45,8 +51,8 @@
                     </div>
                 </div>
             </UCarousel>
-            <UCarousel v-else-if="isDesktop" ref="carouselRef" id="CaroselloProdotti_Desktop" v-slot="{ item }"
-                :items="sortedCarouselData" arrows indicators
+            <UCarousel v-else-if="isDesktop && sortedCarouselData[0].hasOwnProperty('Brand')"
+                id="CaroselloProdotti_Desktop" v-slot="{ item }" :items="sortedCarouselData" arrows indicators
                 class="relative overflow-hidden w-full h-fit px-Desktop py-Desktop " :ui="{
                     item: 'basis-1/3',
                     indicators: {
@@ -60,15 +66,38 @@
                     icon: 'i-heroicons-arrow-left-20-solid',
                     class: 'start-20'
                 }" :next-button="{
-                        color: 'gray',
-                        icon: 'i-heroicons-arrow-right-20-solid',
-                        class: 'end-20'
-                    }">
+                    color: 'gray',
+                    icon: 'i-heroicons-arrow-right-20-solid',
+                    class: 'end-20'
+                }">
                 <div class="text-center text-gr font-nunito flex flex-col gap-2">
-                    <img :src="item.ImgUrl" alt="" class="h-[29.75rem] w-[29.5rem] relative left-5 rounded-3xl" />
+                    <img :src="item.ImgUrl" alt="" class="h-[29.75rem] w-[29.75rem] relative left-5 rounded-3xl" />
                     <p class="text-xl font-extrabold"> {{ item.Brand }}</p>
                     <p class="text-sm font-bold">{{ item.Model }}</p>
                     <p class="text-[13px] font-normal pb-2">{{ item.Description }}</p>
+                </div>
+            </UCarousel>
+            <UCarousel v-else-if="isDesktop && !sortedCarouselData[0].hasOwnProperty('Brand')"
+                id="CaroselloProdotti_Desktop" v-slot="{ item }" :items="sortedCarouselData" arrows indicators
+                class="px-Desktop py-Desktop " :ui="{
+                    item: 'h-fit basis-full justify-center',
+                    indicators: {
+                        wrapper: 'gap-5',
+                        base: 'w-6 h-6 [aspect-ratio:_1/1]',
+                        active: 'bg-[url(@/assets/img/LOGO_AT.png)] bg-cover',
+                        inactive: 'bg-gray-100 dark:bg-gray-800'
+                    },
+                }" :prev-button="{
+                    color: 'gray',
+                    icon: 'i-heroicons-arrow-left-20-solid',
+                    class: 'start-[25rem]'
+                }" :next-button="{
+                    color: 'gray',
+                    icon: 'i-heroicons-arrow-right-20-solid',
+                    class: 'end-[25rem]'
+                }">
+                <div class="h-fit text-center text-gr font-nunito flex flex-col justify-center">
+                    <img :src="item.ImgUrl" alt="" class="w-full h-[29.75rem] rounded-3xl" />
                 </div>
             </UCarousel>
         </div>
@@ -101,8 +130,6 @@ const sortedCarouselData = computed(() => {
 const prodPrev = ref(sortedCarouselData.value[0]);
 const prod = ref(sortedCarouselData.value[0]);
 const prodNext = ref(sortedCarouselData.value[0]);
-const closeAnimation = ref(false); // Animation state for the component
-const carouselRef = ref()
 
 onMounted(() => {
     // Set the initial active tab based on the first product
@@ -111,17 +138,7 @@ onMounted(() => {
         prod.value = sortedCarouselData.value[0];
         prodNext.value = sortedCarouselData.value[1];
         // console.log(JSON.parse(JSON.stringify(prodPrev.value)).Brand, JSON.parse(JSON.stringify(prod.value)), JSON.parse(JSON.stringify(prodNext.value)));
-        console.log("carouselRef.value", carouselRef.value);
     }
 });
 
-// const changeProd = (index: number) => {
-//     closeAnimation.value = true; // Set the animation state to true
-//     setTimeout(() => {
-//         prodPrev.value = sortedCarouselData.value[index - 1] || sortedCarouselData.value[sortedCarouselData.value.length - 1];
-//         prod.value = sortedCarouselData.value[index];
-//         prodNext.value = sortedCarouselData.value[index + 1] || sortedCarouselData.value[0];
-//         closeAnimation.value = false; // Reset the animation state after the change
-//     }, 500); // Delay to allow the animation to finish before changing the product
-// };
 </script>
