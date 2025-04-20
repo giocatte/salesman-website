@@ -15,7 +15,7 @@
                     class="w-fit mt-1 rounded-full [border-bottom:_3px_inset_#989898] hover:border-b-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
                     <a href="tel:3483003229">
                         <button
-                            class="w-[21ch] flex items-center justify-around font-bold font-nunito text-lg px-4 py-1 rounded-full hover:bg-gray-400  hover:text-white hover:mb-[3px] lg:button-Desktop">
+                            class="w-[21ch] flex items-center justify-around font-bold font-nunito text-lg px-4 py-1 rounded-full hover:bg-red-500  hover:text-white hover:mb-[3px] lg:button-Desktop">
                             <Icon name="ion:call" size="20" class="inline-block"></Icon> (+39) 348 300 3229
                         </button></a>
                 </div>
@@ -24,10 +24,11 @@
                 <p class="text-center text-[2rem] font-black font-nunito leading-7 lg:h2-Desktop">E-mail</p>
                 <div
                     class="w-fit mt-1 rounded-full [border-bottom:_3px_inset_#989898] hover:border-b-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
-                    <a href="mailto:a.tognon@yahoo.it"><button
-                            class="w-[21ch] flex items-center justify-around font-bold font-nunito text-lg px-4 py-1 rounded-full hover:bg-gray-400 hover:text-white hover:mb-[3px] lg:button-Desktop">
-                            <Icon name="ion:mail" size="20" class="inline-block"></Icon> a.tognon@yahoo.it
-                        </button></a>
+                    <a href="mailto:a.tognon@yahoo.it">
+                        <button class="w-[21ch] flex items-center justify-around font-bold font-nunito text-lg px-4 py-1 rounded-full hover:bg-blue-500 hover:text-white hover:mb-[3px] lg:button-Desktop">
+                        <Icon name="ion:mail" size="20" class="inline-block"></Icon> a.tognon@yahoo.it
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

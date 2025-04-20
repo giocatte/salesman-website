@@ -9,7 +9,6 @@
             </div>
             <div v-else
                 class="w-full h-fit bg-none bg-[#f4f4f4] rounded-t-xl text-gr font-nunito text-center  lg:bg-white lg:rounded-t-none">
-                <p v-show="isMobile" class="text-xl font-extrabold mt-5">SOLO IL MEGLIO PER LA TUA</br> IMPRESA</p>
                 <p v-show="isDesktop" class="h1-Desktop pt-10">LE REALIZZAZIONI</p>
             </div>
             <UCarousel v-if="isMobile && sortedCarouselData[0].hasOwnProperty('Brand')" id="CaroselloProdotti"
@@ -20,7 +19,7 @@
                         wrapper: 'gap-2 bottom-2',
                         base: 'w-2 h-2 [aspect-ratio:_1/1]',
                         active: 'bg-BlueToRed',
-                        inactive: 'bg-gray-100 dark:bg-gray-800'
+                        inactive: 'bg-gray-800 dark:bg-gray-800'
                     }
                 }">
                 <div
@@ -42,7 +41,7 @@
                         wrapper: 'gap-2 bottom-2',
                         base: 'w-2 h-2 [aspect-ratio:_1/1]',
                         active: 'bg-BlueToRed',
-                        inactive: 'bg-gray-100 dark:bg-gray-800'
+                        inactive: 'bg-gray-800 dark:bg-gray-800'
                     }
                 }">
                 <div class="w-full h-full aspect-[8/9.1] bg-[#f4f4f4] flex items-center">
@@ -53,10 +52,10 @@
             </UCarousel>
             <UCarousel v-else-if="isDesktop && sortedCarouselData[0].hasOwnProperty('Brand')"
                 id="CaroselloProdotti_Desktop" v-slot="{ item }" :items="sortedCarouselData" arrows indicators
-                class="relative overflow-hidden w-full h-fit px-Desktop py-Desktop " :ui="{
+                class="relative overflow-hidden w-full h-fit px-Desktop pt-[3.75rem] pb-[6.25rem] " :ui="{
                     item: 'basis-1/3',
                     indicators: {
-                        wrapper: 'gap-2 bottom-2',
+                        wrapper: 'gap-2 bottom-[3rem]',
                         base: 'w-6 h-6 [aspect-ratio:_1/1]',
                         active: 'bg-[url(@/assets/img/LOGO_AT.png)] bg-cover',
                         inactive: 'bg-gray-100 dark:bg-gray-800'
@@ -64,11 +63,11 @@
                 }" :prev-button="{
                     color: 'gray',
                     icon: 'i-heroicons-arrow-left-20-solid',
-                    class: 'start-20'
+                    class: 'start-[5rem]'
                 }" :next-button="{
                     color: 'gray',
                     icon: 'i-heroicons-arrow-right-20-solid',
-                    class: 'end-20'
+                    class: 'end-[5rem]'
                 }">
                 <div class="text-center text-gr font-nunito flex flex-col gap-2">
                     <img :src="item.ImgUrl" alt="" class="h-[29.75rem] w-[29.75rem] relative left-5 rounded-3xl" />
@@ -79,10 +78,10 @@
             </UCarousel>
             <UCarousel v-else-if="isDesktop && !sortedCarouselData[0].hasOwnProperty('Brand')"
                 id="CaroselloProdotti_Desktop" v-slot="{ item }" :items="sortedCarouselData" arrows indicators
-                class="px-Desktop py-Desktop " :ui="{
+                class="px-Desktop pt-[3.75rem] pb-[6.25rem] " :ui="{
                     item: 'h-fit basis-full justify-center',
                     indicators: {
-                        wrapper: 'gap-5',
+                        wrapper: 'gap-3 bottom-[3rem]',
                         base: 'w-6 h-6 [aspect-ratio:_1/1]',
                         active: 'bg-[url(@/assets/img/LOGO_AT.png)] bg-cover',
                         inactive: 'bg-gray-100 dark:bg-gray-800'
@@ -90,14 +89,14 @@
                 }" :prev-button="{
                     color: 'gray',
                     icon: 'i-heroicons-arrow-left-20-solid',
-                    class: 'start-[25rem]'
+                    class: 'start-[5rem]'
                 }" :next-button="{
                     color: 'gray',
                     icon: 'i-heroicons-arrow-right-20-solid',
-                    class: 'end-[25rem]'
+                    class: 'end-[5rem]'
                 }">
                 <div class="h-fit text-center text-gr font-nunito flex flex-col justify-center">
-                    <img :src="item.ImgUrl" alt="" class="w-full h-[29.75rem] rounded-3xl" />
+                    <img :src="item.ImgUrl" alt="" class="w-full h-[50rem] rounded-3xl" />
                 </div>
             </UCarousel>
         </div>

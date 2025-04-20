@@ -8,7 +8,25 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/google-fonts",
     "@nuxt/image",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
   ],
+
+  runtimeConfig: {
+    public: {
+      sitemap: {
+        siteUrl: "https://andreatognon.it",
+        },
+        robots: {
+        rules: [{
+          userAgent: "*",
+          allow: "/",
+        }],
+        sitemap: "https://andreatognon.it/sitemap.xml",
+      },
+    },
+  },
+
   googleFonts: {
     families: {
       Roboto: true,
