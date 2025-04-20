@@ -182,7 +182,7 @@ export default defineEventHandler((event) => {
           SubTitle:
             "Funzionalità, design e innovazione per il tuo spazio di lavoro",
           Intro:
-            "<b>Progetto laboratori</b> e <b>cucine professionali su misura</b>, curando ogni dettaglio per migliorare il <b>flusso di lavoro</b> e garantire un <b>ambiente pratico e confortevole</b>.Dalla <b>disposizione degli spazi</b> alla <b>scelta dei materiali</b>, ogni elemento è pensato per combinare <b>design moderno</b> e <b>funzionalità</b>.<br/>Propongo <b>banchi da lavoro ergonomici</b>, <b>arredi personalizzati</b> e <b>soluzioni per ottimizzare spazio e organizzazione</b>, garantendo un equilibrio tra <b>estetica</b>, <b>resistenza</b> e <b>praticità</b>.",
+            "<b>Progetto laboratori</b> e <b>cucine professionali su misura</b>, curando ogni dettaglio per migliorare il <b>flusso di lavoro</b> e garantire un <b>ambiente pratico e confortevole</b>. Dalla <b>disposizione degli spazi</b> alla <b>scelta dei materiali</b>, ogni elemento è pensato per combinare <b>design moderno</b> e <b>funzionalità</b>.<br/>Propongo <b>banchi da lavoro ergonomici</b>, <b>arredi personalizzati</b> e <b>soluzioni per ottimizzare spazio e organizzazione</b>, garantendo un equilibrio tra <b>estetica</b>, <b>resistenza</b> e <b>praticità</b>.",
           Title_2: "",
           Desc: "",
           list: [],
