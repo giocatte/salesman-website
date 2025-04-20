@@ -70,12 +70,6 @@
                     <img :src="item.imgUrl" alt="carousel logo" class="aspect-[auto] w-full h-auto min-h-12 max-h-16"
                         draggable="false" />
                 </UCarousel>
-                <UCarousel v-show="isDesktop" id="CaroselloLoghi_Desktop" ref="carouseLoghiRef_Desktop" class="py-8"
-                    v-slot="{ item }" :items="loghi2"
-                    :ui="{ item: 'basis-1/3 lg:basis-[15.625rem]', container: 'items-center gap-x-5 lg:gap-x-[9.688rem]' }">
-                    <img :src="item.imgUrl" alt="carousel logo" class="aspect-[auto] w-full h-auto min-h-12 max-h-16"
-                        draggable="false" />
-                </UCarousel>
             </div>
         </div>
     </div>
@@ -112,23 +106,17 @@ function shuffle<T>(array: T[]): T[] {
 const loghi2 = shuffle(loghi);
 // const { data: loghi } = await useFetch('/api/getLoghi');
 const carouseLoghiRef = ref();
-const carouseLoghiRef_Desktop = ref();
 
 onMounted(() => {
     isReady.value = true
     setInterval(() => {
-        if (!carouseLoghiRef.value || !carouseLoghiRef_Desktop.value) return;
+        if (!carouseLoghiRef.value) return;
 
         if (carouseLoghiRef.value.page === carouseLoghiRef.value.pages) {
             return carouseLoghiRef.value.select(0);
         }
+        
         carouseLoghiRef.value.next()
-        setTimeout(() => {
-            if (carouseLoghiRef_Desktop.value.page === carouseLoghiRef_Desktop.value.pages) {
-                return carouseLoghiRef_Desktop.value.select(0);
-            }
-            carouseLoghiRef_Desktop.value.next()
-        }, 1750)
     }, 3500)
 })
 
