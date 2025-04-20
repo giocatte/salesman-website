@@ -108,10 +108,10 @@ onMounted(() => {
     if (props.products && props.products.length > 0) {
         activeTab.value = props.products[0].Name; // Imposta il primo tab
         comp.value = props.products[0].component; // Imposta il primo componente
-        desktopTitle.value = props.products[0].component.Title; // Imposta il titolo desktop
-        desktopTitle.value = desktopTitle.value.replace(/<[^>]+>/g, ' '); // Rimuovi i tag HTML
         compPrev.value = props.products[6].component; // Imposta il primo componente per desktop
         compNext.value = props.products[6].component; // Imposta il primo componente per desktop
+        desktopTitle.value = props.products[0].component.Title; // Imposta il titolo desktop
+        desktopTitle.value = desktopTitle.value.replace(/<[^>]+>/g, ' '); // Rimuovi i tag HTML
     }
 });
 

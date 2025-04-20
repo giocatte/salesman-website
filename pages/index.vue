@@ -63,7 +63,7 @@
                     la soluzione più adatta al tuo <b>volume di produzione</b> e agli <b>spazi</b> della tua attività.
                 </p>
             </div>
-            <div v-if="loghi" id="OnlyTheBest" class="relative py-8 lg:py-[3.75rem]">
+            <div v-if="loghi" id="OnlyTheBest" class="relative py-8 lg:py-Desktop">
                 <p class="text-[2rem] text-center font-extrabold font-nunito text-gr lg:h1-Desktop">SOLO IL MEGLIO</p>
                 <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi"
                     :ui="{ item: 'basis-1/3 lg:basis-[15.625rem]', container: 'items-center gap-x-5 lg:gap-x-[9.688rem]' }">

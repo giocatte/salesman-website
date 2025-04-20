@@ -7,11 +7,7 @@
         <NuxtLink @click="menuOpen === true ? handleOptMenuSelected($event) : ''" to="/">
             <img :src="Logo" alt="Logo" class="w-[3.125rem] lg:w-[6.25rem] aspect-square">
         </NuxtLink>
-        <MenuBurgerAnimated v-if="isMobile" @menu-trigger="handleMenuTrigger" id="menuBurger">
-        </MenuBurgerAnimated>
-        <div v-else-if="isDesktop">
-
-        </div>
+        <MenuBurgerAnimated v-if="isMobile" @menu-trigger="handleMenuTrigger" id="menuBurger"></MenuBurgerAnimated>
         <div v-if="menuOpen === true && isMobile" id="Menu"
             class="w-full min-h-lvh h-lvh fixed overflow-hidden top-[4.125rem] left-0 z-20 bg-[#00000059]"
             @click.self="closeMenu">

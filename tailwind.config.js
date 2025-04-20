@@ -57,8 +57,12 @@ export default {
           lineHeight: '2rem',
           fontWeight: '800',
         },
-        '.px-Desktop':{
-          'padding-inline' : '11.25rem'
+        '.px-Desktop': {
+          'padding-inline': '11.25rem'
+        },
+        '.py-Desktop': {
+          'padding-top': '3.75rem',
+          'padding-bottom': '3.75rem'
         },
         '.no-scrollbar': {
           '-ms-overflow-style': 'none', // IE and Edge
