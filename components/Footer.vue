@@ -2,7 +2,7 @@
     <div id="Footer" class="bg-white">
         <div id="Contatti"
             class="bg-iron-op bg-opacity-50 py-7 px-12 flex flex-col gap-y-5 flex-nowrap items-center text-gr lg:px-Desktop lg:flex-row lg:justify-between">
-            <img v-show="isDesktop" :src="Logo" alt="Logo" class="w-[7.5rem] aspect-square">
+            <img v-show="isDesktop" :src="Logo" alt="Logo" loading="lazy" draggable="false" class="w-[7.5rem] aspect-square">
             <div id="AndreaTognon" class="mt-2 lg:mt-0">
                 <p class="text-center text-[2rem] font-black font-nunito leading-7 lg:h2-Desktop">ANDREA TOGNON</p>
                 <p v-show="isMobile" class="mt-1 text-center text-lg font-semibold font-nunito">Agente
