@@ -8,8 +8,8 @@
         <div id="Home" v-show="isReady" class="w-full relative bg-white text-black">
             <div v-if="isMobile" id="landing" class="w-full h-fit relative flex z-0">
                 <div id="imgsBCK" class="absolute w-full h-full flex flex-row flex-nowrap">
-                    <img src="assets/img/Polin_FornoPane.png" alt="Polin Forno per Pane" loading="lazy" draggable="false"
-                        class="w-1/2 h-full brightness-75">
+                    <img src="assets/img/Polin_FornoPane.png" alt="Polin Forno per Pane" loading="lazy"
+                        draggable="false" class="w-1/2 h-full brightness-75">
                     <img src="assets/img/Abbattitore_Polin.jpg" alt="Polin Abbattitore" loading="lazy" draggable="false"
                         class="w-1/2 h-full brightness-75">
                 </div>
@@ -20,9 +20,9 @@
                     <p class="text-[4rem] font-bold h-fit">ANDREA<br>TOGNON</p>
                     <p class="text-[2rem] font-extrabold tracking-normal max-w-[20ch]">Agente Rivenditore di zona
                         Autorizzato</p>
-                    <p class="text-lg tracking-wide drop-shadow-xl leading-8 max-w-[30ch]">
+                    <h1 class="text-lg tracking-wide drop-shadow-xl leading-8 max-w-[30ch]">
                         Vendita macchinari e attrezzatura per:<br />
-                        panifici, pasticcerie, pizzerie, gelaterie e ristorazione.</p>
+                        panifici, pasticcerie, pizzerie, gelaterie e ristorazione.</h1>
                 </div>
             </div>
             <div v-else-if="isDesktop" id="HomeDesktop">
@@ -30,10 +30,10 @@
                     <div id="NomeCognomeDesktop" class="py-24 pl-44 flex flex-col gap-y-7">
                         <p class="font-bold text-[6.25rem] leading-[7.144rem]">ANDREA<br />TOGNON</p>
                         <p class="h2-Desktop">Agente rivenditore di zona Autorizzato</p>
-                        <p class="h3-Desktop">Vendita macchinari e attrezzature per:<br />panifici, pasticcerie,
+                        <h1 class="h3-Desktop">Vendita macchinari e attrezzature per:<br />panifici, pasticcerie,
                             pizzerie,
                             gelaterie e ristoranti
-                        </p>
+                        </h1>
                     </div>
                     <div id="imgBCKDesktop" class="col-start-2 flex items-center justify-start py-10 pr-24">
                         <img src="/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.png" alt="Immagine di sfondo"
@@ -114,7 +114,6 @@ function shuffle<T>(array: T[]): T[] {
 
 // Creo una versione randomizzata dei loghi
 const loghi2 = shuffle(loghi);
-// const { data: loghi } = await useFetch('/api/getLoghi');
 const carouseLoghiRef = ref();
 
 onMounted(() => {
