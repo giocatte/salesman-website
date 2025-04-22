@@ -101,7 +101,7 @@ export default defineEventHandler((event) => {
           Intro:
             "Metto a tua disposizione una vasta selezione di <b>macchinari</b> e <b>soluzioni per gelaterie</b>, perfette per trasformare la tua attività in un ambiente ideale dove produrre <b>gelato artigianale</b> di altissima <b>qualità</b>.",
           Title_2: "Distinguiti con attrezzature d’eccellenza",
-          Desc: "Collaboro con i <b>brand più affidabili</b> del settore per assicurarti <b>efficienza</b>, <b>facilità d’uso</b> e risultati <b>costanti nel tempo</b>.<br/>Grazie a <b>partnership</b> con aziende leader, come <b>Catabriga</b> per le <b>macchine gelato</b> e <b>Polin, RAM, OSTALI</b> e <b>Longoni</b> per <b>frigoriferi</b>, <b>armadi refrigerati</b>, <b>vetrine</b> e <b>banchi freddi</b>.<br/>Il mio obiettivo è fornirti a <b>Padova, Venezia e nel Nord Est</b>:",
+          Desc: "Collaboro con i <b>brand più affidabili</b> del settore per assicurarti <b>efficienza</b>, <b>facilità d’uso</b> e risultati <b>costanti nel tempo</b>.<br/>Grazie a <b>partnership</b> con aziende leader, come <b>Cattabriga</b> per le <b>macchine gelato</b> e <b>Polin, RAM, OSTALI</b> e <b>Longoni</b> per <b>frigoriferi</b>, <b>armadi refrigerati</b>, <b>vetrine</b> e <b>banchi freddi</b>.<br/>Il mio obiettivo è fornirti a <b>Padova, Venezia e nel Nord Est</b>:",
           list: [
             "<b>Macchine per gelato</b> di ultima generazione, progettate per mantenere la massima <b>cremosità</b> e garantire la corretta <b>pastorizzazione</b>",
             "<b>Sistemi di refrigerazione</b> e <b>conservazione</b> (<b>armadi</b>, <b>vetrine</b>, <b>banchi freddi</b>) per mantenere il <b>gelato</b> sempre alla <b>temperatura ideale</b>",

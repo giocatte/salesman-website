@@ -223,7 +223,7 @@
     "Gelaterie": [
         {
             "orderId": 10,
-            "Brand": "CATABRIGA",
+            "Brand": "CATTABRIGA",
             "Model": "COMPACTA_4",
             "Description": "MACHINA PER GELATO",
             "ImgUrl": "/img/Gelaterie/COMPACTA_4.png"
@@ -237,7 +237,7 @@
         },
         {
             "orderId": 12,
-            "Brand": "CATABRIGA",
+            "Brand": "CATTABRIGA",
             "Model": "CREMOMATIC_60",
             "Description": "MACCHINA CUOCICREMA",
             "ImgUrl": "/img/Gelaterie/CREMOMATIC_60.png"
@@ -258,21 +258,21 @@
         },
         {
             "orderId": 11,
-            "Brand": "CATABRIGA",
+            "Brand": "CATTABRIGA",
             "Model": "LINE_F",
             "Description": "MACCHINE PER GELATO",
             "ImgUrl": "/img/Gelaterie/LINE_F.png"
         },
         {
             "orderId": 13,
-            "Brand": "CATABRIGA",
+            "Brand": "CATTABRIGA",
             "Model": "MASTERCHEF",
             "Description": "MACCHINA MULTIFUNZIONE",
             "ImgUrl": "/img/Gelaterie/MASTERCHEF.png"
         },
         {
             "orderId": 14,
-            "Brand": "CATABRIGA",
+            "Brand": "CATTABRIGA",
             "Model": "MULTIFREEZE_8_PRO",
             "Description": "MANTECATORE PER GELATO",
             "ImgUrl": "/img/Gelaterie/MULTIFREEZE_8_PRO.png"
