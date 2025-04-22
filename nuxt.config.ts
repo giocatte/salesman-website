@@ -16,12 +16,14 @@ export default defineNuxtConfig({
     public: {
       sitemap: {
         siteUrl: "https://andreatognon.it",
-        },
-        robots: {
-        rules: [{
-          userAgent: "*",
-          allow: "/",
-        }],
+      },
+      robots: {
+        rules: [
+          {
+            userAgent: "*",
+            allow: "/",
+          },
+        ],
         sitemap: "https://andreatognon.it/sitemap.xml",
       },
     },
