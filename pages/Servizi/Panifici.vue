@@ -43,11 +43,8 @@
 
         <!-- Colonna destra: immagine -->
         <div class="w-1/2">
-          <img
-            :src="currentProduct.pages.ImgUrlDesktop"
-            alt="Macchinari per panifici"
-            class="w-full h-auto object-contain"
-          />
+          <img :src="currentProduct.pages.ImgUrlDesktop" alt="Macchinari per panifici"
+            class="w-full h-auto object-contain" />
         </div>
       </div>
 
@@ -69,6 +66,16 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { ProductShowCarousel } from '#components'
+
+
+useSeoMeta({
+  title: 'Forni Polin e macchinari per panifici | Andrea Tognon',
+  ogTitle: 'Forni Polin e macchinari per panifici | Andrea Tognon',
+  description: 'Forni a tunnel, ventilati, impastatrici e accessori Polin per panifici artigianali o industriali. Consulenza, vendita e assistenza in Veneto e Nord‑Est.',
+  ogDescription: 'Forni a tunnel, ventilati, impastatrici e accessori Polin per panifici artigianali o industriali. Consulenza, vendita e assistenza in Veneto e Nord‑Est.',
+  ogImage: 'public/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
+})
+
 const router = useRouter()
 const { isDesktop } = useDeviceWidth()
 
@@ -89,9 +96,11 @@ let currentProduct = data.value.products.find(product => product.Name === curren
 p.title {
   @apply font-nunito font-bold text-[2rem];
 }
+
 p.subTitle {
   @apply font-nunito font-semibold text-2xl;
 }
+
 .desc {
   @apply font-nunito text-lg;
 }

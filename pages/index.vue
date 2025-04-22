@@ -80,6 +80,14 @@
 import ProductOverview from '../components/Product/Overview.vue';
 import 'animate.css';
 
+useSeoMeta({
+    title: 'Macchinari per panifici, pasticcerie, pizzerie, gelaterie e ristoranti',
+    ogTitle: 'Macchinari per panifici, pasticcerie, pizzerie, gelaterie e ristoranti',
+    description: 'Da 30 anni fornisco macchinari professionali nuovi e usati per panifici, pasticcerie, pizzerie, gelaterie e ristoranti, con assistenza tecnica.',
+    ogDescription: 'Da 30 anni fornisco macchinari professionali nuovi e usati per panifici, pasticcerie, pizzerie, gelaterie e ristoranti, con assistenza tecnica.',
+    ogImage: 'public/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.MOBILE.png',
+})
+
 const { width, isMobile, isDesktop } = useDeviceWidth()
 // Rilevamento se siamo pronti a mostrare la vista corretta
 const isReady = ref(false)
@@ -115,7 +123,7 @@ onMounted(() => {
         if (carouseLoghiRef.value.page === carouseLoghiRef.value.pages) {
             return carouseLoghiRef.value.select(0);
         }
-        
+
         carouseLoghiRef.value.next()
     }, 3500)
 })
