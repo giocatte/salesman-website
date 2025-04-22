@@ -73,7 +73,7 @@ useSeoMeta({
   ogTitle: 'Forni Polin e macchinari per panifici | Andrea Tognon',
   description: 'Forni a tunnel, ventilati, impastatrici e accessori Polin per panifici artigianali o industriali. Consulenza, vendita e assistenza in Veneto e Nord‑Est.',
   ogDescription: 'Forni a tunnel, ventilati, impastatrici e accessori Polin per panifici artigianali o industriali. Consulenza, vendita e assistenza in Veneto e Nord‑Est.',
-  ogImage: 'public/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
+  ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 
 const router = useRouter()

@@ -73,7 +73,7 @@ useSeoMeta({
   ogTitle: 'Progettazione laboratori e arredi su misura | Andrea Tognon',
   description: 'Progettiamo laboratori e cucine professionali su misura: layout ottimizzato, arredi ergonomici e materiali resistenti. Consulenza in Veneto e Nord‑Est.',
   ogDescription: 'Progettiamo laboratori e cucine professionali su misura: layout ottimizzato, arredi ergonomici e materiali resistenti. Consulenza in Veneto e Nord‑Est.',
-  ogImage: 'public/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
+  ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 
 const router = useRouter()

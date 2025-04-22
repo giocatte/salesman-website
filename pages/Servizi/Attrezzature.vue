@@ -72,7 +72,7 @@ useSeoMeta({
   ogTitle: 'Attrezzature per laboratori e ristorazione | Andrea Tognon',
   description: 'Refrigerazione Coldline, lavastoviglie Hoonved e arredi inox Longoni per laboratori e ristorazione. Vendita, consulenza e assistenza in Veneto e Nord‑Est.',
   ogDescription: 'Refrigerazione Coldline, lavastoviglie Hoonved e arredi inox Longoni per laboratori e ristorazione. Vendita, consulenza e assistenza in Veneto e Nord‑Est.',
-  ogImage: 'public/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
+  ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 
 const router = useRouter()

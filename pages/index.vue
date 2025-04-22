@@ -85,7 +85,7 @@ useSeoMeta({
     ogTitle: 'Macchinari per panifici, pasticcerie, pizzerie, gelaterie e ristoranti',
     description: 'Da 30 anni fornisco macchinari professionali nuovi e usati per panifici, pasticcerie, pizzerie, gelaterie e ristoranti, con assistenza tecnica.',
     ogDescription: 'Da 30 anni fornisco macchinari professionali nuovi e usati per panifici, pasticcerie, pizzerie, gelaterie e ristoranti, con assistenza tecnica.',
-    ogImage: 'public/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.MOBILE.png',
+    ogImage: '/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.png',
 })
 
 const { width, isMobile, isDesktop } = useDeviceWidth()

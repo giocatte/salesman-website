@@ -72,7 +72,7 @@ useSeoMeta({
   ogTitle: 'Macchine gelato Catabriga per gelaterie | Andrea Tognon',
   description: 'Macchine di ultima generazione Catabriga, vetrine refrigerate Polin e RAM per gelaterie artigianali. Vendita, consulenza e assistenza a Padova, Venezia e Nord‑Est.',
   ogDescription: 'Macchine di ultima generazione Catabriga, vetrine refrigerate Polin e RAM per gelaterie artigianali. Vendita, consulenza e assistenza a Padova, Venezia e Nord‑Est.',
-  ogImage: 'public/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
+  ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 
 const router = useRouter()

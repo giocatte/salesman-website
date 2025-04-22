@@ -71,7 +71,7 @@ useSeoMeta({
   ogTitle: 'Macchinari professionali per pasticcerie | Andrea Tognon',
   description: 'Selezione di forni ventilati e impastatrici Polin, RAM e Longoni per pasticcerie artigianali o laboratori. Vendita e assistenza in Veneto e Nord‑Est.',
   ogDescription: 'Selezione di forni ventilati e impastatrici Polin, RAM e Longoni per pasticcerie artigianali o laboratori. Vendita e assistenza in Veneto e Nord‑Est.',
-  ogImage: 'public/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png',
+  ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png',
 })
 
 const router = useRouter();
