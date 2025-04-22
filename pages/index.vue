@@ -70,7 +70,7 @@
                 <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi"
                     :ui="{ item: 'basis-1/3 lg:basis-[15.625rem]', container: 'items-center gap-x-5 lg:gap-x-[9.688rem]' }">
                     <img :src="item.imgUrl" alt="carousel logo" loading="lazy" draggable="false"
-                        class="aspect-[auto] w-full h-auto min-h-12 max-h-16" draggable="false" />
+                        class="aspect-[auto] w-full h-auto min-h-12 max-h-16" />
                 </UCarousel>
             </div>
         </div>
