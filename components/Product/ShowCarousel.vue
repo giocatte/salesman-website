@@ -70,7 +70,7 @@
                     class: 'end-[5rem]'
                 }">
                 <div class="text-center text-gr font-nunito flex flex-col gap-2">
-                    <img :src="item.ImgUrl" alt="" class="h-[29.75rem] w-[29.75rem] relative left-5 rounded-3xl" />
+                    <img :src="item.ImgUrl" :alt="item.Model" loading="lazy" draggable="false" class="h-[29.75rem] w-[29.75rem] relative left-5 rounded-3xl" />
                     <p class="text-xl font-extrabold"> {{ item.Brand }}</p>
                     <p class="text-sm font-bold">{{ item.Model }}</p>
                     <p class="text-[13px] font-normal pb-2">{{ item.Description }}</p>
@@ -96,7 +96,7 @@
                     class: 'end-[5rem]'
                 }">
                 <div class="h-fit text-center text-gr font-nunito flex flex-col justify-center">
-                    <img :src="item.ImgUrl" alt="" class="w-full h-[50rem] rounded-3xl" />
+                    <img :src="item.ImgUrl" alt="Realizzazione image" loading="lazy" draggable="false" class="w-full h-[50rem] rounded-3xl" />
                 </div>
             </UCarousel>
         </div>

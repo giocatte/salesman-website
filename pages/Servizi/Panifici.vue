@@ -3,7 +3,7 @@
 
     <!-- MOBILE -->
     <div v-if="!isDesktop">
-      <img :src="currentProduct.pages.ImgUrl" alt="" class="relative top-0 left-0 w-full bg-white aspect-[5/4]" />
+      <img :src="currentProduct.pages.ImgUrl" :alt="currentProduct.pages.Title" loading="lazy" draggable="false" class="relative top-0 left-0 w-full bg-white aspect-[5/4]" />
       <div class="w-full px-3 py-5 bg-white text-gr flex flex-col gap-2">
         <p class="title" v-html="currentProduct.pages.Title"></p>
         <p class="subTitle" v-html="currentProduct.pages.SubTitle"></p>
@@ -43,7 +43,7 @@
 
         <!-- Colonna destra: immagine -->
         <div class="w-1/2">
-          <img :src="currentProduct.pages.ImgUrlDesktop" alt="Macchinari per panifici"
+          <img :src="currentProduct.pages.ImgUrlDesktop" :alt="currentProduct.pages.Title" loading="lazy" draggable="false"
             class="w-full h-auto object-contain" />
         </div>
       </div>
@@ -73,7 +73,7 @@ useSeoMeta({
   ogTitle: 'Forni Polin e macchinari per panifici | Andrea Tognon',
   description: 'Forni a tunnel, ventilati, impastatrici e accessori Polin per panifici artigianali o industriali. Consulenza, vendita e assistenza in Veneto e Nord‑Est.',
   ogDescription: 'Forni a tunnel, ventilati, impastatrici e accessori Polin per panifici artigianali o industriali. Consulenza, vendita e assistenza in Veneto e Nord‑Est.',
-  ogImage: 'public/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
+  ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 
 const router = useRouter()

@@ -5,7 +5,7 @@
     <div id="Navbar"
         class="py-3 px-5 lg:px-Desktop w-full h-[4.125rem] lg:h-32 flex justify-between items-center z-30 sticky top-0 left-0">
         <NuxtLink @click="menuOpen === true ? handleOptMenuSelected($event) : ''" to="/">
-            <img :src="Logo" alt="Logo" class="w-[3.125rem] lg:w-[6.25rem] aspect-square">
+            <img :src="Logo" alt="Logo" loading="lazy" draggable="false" class="w-[3.125rem] lg:w-[6.25rem] aspect-square">
         </NuxtLink>
         <MenuBurgerAnimated v-if="isMobile" @menu-trigger="handleMenuTrigger" id="menuBurger"></MenuBurgerAnimated>
         <div v-if="menuOpen === true && isMobile" id="Menu"

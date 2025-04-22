@@ -8,8 +8,10 @@
         <div id="Home" v-show="isReady" class="w-full relative bg-white text-black">
             <div v-if="isMobile" id="landing" class="w-full h-fit relative flex z-0">
                 <div id="imgsBCK" class="absolute w-full h-full flex flex-row flex-nowrap">
-                    <img src="assets/img/Polin_FornoPane.png" alt="" class="w-1/2 h-full brightness-75">
-                    <img src="assets/img/Abbattitore_Polin.jpg" alt="" class="w-1/2 h-full brightness-75">
+                    <img src="assets/img/Polin_FornoPane.png" alt="Polin Forno per Pane" loading="lazy" draggable="false"
+                        class="w-1/2 h-full brightness-75">
+                    <img src="assets/img/Abbattitore_Polin.jpg" alt="Polin Abbattitore" loading="lazy" draggable="false"
+                        class="w-1/2 h-full brightness-75">
                 </div>
                 <div id="Ellipse" class="absolute w-full h-full py-24 self-start z-10 bg-ellipse">
                 </div>
@@ -34,8 +36,8 @@
                         </p>
                     </div>
                     <div id="imgBCKDesktop" class="col-start-2 flex items-center justify-start py-10 pr-24">
-                        <img src="/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.png"
-                            class="drop-shadow-[0_36px_50px_rgba(0,0,0,0.25)]" alt="Immagine di sfondo" />
+                        <img src="/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.png" alt="Immagine di sfondo"
+                            loading="lazy" draggable="false" class="drop-shadow-[0_36px_50px_rgba(0,0,0,0.25)]" />
                     </div>
                 </div>
             </div>
@@ -67,8 +69,8 @@
                 <p class="text-[2rem] text-center font-extrabold font-nunito text-gr lg:h1-Desktop">SOLO IL MEGLIO</p>
                 <UCarousel id="CaroselloLoghi" ref="carouseLoghiRef" class="py-8" v-slot="{ item }" :items="loghi"
                     :ui="{ item: 'basis-1/3 lg:basis-[15.625rem]', container: 'items-center gap-x-5 lg:gap-x-[9.688rem]' }">
-                    <img :src="item.imgUrl" alt="carousel logo" class="aspect-[auto] w-full h-auto min-h-12 max-h-16"
-                        draggable="false" />
+                    <img :src="item.imgUrl" alt="carousel logo" loading="lazy" draggable="false"
+                        class="aspect-[auto] w-full h-auto min-h-12 max-h-16" />
                 </UCarousel>
             </div>
         </div>
@@ -85,7 +87,7 @@ useSeoMeta({
     ogTitle: 'Macchinari per panifici, pasticcerie, pizzerie, gelaterie e ristoranti',
     description: 'Da 30 anni fornisco macchinari professionali nuovi e usati per panifici, pasticcerie, pizzerie, gelaterie e ristoranti, con assistenza tecnica.',
     ogDescription: 'Da 30 anni fornisco macchinari professionali nuovi e usati per panifici, pasticcerie, pizzerie, gelaterie e ristoranti, con assistenza tecnica.',
-    ogImage: 'public/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.MOBILE.png',
+    ogImage: '/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/HOME.png',
 })
 
 const { width, isMobile, isDesktop } = useDeviceWidth()
