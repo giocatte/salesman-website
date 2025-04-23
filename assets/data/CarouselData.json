@@ -383,7 +383,63 @@
             "Model": "K60",
             "Description": "MESCOLATRICE PLANETARIA",
             "ImgUrl": "/img/Pasticcerie/K60.png"
-        }
+        },
+        {
+          "orderId": 80,
+          "Brand": "RAM",
+          "Model": "K160",
+          "Description": "MESCOLATRICE PLANETARIA",
+          "ImgUrl": "/img/Pasticcerie/K160.png"
+      },
+      {
+          "orderId": 90,
+          "Brand": "POLIN",
+          "Model": "MULTIDROP",
+          "Description": "MACCHINA PER BISCOTTI",
+          "ImgUrl": "/img/Pasticcerie/MULTIDROP.png"
+      },
+      {
+          "orderId": 91,
+          "Brand": "TECNOMAC",
+          "Model": "TECNOCEL",
+          "Description": "ARMADIO REFRIGERATO",
+          "ImgUrl": "/img/Gelaterie/TECNOCEL.png"
+      },
+      {
+          "orderId": 110,
+          "Brand": "RAM",
+          "Model": "Q600",
+          "Description": "SFOGLIATRICE AUTOMATICA",
+          "ImgUrl": "/img/Pasticcerie/Q600.png"
+      },
+      {
+          "orderId": 120,
+          "Brand": "RAM",
+          "Model": "Q500",
+          "Description": "SFOGLIATRICE MANUALE",
+          "ImgUrl": "/img/Pasticcerie/Q500.png"
+      },
+      {
+          "orderId": 130,
+          "Brand": "RAM",
+          "Model": "QTP715",
+          "Description": "SFOGLIATRICE AUTOMATICA",
+          "ImgUrl": "/img/Pasticcerie/QTP715.png"
+      },
+      {
+          "orderId": 180,
+          "Brand": "LONGONI",
+          "Model": "LONGONI_SHOW1",
+          "Description": "FRIGHI",
+          "ImgUrl": "/img/Pasticcerie/LONGONI_SHOW1.png"
+      },
+      {
+          "orderId": 190,
+          "Brand": "LONGONI",
+          "Model": "LONGONI_SHOW2",
+          "Description": "FRIGHI",
+          "ImgUrl": "/img/Pasticcerie/LONGONI_SHOW2.png"
+      }
         ],
         "Ristorazione": [
           {
