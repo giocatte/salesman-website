@@ -12,7 +12,10 @@ export default defineNuxtConfig({
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "description", content: "Andrea Tognon Rivenditore Autorizzato Polin" },
+        {
+          name: "description",
+          content: "Andrea Tognon Rivenditore Autorizzato Polin",
+        },
         { name: "author", content: "Andrea Tognon" },
         { name: "robots", content: "index, follow" },
       ],
@@ -31,7 +34,12 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
   ],
-
+  site: {
+    url: "https://andreatognon.it",
+    name: "Andrea Tognon",
+    siteName: "Andrea Tognon",
+    description: "Rivenditore Autorizzato Polin",
+  },
   runtimeConfig: {
     public: {
       sitemap: {
