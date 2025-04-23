@@ -6,7 +6,7 @@
       <img :src="currentProduct.pages.ImgUrl" :alt="currentProduct.pages.Title" loading="lazy" draggable="false"
         class="relative top-0 left-0 w-full bg-white aspect-[5/4]" />
       <div class="w-full px-3 py-5 bg-white text-gr flex flex-col gap-2">
-        <p class="title" v-html="currentProduct.pages.Title"></p>
+        <h1 class="title" v-html="currentProduct.pages.Title"></h1>
         <p class="subTitle" v-html="currentProduct.pages.SubTitle"></p>
         <p class="desc" v-html="currentProduct.pages.Intro"></p>
       </div>
@@ -37,7 +37,7 @@
       <div class="w-full bg-iron flex flex-row items-center md:px-[11.25rem] px-4 py-Desktop gap-[1.25rem]">
         <!-- Colonna sinistra -->
         <div class="w-1/2 text-gr font-nunito flex flex-col gap-3">
-          <p class="text-3xl lg:h1-Desktop font-bold" v-html="currentProduct.pages.Title"></p>
+          <h1 class="text-3xl lg:h1-Desktop font-bold" v-html="currentProduct.pages.Title"></h1>
           <p class="text-xl lg:h2-Desktop font-semibold" v-html="currentProduct.pages.SubTitle"></p>
           <p class="text-lg lg:h3-Desktop" v-html="currentProduct.pages.Intro"></p>
         </div>
@@ -93,7 +93,7 @@ let currentProduct = data.value.products.find(product => product.Name === curren
 </script>
 
 <style scoped>
-p.title {
+h1.title {
   @apply font-nunito font-bold text-[2rem];
 }
 

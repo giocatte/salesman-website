@@ -2,6 +2,26 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+  app: {
+    head: {
+      title: "Andrea Tognon",
+      titleTemplate: "%s - Andrea Tognon",
+      htmlAttrs: {
+        lang: "it",
+      },
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "description", content: "Andrea Tognon Rivenditore Autorizzato Polin" },
+        { name: "author", content: "Andrea Tognon" },
+        { name: "robots", content: "index, follow" },
+      ],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "canonical", href: "https://andreatognon.it" },
+      ],
+    },
+  },
   modules: [
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
