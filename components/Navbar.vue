@@ -203,14 +203,13 @@ const closeMenu = () => handleOptMenuSelected()
 
 /* blur su scroll ------------------------------------------------------ */
 onMounted(() => {
-  const Navbar  = document.getElementById('Navbar')
-  const Servizi = document.getElementById('ServiziMenu')
-  if (Navbar && Servizi) {
+  const Navbar = document.getElementById('Navbar')
+  if (Navbar) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY < Servizi.offsetTop) {
-        Navbar.classList.remove('backdrop-blur-sm')
-      } else {
+      if (window.scrollY > 20) {
         Navbar.classList.add('backdrop-blur-sm')
+      } else {
+        Navbar.classList.remove('backdrop-blur-sm')
       }
     })
   }
