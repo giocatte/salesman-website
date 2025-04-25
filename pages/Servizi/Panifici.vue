@@ -6,16 +6,16 @@
         class="relative top-0 left-0 w-full bg-white aspect-[5/4]" />
 
       <div class="w-full px-3 py-5 bg-white text-gr flex flex-col gap-2">
-        <h1 class="title" v-html="currentProduct.pages.Title" />
-        <p class="subTitle" v-html="currentProduct.pages.SubTitle" />
-        <p class="desc" v-html="currentProduct.pages.Intro" />
+        <h1 class="title" v-html="currentProduct.pages.Title"></h1>
+        <p class="subTitle" v-html="currentProduct.pages.SubTitle"></p>
+        <p class="desc" v-html="currentProduct.pages.Intro"></p>
       </div>
 
       <div class="w-full px-3 py-5 bg-white text-gr flex flex-col gap-2">
-        <p class="title" v-html="currentProduct.pages.Title_2" />
-        <p class="desc" v-html="currentProduct.pages.Desc" />
+        <p class="title" v-html="currentProduct.pages.Title_2"></p>
+        <p class="desc" v-html="currentProduct.pages.Desc"></p>
         <ul class="desc list-disc px-5">
-          <li v-for="l in currentProduct.pages.list" :key="l" v-html="l" />
+          <li v-for="l in currentProduct.pages.list" :key="l" v-html="l"></li>
         </ul>
       </div>
 
@@ -44,9 +44,12 @@
 
         <!-- Colonna sinistra -->
         <div class="w-1/2 text-gr font-nunito flex flex-col gap-3">
-          <h1 class="text-3xl lg:h1-Tablet xl:h1-Desktop font-bold" v-html="currentProduct.pages.Title" />
-          <p class="text-xl lg:h2-Tablet xl:h2-Desktop font-semibold" v-html="currentProduct.pages.SubTitle" />
-          <p class="text-lg lg:h3-Tablet xl:h3-Desktop" v-html="currentProduct.pages.Intro" />
+          <h1 class="text-3xl lg:h1-Tablet xl:h1-Desktop font-bold"
+              v-html="currentProduct.pages.Title"></h1>
+          <p  class="text-xl lg:h2-Tablet xl:h2-Desktop font-semibold"
+              v-html="currentProduct.pages.SubTitle"></p>
+          <p  class="text-lg lg:h3-Tablet xl:h3-Desktop"
+              v-html="currentProduct.pages.Intro"></p>
         </div>
 
         <!-- Colonna destra -->
@@ -61,12 +64,14 @@
                px-4 lg:px-Tablet xl:px-Desktop
                lg:py-Tablet xl:py-Desktop">
 
-        <p class="text-3xl font-bold lg:h1-Tablet xl:h1-Desktop" v-html="currentProduct.pages.Title_2" />
+        <p class="text-3xl font-bold lg:h1-Tablet xl:h1-Desktop"
+           v-html="currentProduct.pages.Title_2"></p>
 
-        <p class="text-lg lg:h3-Tablet xl:h3-Desktop" v-html="currentProduct.pages.Desc" />
+        <p class="text-lg lg:h3-Tablet xl:h3-Desktop"
+           v-html="currentProduct.pages.Desc"></p>
 
         <ul class="list-disc px-5 text-lg lg:h3-Tablet xl:h3-Desktop">
-          <li v-for="item in currentProduct.pages.list" :key="item" v-html="item" />
+          <li v-for="item in currentProduct.pages.list" :key="item" v-html="item"></li>
         </ul>
       </div>
 
