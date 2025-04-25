@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+  ssr: true, // opzionale, default è true
+  nitro: {
+    preset: "netlify",
+  },
   app: {
+    baseURL: "/", // già corretto così
     head: {
       title: "Andrea Tognon",
       titleTemplate: "%s - Andrea Tognon",
@@ -34,12 +39,6 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
   ],
-  site: {
-    url: "https://andreatognon.it",
-    name: "Andrea Tognon",
-    siteName: "Andrea Tognon",
-    description: "Rivenditore Autorizzato Polin",
-  },
   runtimeConfig: {
     public: {
       sitemap: {
@@ -56,7 +55,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
   googleFonts: {
     families: {
       Roboto: true,

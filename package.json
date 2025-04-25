@@ -8,7 +8,8 @@
     "devh": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate:netlify": "nuxi generate --preset netlify"
   },
   "dependencies": {
     "@nuxtjs/robots": "^5.2.10",
