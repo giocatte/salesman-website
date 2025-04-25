@@ -1,42 +1,57 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 export const useDeviceWidth = () => {
-  const width = ref(0)
+  const width  = ref(0)
+  const height = ref(0)
 
-  // Funzione per aggiornare la larghezza quando la finestra cambia
-  const updateWidth = () => {
-    width.value = window.innerWidth
+  const updateSize = () => {
+    width.value  = window.innerWidth
+    height.value = window.innerHeight
   }
 
   onMounted(() => {
-    updateWidth()
-
-    window.addEventListener('resize', updateWidth)
-
-    // ⚠️ Forza un secondo aggiornamento subito dopo il mount
-    // Utile per dispositivi mobili come iPad in orizzontale
-    setTimeout(() => {
-      updateWidth()
-    }, 100)
+    updateSize()
+    window.addEventListener('resize', updateSize)
+    setTimeout(updateSize, 100)      // fix iniziale per iPad
   })
 
   onUnmounted(() => {
-    window.removeEventListener('resize', updateWidth)
+    window.removeEventListener('resize', updateSize)
   })
 
-  // Verifica se siamo nel client prima di accedere a navigator
-  const isMobileDevice = typeof window !== 'undefined' && /Mobi|Android/i.test(navigator.userAgent)
+  // --------------------------
+  //  Nuove computed reattive
+  // --------------------------
+  const isLandscape = computed(() => width.value > height.value)
+
+  const isMobileDevice =
+    typeof window !== 'undefined' &&
+    /Mobi|Android/i.test(navigator.userAgent)
+
+  const isTabletWidth  = computed(
+    () => width.value >= 768 && width.value < 1366
+  )
 
   return {
     width,
+    height,
+    isLandscape,
 
-    // Mobile: qualsiasi larghezza sotto i 1024px
-    isMobile: computed(() => width.value < 1024),
+    /* MOBILE  → sempre < 768 o qualsiasi tablet in verticale */
+    isMobile : computed(
+      () => width.value < 768 || (isTabletWidth.value && !isLandscape.value)
+    ),
 
-    // Tablet: tra 768px e 1023px (inclusivo)
-    isTablet: computed(() => width.value >= 768 && width.value < 1024),
+    /* TABLET  → 768 – 1365 e in orizzontale */
+    isTabletLandscape : computed(
+      () => isTabletWidth.value && isLandscape.value
+    ),
 
-    // Desktop: da 1024px in su E non su un browser mobile
-    isDesktop: computed(() => width.value >= 1024 && !isMobileDevice)
+    /* DESKTOP → vero desktop  oppure  tablet in orizzontale ≥ 1024 px */
+    isDesktop : computed(
+      () =>
+        (!isMobileDevice && width.value >= 1024) ||   // laptop / desktop
+        (isTabletWidth.value && isLandscape.value)    // tablet landscape
+    ),
   }
 }

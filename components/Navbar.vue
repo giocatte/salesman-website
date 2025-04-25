@@ -1,230 +1,234 @@
 <template>
-    <div id="sfondoNav"
-        class="absolute top-0 left-0 w-full h-[4.125rem] lg:h-32 z-[1] bg-iron lg:bg-none lg:bg-white contrast-75 lg:contrast-100">
-    </div>
-    <div id="Navbar"
-        class="py-3 px-5 lg:px-Desktop w-full h-[4.125rem] lg:h-32 flex justify-between items-center z-30 sticky top-0 left-0">
-        <NuxtLink @click="menuOpen === true ? handleOptMenuSelected($event) : ''" to="/">
-            <img :src="Logo" alt="Logo" loading="lazy" draggable="false" class="w-[3.125rem] lg:w-[6.25rem] aspect-square">
+  <!-- Sfondo dietro la barra -------------------------------------------->
+  <div
+    id="sfondoNav"
+    class="absolute top-0 left-0 w-full
+           h-[4.125rem] lg:h-28 xl:h-32
+           z-[1] bg-iron lg:bg-none lg:bg-white
+           contrast-75 lg:contrast-100"
+  />
+
+  <!-- NAVBAR ------------------------------------------------------------->
+  <div
+    id="Navbar"
+    class="sticky top-0 left-0 z-30 flex justify-between items-center
+           py-3 px-5
+           lg:pl-[6rem] lg:pr-[6rem]   <!-- 0 rem sin., 6 rem destra sui tablet -->
+           xl:px-Desktop
+           h-[4.125rem] lg:h-28 xl:h-32"
+  >
+    <!-- Logo ----------------------------------------------------------- -->
+    <NuxtLink to="/" @click="menuOpen ? handleOptMenuSelected() : null">
+      <img
+        :src="Logo"
+        alt="Logo"
+        loading="lazy"
+        draggable="false"
+        class="w-[3.125rem] lg:w-[4.5rem] xl:w-[6.25rem] aspect-square"
+      />
+    </NuxtLink>
+
+    <!-- Burger mobile --------------------------------------------------->
+    <MenuBurgerAnimated
+      v-if="isMobile"
+      id="menuBurger"
+      @menu-trigger="handleMenuTrigger"
+    />
+
+    <!-- Menu mobile ----------------------------------------------------->
+    <div
+      v-if="menuOpen && isMobile"
+      id="Menu"
+      class="fixed top-[4.125rem] left-0 w-full min-h-lvh h-lvh z-20
+             overflow-hidden bg-[#00000059]"
+      @click.self="closeMenu"
+    >
+      <div
+        class="w-full bg-white flex flex-col items-start px-4 pt-6 pb-8
+               animate__animated animate__faster"
+        :class="closeAnimation ? 'animate__slideInDown'
+                               : 'animate__slideOutUp'"
+      >
+        <!-- Accordion “Servizi” ------------------------------------->
+        <div
+          class="w-full border-b border-[#D8D8D8]"
+          @click="showServizi = !showServizi"
+        >
+          <div
+            class="flex items-center gap-4 py-1 font-nunito font-bold text-gr
+                   text-[3.5rem] leading-none cursor-pointer"
+          >
+            <p>Servizi</p>
+            <Icon
+              v-show="!showServizi"
+              name="ion:plus-round"
+              size="30"
+              class="animate__animated animate__fadeIn animate__faster"
+            />
+            <Icon
+              v-show="showServizi"
+              name="ion:minus-round"
+              size="30"
+              class="animate__animated animate__fadeIn"
+            />
+          </div>
+
+          <!-- Link servizi -->
+          <div
+            v-show="showServizi"
+            id="ServiziMenu"
+            class="max-h-fit overflow-y-hidden"
+          >
+            <template v-for="link in serviziLinks" :key="link.to">
+              <NuxtLink
+                :to="link.to"
+                @click="handleOptMenuSelected"
+                class="block w-fit font-nunito text-[#6E6E6E] text-2xl py-1
+                       font-medium cursor-pointer animate__animated animate__fadeInDown"
+                active-class="activeNav"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </template>
+          </div>
+        </div>
+
+        <!-- Altre voci -------------------------------------------------->
+        <NuxtLink
+          to="/#ChiSono"
+          @click="handleOptMenuSelected"
+          class="block w-full font-nunito text-gr font-bold
+                 text-[3.5rem] py-1 border-b border-[#D8D8D8]"
+        >
+          Chi sono
         </NuxtLink>
-        <MenuBurgerAnimated v-if="isMobile" @menu-trigger="handleMenuTrigger" id="menuBurger"></MenuBurgerAnimated>
-        <div v-if="menuOpen === true && isMobile" id="Menu"
-            class="w-full min-h-lvh h-lvh fixed overflow-hidden top-[4.125rem] left-0 z-20 bg-[#00000059]"
-            @click.self="closeMenu">
-            <div class="w-full h-fit bg-white flex flex-col flex-nowrap justify-start items-start px-4 pt-6 pb-8 animate__animated animate__faster"
-                :class="closeAnimation ? 'animate__slideInDown' : 'animate__slideOutUp'">
-                <div class="w-full border-b-[1px] border-[#D8D8D8]" @click="showServizi = !showServizi">
-                    <div
-                        class="flex items-center gap-x-4 font-nunito text-gr py-1 font-bold w-full h-fit cursor-pointer">
-                        <p class="text-[3.5rem]">Servizi</p>
-                        <Icon v-show="showServizi == false" name="ion:plus-round" size="30"
-                            class="animate__animated animate__fadeIn animate__faster"></Icon>
-                        <Icon v-show="showServizi == true" name="ion:minus-round" size="30"
-                            class="animate__animated animate__fadeIn"></Icon>
-                    </div>
-                    <div v-show="showServizi" id="ServiziMenu" class="max-h-fit h-fit overflow-y-hidden">
-                        <NuxtLink to="/Servizi/Panifici" @click="handleOptMenuSelected"
-                            class="block w-fit font-nunito text-[#6E6E6E] text-2xl py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
-                            active-class="activeNav">
-                            Panifici
-                        </NuxtLink>
-                        <NuxtLink to="/Servizi/Pasticcerie" @click="handleOptMenuSelected"
-                            class="block w-fit font-nunito text-[#6E6E6E] text-2xl py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
-                            active-class="activeNav">
-                            Pasticcerie
-                        </NuxtLink>
-                        <NuxtLink to="/Servizi/Pizzerie" @click="handleOptMenuSelected"
-                            class="block w-fit font-nunito text-[#6E6E6E] text-2xl py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
-                            active-class="activeNav">
-                            Pizzerie
-                        </NuxtLink>
-                        <NuxtLink to="/Servizi/Gelaterie" @click="handleOptMenuSelected"
-                            class="block w-fit font-nunito text-[#6E6E6E] text-2xl py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
-                            active-class="activeNav">
-                            Gelaterie
-                        </NuxtLink>
-                        <NuxtLink to="/Servizi/Ristorazione" @click="handleOptMenuSelected"
-                            class="block w-fit font-nunito text-[#6E6E6E] text-2xl py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
-                            active-class="activeNav">
-                            Ristorazione
-                        </NuxtLink>
-                        <NuxtLink to="/Servizi/Attrezzature" @click="handleOptMenuSelected"
-                            class="block w-fit font-nunito text-[#6E6E6E] text-2xl py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
-                            active-class="activeNav">
-                            Attrezzature
-                        </NuxtLink>
-                        <NuxtLink to="/Servizi/Progettazione" @click="handleOptMenuSelected"
-                            class="block w-fit font-nunito text-[#6E6E6E] text-2xl py-1 font-medium h-fit cursor-pointer animate__animated animate__fadeInDown"
-                            active-class="activeNav">
-                            Progettazione
-                        </NuxtLink>
-                    </div>
-                </div>
-                <NuxtLink @click="handleOptMenuSelected" to="/#ChiSono"
-                    class="block w-full font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-[1px] border-[#D8D8D8]">
-                    Chi sono
-                </NuxtLink>
-                <NuxtLink @click="handleOptMenuSelected" to="/#Contatti"
-                    class="block w-full font-nunito text-gr text-[3.5rem] py-1 font-bold h-fit border-b-[1px] border-[#D8D8D8]">
-                    Contatti
-                </NuxtLink>
-            </div>
-        </div>
-        <div v-else-if="isDesktop" id="MenuDesktop">
-            <div
-                class="flex gap-x-10 items-center text-black text-2xl leading-[2rem] font-nunito font-extrabold cursor-pointer">
-                <UPopover :ui="{
-                    rounded: 'rounded-2xl',
-                    base: 'bg-RedToBlue p-1',
-                    overlay: {
-                        background: 'bg-blue-300 dark:bg-blue-300'
-                    }
-                }">
-                    <p>SERVIZI</p>
-                    <template #panel="{ close }">
-                        <div
-                            class="size-[30rem] p-12 bg-none bg-[#f4f4f4] rounded-xl flex flex-col felx-nowrap gap-y-2 h2-Desktop text-gr font-semibold cursor-default">
-                            <NuxtLink to="/Servizi/Panifici" class="w-full cursor-pointer" active-class="activeService"
-                                @click="close">
-                                Panifici
-                            </NuxtLink>
-                            <NuxtLink to="/Servizi/Pasticcerie" class="w-full cursor-pointer"
-                                active-class="activeService" @click="close">
-                                Pasticcerie
-                            </NuxtLink>
-                            <NuxtLink to="/Servizi/Pizzerie" class="w-full cursor-pointer" active-class="activeService"
-                                @click="close">
-                                Pizzerie
-                            </NuxtLink>
-                            <NuxtLink to="/Servizi/Gelaterie" class="w-full cursor-pointer" active-class="activeService"
-                                @click="close">
-                                Gelaterie
-                            </NuxtLink>
-                            <NuxtLink to="/Servizi/Ristorazione" class="w-full cursor-pointer"
-                                active-class="activeService" @click="close">
-                                Ristorazione
-                            </NuxtLink>
-                            <NuxtLink to="/Servizi/Attrezzature" class="w-full cursor-pointer"
-                                active-class="activeService" @click="close">
-                                Attrezzature
-                            </NuxtLink>
-                            <NuxtLink to="/Servizi/Progettazione" class="w-full cursor-pointer"
-                                active-class="activeService" @click="close">
-                                Progettazione
-                            </NuxtLink>
-                        </div>
-                    </template>
-                </UPopover>
-                <NuxtLink to="/#ChiSono">
-                    CHI SONO
-                </NuxtLink>
-                <NuxtLink to="/#Contatti">
-                    CONTATTI
-                </NuxtLink>
-            </div>
-        </div>
+        <NuxtLink
+          to="/#Contatti"
+          @click="handleOptMenuSelected"
+          class="block w-full font-nunito text-gr font-bold
+                 text-[3.5rem] py-1 border-b border-[#D8D8D8]"
+        >
+          Contatti
+        </NuxtLink>
+      </div>
     </div>
+
+    <!-- Menu desktop / tablet landscape -------------------------------->
+    <div v-else-if="isDesktop" id="MenuDesktop">
+      <div
+        class="flex gap-x-8 lg:gap-x-6 xl:gap-x-10 items-center
+               font-nunito font-extrabold text-black
+               text-lg lg:text-xl xl:text-2xl leading-[2rem]"
+      >
+        <!-- Popover Servizi -->
+        <UPopover
+          :ui="{
+            rounded: 'rounded-2xl',
+            base: 'bg-RedToBlue p-1',
+            overlay: { background: 'bg-blue-300 dark:bg-blue-300' }
+          }"
+        >
+          <p>SERVIZI</p>
+          <template #panel="{ close }">
+            <div
+              class="w-[20rem] lg:w-[24rem] xl:w-[30rem]
+                     p-8 lg:p-10 xl:p-12 bg-[#f4f4f4] rounded-xl
+                     text-gr font-semibold
+                     lg:h2-Tablet xl:h2-Desktop flex flex-col gap-2"
+            >
+              <template v-for="link in serviziLinks" :key="link.to">
+                <NuxtLink
+                  :to="link.to"
+                  @click="close"
+                  class="w-full cursor-pointer"
+                  active-class="activeService"
+                >
+                  {{ link.label }}
+                </NuxtLink>
+              </template>
+            </div>
+          </template>
+        </UPopover>
+
+        <!-- Link statici -->
+        <NuxtLink to="/#ChiSono">CHI&nbsp;SONO</NuxtLink>
+        <NuxtLink to="/#Contatti">CONTATTI</NuxtLink>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import Logo from '~/assets/img/LOGO_AT.png';
+import Logo from '~/assets/img/LOGO_AT.png'
+import { ref, onMounted } from 'vue'
 
-const { width, isMobile, isDesktop } = useDeviceWidth()
-const showServizi = ref(false);
+const { isMobile, isDesktop } = useDeviceWidth()
 
-const closeAnimation = ref(false);
-const menuOpen = ref(false);
-const handleMenuTrigger = (event: Event) => {
-    // console.log("handleMenuTrigger", event);
-    if (menuOpen.value === true) {
-        document.body.classList.contains('overflow-y-hidden') ? document.body.classList.remove('overflow-y-hidden') : null;
-        closeAnimation.value = !closeAnimation.value;
-        setTimeout(() => { menuOpen.value = false; }, 450);
-    } else {
-        document.body.classList.add('overflow-y-hidden');
-        menuOpen.value = !menuOpen.value;
-        closeAnimation.value = !closeAnimation.value;
-    }
-    const Navbar = document.getElementById('Navbar');
-    const Home = document.getElementById('Home');
-    const Service = document.getElementById('Service');
-    if (Navbar && closeAnimation.value === true) {
-        Navbar.classList.remove('bg-backdrop-blur-sm');
-        Navbar.classList.add('bg-white');
-        Home ? Home.classList.add('blur-sm') : Service?.classList.add('blur-sm');
-    } else if (Navbar && closeAnimation.value === false) {
-        Navbar.classList.remove('bg-white');
-        Navbar.classList.add('backdrop-blur-sm');
-        Home ? Home.classList.remove('blur-sm') : Service?.classList.remove('blur-sm');
-    }
-};
+/* link servizi -------------------------------------------------------- */
+const serviziLinks = [
+  { to: '/Servizi/Panifici',      label: 'Panifici' },
+  { to: '/Servizi/Pasticcerie',   label: 'Pasticcerie' },
+  { to: '/Servizi/Pizzerie',      label: 'Pizzerie' },
+  { to: '/Servizi/Gelaterie',     label: 'Gelaterie' },
+  { to: '/Servizi/Ristorazione',  label: 'Ristorazione' },
+  { to: '/Servizi/Attrezzature',  label: 'Attrezzature' },
+  { to: '/Servizi/Progettazione', label: 'Progettazione' }
+]
 
-const handleOptMenuSelected = (event: Event) => {
-    const menuBurger = document.getElementById('menuBurger');
-    menuBurger ? menuBurger.click() : null;
-};
+/* stato menu mobile --------------------------------------------------- */
+const showServizi    = ref(false)
+const closeAnimation = ref(false)
+const menuOpen       = ref(false)
 
-const closeMenu = () => {
-    const menuBurger = document.getElementById('menuBurger');
-    menuBurger ? menuBurger.click() : null;
-};
+/* handler burger ------------------------------------------------------ */
+const handleMenuTrigger = () => {
+  if (menuOpen.value) {
+    /* CHIUSURA */
+    document.body.classList.remove('overflow-y-hidden')
+    closeAnimation.value = false          // ➜ slideOutUp
+    setTimeout(() => { menuOpen.value = false }, 450)
+  } else {
+    /* APERTURA */
+    document.body.classList.add('overflow-y-hidden')
+    menuOpen.value       = true
+    closeAnimation.value = true           // ➜ slideInDown
+  }
+}
 
+const handleOptMenuSelected = () => {
+  document.getElementById('menuBurger')?.click()
+}
+
+const closeMenu = () => handleOptMenuSelected()
+
+/* blur su scroll ------------------------------------------------------ */
 onMounted(() => {
-    const Navbar = document.getElementById('Navbar');
-    const Servizi = document.getElementById('ServiziMenu');
-    if (Navbar) {
-        window.addEventListener('scroll', () => {
-            if (Servizi && window.scrollY < Servizi.offsetTop) {
-                Navbar.classList.remove('backdrop-blur-sm');
-            } else {
-                Navbar.classList.add('backdrop-blur-sm');
-            }
-        });
-    }
-});
+  const Navbar  = document.getElementById('Navbar')
+  const Servizi = document.getElementById('ServiziMenu')
+  if (Navbar && Servizi) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < Servizi.offsetTop) {
+        Navbar.classList.remove('backdrop-blur-sm')
+      } else {
+        Navbar.classList.add('backdrop-blur-sm')
+      }
+    })
+  }
+})
 </script>
 
-<style lang="scss" scoped>
-.activeNav {
-    @apply text-black font-semibold
-}
+<style scoped lang="scss">
+.activeNav     { @apply text-black font-semibold; }
+.activeService { @apply text-black font-extrabold; }
 
-.activeService {
-    @apply text-black font-extrabold
-}
-
+/* animazione accordion ------------------------------------------------ */
 #ServiziMenu {
-    --MachMenu: 125ms;
-    /* animation-duration: var(--MachMenu); */
-    animation: heightInc var(--MachMenu) linear;
-
-    a p {
-        animation-duration: 250ms;
-        animation-delay: var(--MachMenu);
-    }
-}
-
-#ServiziMenu a:nth-last-child(3) p {
-    animation-delay: calc(var(--MachMenu) + 40ms);
-}
-
-#ServiziMenu a:nth-last-child(2) p {
-    animation-delay: calc(var(--MachMenu) + 80ms);
-
-}
-
-#ServiziMenu a:last-child p {
-    animation-delay: calc(var(--MachMenu) + 120ms);
-
+  --MachMenu: 125ms;
+  animation: heightInc var(--MachMenu) linear;
 }
 
 @keyframes heightInc {
-    0% {
-        @apply h-0;
-    }
-
-    100% {
-        @apply h-96;
-    }
+  from { @apply h-0; }
+  to   { @apply h-96; }
 }
 </style>
