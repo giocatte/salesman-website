@@ -388,14 +388,14 @@
         "orderId": 90,
         "Brand": "RAM",
         "Model": "Q600",
-        "Description": "SFOGLIATRICE AUTOMATICA",
+        "Description": "SFOGLIATRICE MANUALE",
         "ImgUrl": "/img/Pasticcerie/Q600.png"
     },
     {
         "orderId": 100,
         "Brand": "RAM",
         "Model": "Q500",
-        "Description": "SFOGLIATRICE AUTOMATICA",
+        "Description": "SFOGLIATRICE MANUALE",
         "ImgUrl": "/img/Pasticcerie/Q500.png"
     },
     {

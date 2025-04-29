@@ -8,7 +8,7 @@ export default defineEventHandler((event) => {
           BtnText: "Panifici",
           Title: "Macchine per Panifici<br/>Vendita e Assistenza",
           Description:
-          "<b>Macchinari per panificazione</b> e <b>attrezzature professionali</b> per ogni fase della lavorazione: dall’<b>impasto</b> alla <b>cottura</b>. Grazie a <b>forni e strumenti di alta qualità</b>, potrai ottimizzare i processi produttivi, sperimentare <b>nuove ricette</b> e offrire ogni giorno <b>pane fragrante e dal gusto autentico</b>.",
+          "<b>Macchinari per panificazione</b> e <b>attrezzature professionali</b> per ogni fase della lavorazione: dall'<b>impasto</b> alla <b>cottura</b>. Grazie a <b>forni e strumenti di alta qualità</b>, potrai ottimizzare i processi produttivi, sperimentare <b>nuove ricette</b> e offrire ogni giorno <b>pane fragrante e dal gusto autentico</b>.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_Panifici.png",
         },
         pages: {
@@ -22,7 +22,7 @@ export default defineEventHandler((event) => {
             "<b>Forni a tunnel</b>, a <b>vapore</b> e a <b>cupola</b>, per adattarsi a differenti modalità di <b>cottura</b>",
             "<b>Forni ventilati</b>, ideali per una <b>distribuzione uniforme</b> del calore",
             "<b>Impastatrici professionali</b>, adatte alla preparazione di qualsiasi tipo di <b>impasto</b>",
-            "<b>Accessori</b> e <b>macchinari ausiliari</b> per <b>ottimizzare</b> i flussi di lavoro e migliorare l’<b>efficienza</b>",
+            "<b>Accessori</b> e <b>macchinari ausiliari</b> per <b>ottimizzare</b> i flussi di lavoro e migliorare l'<b>efficienza</b>",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png",
           ImgUrlDesktop: "/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/PANIFICI.png" //modifica immagine desktop
@@ -43,14 +43,14 @@ export default defineEventHandler((event) => {
           SubTitle:
             "Innovazione e precisione al servizio della tua pasticceria",
           Intro:
-            "Metto a disposizione un’ampia selezione di <b>macchinari professionali</b> e <b>attrezzature</b> per <b>pasticceria</b>, studiati per migliorare l’<b>efficienza</b> e garantire <b>risultati eccellenti</b>.<br/>Dalle <b>pasticcerie artigianali</b> ai laboratori più strutturati, offro <b>soluzioni personalizzate</b> per ogni <b>necessità produttiva</b>.",
+            "Metto a disposizione un'ampia selezione di <b>macchinari professionali</b> e <b>attrezzature</b> per <b>pasticceria</b>, studiati per migliorare l'<b>efficienza</b> e garantire <b>risultati eccellenti</b>.<br/>Dalle <b>pasticcerie artigianali</b> ai laboratori più strutturati, offro <b>soluzioni personalizzate</b> per ogni <b>necessità produttiva</b>.",
           Title_2: "Soddisfa e sorprendi i tuoi clienti",
           Desc: "Collaboro con i <b>migliori marchi</b> del settore, tra cui <b>Polin</b>, <b>RAM</b>, <b>OSTALI</b> e <b>Longoni</b>, selezionando <b>macchinari</b> che combinano <b>innovazione</b>, <b>prestazioni elevate</b> e <b>affidabilità</b> nel tempo.<br/>A <b>Padova, Venezia e nel Nord Est</b> fornisco:",
           list: [
             "<b>Forni statici</b> ed <b>elettrici</b>, disponibili in varie configurazioni per una <b>cottura ottimale</b>",
             "<b>Forni ventilati</b>, a <b>gas</b> ed <b>elettrici</b>, ideali per <b>lavorazioni specifiche</b>",
             "<b>Impastatrici planetarie</b>, <b>sfogliatrici</b> e <b>spezzatrici</b>, progettate per facilitare la preparazione di <b>impasti</b> e <b>creme</b>",
-            "<b>Macchinari complementari</b> per migliorare l’<b>organizzazione</b> del laboratorio e <b>ottimizzare</b> la produzione",
+            "<b>Macchinari complementari</b> per migliorare l'<b>organizzazione</b> del laboratorio e <b>ottimizzare</b> la produzione",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png",
           ImgUrlDesktop: "/img/DESKTOP/IMMAGINI_INIZIALI_DESKTOP/PASTICCERIE.png" //modifica immagine desktop
@@ -77,7 +77,7 @@ export default defineEventHandler((event) => {
             "<b>Forni statici</b> ed <b>elettrici</b> (modulari, a tunnel, a cupola)",
             "<b>Forni ventilati</b> per cotture più rapide e omogenee",
             "<b>Forni a gas</b> e <b>forni elettrici</b> in diverse dimensioni e potenze",
-            "<b>Impastatrici</b> e altre <b>attrezzature professionali</b> per la preparazione dell’<b>impasto</b>",
+            "<b>Impastatrici</b> e altre <b>attrezzature professionali</b> per la preparazione dell'<b>impasto</b>",
             "<b>Macchinari ausiliari</b> e complementi per <b>ottimizzare</b> il tuo spazio di lavoro",
           ],
           ImgUrl: "/img/IMG_INIZIALI_MOBILE/IMG_MOB_PIZZERIA.png",
@@ -100,8 +100,8 @@ export default defineEventHandler((event) => {
             "Macchine specializzate per garantire gelato artigianale di alto livello",
           Intro:
             "Metto a tua disposizione una vasta selezione di <b>macchinari</b> e <b>soluzioni per gelaterie</b>, perfette per trasformare la tua attività in un ambiente ideale dove produrre <b>gelato artigianale</b> di altissima <b>qualità</b>.",
-          Title_2: "Distinguiti con attrezzature d’eccellenza",
-          Desc: "Collaboro con i <b>brand più affidabili</b> del settore per assicurarti <b>efficienza</b>, <b>facilità d’uso</b> e risultati <b>costanti nel tempo</b>.<br/>Grazie a <b>partnership</b> con aziende leader, come <b>Cattabriga</b> per le <b>macchine gelato</b> e <b>Polin, RAM, OSTALI</b> e <b>Longoni</b> per <b>frigoriferi</b>, <b>armadi refrigerati</b>, <b>vetrine</b> e <b>banchi freddi</b>.<br/>Il mio obiettivo è fornirti a <b>Padova, Venezia e nel Nord Est</b>:",
+          Title_2: "Distinguiti con attrezzature d'eccellenza",
+          Desc: "Collaboro con i <b>brand più affidabili</b> del settore per assicurarti <b>efficienza</b>, <b>facilità d'uso</b> e risultati <b>costanti nel tempo</b>.<br/>Grazie a <b>partnership</b> con aziende leader, come <b>Cattabriga</b> per le <b>macchine gelato</b> e <b>Polin, RAM, OSTALI</b> e <b>Longoni</b> per <b>frigoriferi</b>, <b>armadi refrigerati</b>, <b>vetrine</b> e <b>banchi freddi</b>.<br/>Il mio obiettivo è fornirti a <b>Padova, Venezia e nel Nord Est</b>:",
           list: [
             "<b>Macchine per gelato</b> di ultima generazione, progettate per mantenere la massima <b>cremosità</b> e garantire la corretta <b>pastorizzazione</b>",
             "<b>Sistemi di refrigerazione</b> e <b>conservazione</b> (<b>armadi</b>, <b>vetrine</b>, <b>banchi freddi</b>) per mantenere il <b>gelato</b> sempre alla <b>temperatura ideale</b>",
@@ -125,7 +125,7 @@ export default defineEventHandler((event) => {
           Title: "MACCHINARI PROFESSIONALI PER LA RISTORAZIONE",
           SubTitle: "Tecnologia e innovazione per la tua cucina",
           Intro:
-            "Metto a tua disposizione una <b>gamma completa</b> di <b>forni</b>, <b>cucine</b> e <b>attrezzature</b> professionali per <b>ottimizzare</b> la <b>produttività</b> della tua attività. Che tu gestisca un <b>ristorante</b>, un <b>hotel</b> o un’attività di <b>ristorazione collettiva</b>, offriamo soluzioni su misura per garantire <b>efficienza, affidabilità e qualità</b> in ogni preparazione.",
+            "Metto a tua disposizione una <b>gamma completa</b> di <b>forni</b>, <b>cucine</b> e <b>attrezzature</b> professionali per <b>ottimizzare</b> la <b>produttività</b> della tua attività. Che tu gestisca un <b>ristorante</b>, un <b>hotel</b> o un'attività di <b>ristorazione collettiva</b>, offriamo soluzioni su misura per garantire <b>efficienza, affidabilità e qualità</b> in ogni preparazione.",
           Title_2: "Soluzioni avanzate per ogni esigenza",
           Desc: "Collaboro con <b>Giorik</b>, marchio di riferimento nel settore, selezionando solo <b>attrezzature</b> progettate per <b>migliorare</b> le prestazioni della tua cucina. <br> Il mio obiettivo è fornirti, a <b>Padova, Venezia</b> e in tutto il <b>Nord Est</b>, le migliori soluzioni per:",
           list: [
@@ -146,7 +146,7 @@ export default defineEventHandler((event) => {
           BtnText: "Attrezzature",
           Title: "Attrezzature per <br/>Laboratori e Cucine <br/>Professionali",
           Description:
-            "<b>Attrezzature professionali per cucine</b> e <b>laboratori</b>, studiate per ottimizzare ogni area operativa, dalla <b>conservazione</b> alla <b>refrigerazione</b>, fino al <b>lavaggio professionale</b>. Soluzioni affidabili e durevoli, ideali per migliorare l’organizzazione del lavoro e garantire <b>igiene e funzionalità</b> in ogni fase del processo.",
+            "<b>Attrezzature professionali per cucine</b> e <b>laboratori</b>, studiate per ottimizzare ogni area operativa, dalla <b>conservazione</b> alla <b>refrigerazione</b>, fino al <b>lavaggio professionale</b>. Soluzioni affidabili e durevoli, ideali per migliorare l'organizzazione del lavoro e garantire <b>igiene e funzionalità</b> in ogni fase del processo.",
           ImgUrl: "/img/IMG_SERVIZI_MOBILE/IMG_SERVIZI_MOB_ATTREZZATURE.png",
         },
         pages: {
@@ -158,7 +158,7 @@ export default defineEventHandler((event) => {
           Desc: "Collaboro con <b>Hoonved</b>, <b>Mittel</b>, <b>Longoni</b> e <b>Coldline</b>, <b>aziende leader</b> nella produzione di <b>attrezzature affidabili e durevoli</b>. Offro <b>soluzioni</b> per:",
           list: [
             "<b>Refrigerazione e stoccaggio</b>: <b>armadi</b> e <b>vetrine refrigerate</b> per ingredienti sempre freschi",
-            "<b>Gestione dell’impasto</b>: <b>fermalievitazione</b> e <b>decongelatori</b> per una <b>lievitazione controllata</b>",
+            "<b>Gestione dell'impasto</b>: <b>fermalievitazione</b> e <b>decongelatori</b> per una <b>lievitazione controllata</b>",
             "Igiene e pulizia</b>: <b>lavastoviglie professionali</b> per garantire il massimo della <b>sanificazione</b>",
             "Arredi in acciaio inox</b>: <b>banchi</b> e <b>scaffali</b> per un <b>ambiente di lavoro funzionale</b>",
           ],
