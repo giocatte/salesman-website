@@ -126,8 +126,9 @@
           item: 'basis-1/3 lg:basis-[15.625rem]',
           container: 'items-center gap-x-5 lg:gap-x-[6rem] xl:gap-x-[9.688rem]'
         }">
-          <img :src="item.imgUrl" alt="carousel logo" loading="lazy" draggable="false"
-            class="aspect-auto w-full h-auto min-h-12 max-h-16" />
+          <a :href="item.url" target="_blank"><img :src="item.imgUrl" alt="carousel logo" loading="lazy" draggable="false"
+              class="aspect-auto w-full h-auto min-h-12 max-h-16" /></a>
+
         </UCarousel>
       </div>
     </div>

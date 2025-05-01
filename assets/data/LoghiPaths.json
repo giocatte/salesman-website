@@ -1,40 +1,52 @@
 {
     "Loghi": [
         {
-            "imgUrl": "/img/LOGHI/POLIN.png"
+            "imgUrl": "/img/LOGHI/POLIN.png",
+            "url": "https://www.polin.it/it/"
         },
         {
-            "imgUrl": "/img/LOGHI/MIXER.png"
+            "imgUrl": "/img/LOGHI/MIXER.png",
+            "url": "https://www.mixerit.com"
         },
         {
-            "imgUrl": "/img/LOGHI/OSTALI.png"
+            "imgUrl": "/img/LOGHI/OSTALI.png",
+            "url": "https://www.polin.it/#"
         },
         {
-            "imgUrl": "/img/LOGHI/GIORIK.svg"
+            "imgUrl": "/img/LOGHI/GIORIK.svg",
+            "url": "https://www.giorik.com/it/home.html"
         },
         {
-            "imgUrl": "/img/LOGHI/HOONVED.png"
+            "imgUrl": "/img/LOGHI/HOONVED.png",
+            "url": "https://www.hoonved.com/"
         },
         {
-            "imgUrl": "/img/LOGHI/ICB.png"
+            "imgUrl": "/img/LOGHI/ICB.png",
+            "url": "https://www.icbtecnologie.com/it"
         },
         {
-            "imgUrl": "/img/LOGHI/MCE.png"
+            "imgUrl": "/img/LOGHI/MCE.png",
+            "url": "https://www.mce-meccanica.com"
         },
         {
-            "imgUrl": "/img/LOGHI/KUMA_FORNI.png"
+            "imgUrl": "/img/LOGHI/KUMA_FORNI.png",
+            "url": "https://www.kumaforni.it"
         },
         {
-            "imgUrl": "/img/LOGHI/MITTEL.png"
+            "imgUrl": "/img/LOGHI/MITTEL.png",
+            "url": "https://mittelgroup.com"
         },
         {
-            "imgUrl": "/img/LOGHI/RAM.png"
+            "imgUrl": "/img/LOGHI/RAM.png",
+            "url": "https://www.ramsrl.eu/"
         },
         {
-            "imgUrl": "/img/LOGHI/TECNOMAC.png"
+            "imgUrl": "/img/LOGHI/TECNOMAC.png",
+            "url": "https://tecnomac.eu"
         },
         {
-            "imgUrl": "/img/LOGHI/VIMEK.png"
+            "imgUrl": "/img/LOGHI/VIMEK.png",  
+            "url": "https://vimekbakery.com/it/"
         }
     ]
 }
