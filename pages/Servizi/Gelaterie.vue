@@ -94,10 +94,10 @@ import { ref, onMounted } from 'vue'
 import { ProductShowCarousel } from '#components'
 
 useSeoMeta({
-  title: 'Macchine gelato Cattabriga per gelaterie | Andrea Tognon',
-  ogTitle: 'Macchine gelato Cattabriga per gelaterie | Andrea Tognon',
-  description: 'Macchine di ultima generazione Cattabriga, vetrine refrigerate Polin e RAM per gelaterie artigianali. Vendita, consulenza e assistenza a Padova, Venezia e Nord‑Est.',
-  ogDescription: 'Macchine di ultima generazione Cattabriga, vetrine refrigerate Polin e RAM per gelaterie artigianali. Vendita, consulenza e assistenza a Padova, Venezia e Nord‑Est.',
+  title: 'Macchine e attrezzature per gelaterie a Padova e Venezia',
+  ogTitle: 'Macchine e attrezzature per gelaterie a Padova e Venezia',
+  description: 'Macchine e Attrezzature, Cuocicrema, gelatiere, vetrine refrigerate e accessori Polin per gelateria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  ogDescription: 'Macchine e Attrezzature, Cuocicrema, gelatiere, vetrine refrigerate e accessori Polin per gelateria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 

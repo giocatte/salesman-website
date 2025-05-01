@@ -94,10 +94,10 @@ import { ref, onMounted } from 'vue'
 import { ProductShowCarousel } from '#components'
 
 useSeoMeta({
-  title: 'Forni Giorik e macchinari per ristoranti | Andrea Tognon',
-  ogTitle: 'Forni Giorik e macchinari per ristoranti | Andrea Tognon',
-  description: 'Forni professionali, cucine modulari e friggitrici Giorik per ristoranti, hotel e mense. Vendita, consulenza e assistenza in Veneto e Nord‑Est.',
-  ogDescription: 'Forni professionali, cucine modulari e friggitrici Giorik per ristoranti, hotel e mense. Vendita, consulenza e assistenza in Veneto e Nord‑Est.',
+  title: 'Macchine e attrezzature per ristoranti a Padova e Venezia',
+  ogTitle: 'Macchine e attrezzature per ristoranti a Padova e Venezia',
+  description: 'Macchine e Attrezzature, forni, friggitrici, cucine, forno elettrico e a gas Giorik per ristorante. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  ogDescription: 'Macchine e Attrezzature, forni, friggitrici, cucine, forno elettrico e a gas Giorik per ristorante. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png',
 })
 

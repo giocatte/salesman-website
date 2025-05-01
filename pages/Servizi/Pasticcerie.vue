@@ -95,10 +95,10 @@ import { ref, onMounted } from 'vue'
 import { ProductShowCarousel } from '#components'
 
 useSeoMeta({
-  title: 'Macchinari professionali per pasticcerie | Andrea Tognon',
-  ogTitle: 'Macchinari professionali per pasticcerie | Andrea Tognon',
-  description: 'Selezione di forni ventilati e impastatrici Polin, RAM e Longoni per pasticcerie artigianali o laboratori. Vendita e assistenza in Veneto e Nord‑Est.',
-  ogDescription: 'Selezione di forni ventilati e impastatrici Polin, RAM e Longoni per pasticcerie artigianali o laboratori. Vendita e assistenza in Veneto e Nord‑Est.',
+  title: 'Macchine e attrezzature per pasticcerie a Padova e Venezia',
+  ogTitle: 'Macchine e attrezzature per pasticcerie a Padova e Venezia',
+  description: 'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pasticceria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia',
+  ogDescription: 'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pasticceria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png',
 })
 

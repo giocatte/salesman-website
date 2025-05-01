@@ -94,10 +94,10 @@ import { ref, onMounted } from 'vue'
 import { ProductShowCarousel } from '#components'
 
 useSeoMeta({
-  title: 'Forni Polin e macchinari per pizzerie | Andrea Tognon',
-  ogTitle: 'Forni Polin e macchinari per pizzerie | Andrea Tognon',
-  description: 'Forni statici, elettrici e ventilati Polin, impastatrici e accessori per pizzerie artigianali o catene. Vendita, consulenza e assistenza in Veneto e Nord‑Est.',
-  ogDescription: 'Forni statici, elettrici e ventilati Polin, impastatrici e accessori per pizzerie artigianali o catene. Vendita, consulenza e assistenza in Veneto e Nord‑Est.',
+  title: 'Macchine e attrezzature per pizzerie a Padova e Venezia',
+  ogTitle: 'Macchine e attrezzature per pizzerie a Padova e Venezia',
+  description: 'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pizzeria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  ogDescription: 'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pizzeria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PIZZERIE.png',
 })
 

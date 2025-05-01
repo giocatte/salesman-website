@@ -71,10 +71,10 @@ import { ref, onMounted } from 'vue'
 import { ProductShowCarousel } from '#components'
 
 useSeoMeta({
-  title: 'Progettazione laboratori e arredi su misura | Andrea Tognon',
-  ogTitle: 'Progettazione laboratori e arredi su misura | Andrea Tognon',
-  description: 'Progettiamo laboratori e cucine professionali su misura: layout ottimizzato, arredi ergonomici e materiali resistenti. Consulenza in Veneto e Nord‑Est.',
-  ogDescription: 'Progettiamo laboratori e cucine professionali su misura: layout ottimizzato, arredi ergonomici e materiali resistenti. Consulenza in Veneto e Nord‑Est.',
+  title: 'Progettazione laboratori e arredi su misura a Padova e Venezia',
+  ogTitle: 'Progettazione  laboratori e arredi su misura a Padova e Venezia',
+  description: 'Progetto laboratori e cucine professionali su misura: layout ottimizzato, arredi ergonomici e materiali resistenti. Consulenza in Veneto e Nord‑Est.',
+  ogDescription: 'Progetto laboratori e cucine professionali su misura: layout ottimizzato, arredi ergonomici e materiali resistenti. Consulenza in Veneto e Nord‑Est.',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 

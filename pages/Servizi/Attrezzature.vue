@@ -94,10 +94,10 @@ import { ref, onMounted } from 'vue'
 import { ProductShowCarousel } from '#components'
 
 useSeoMeta({
-  title: 'Attrezzature per laboratori e ristorazione | Andrea Tognon',
-  ogTitle: 'Attrezzature per laboratori e ristorazione | Andrea Tognon',
-  description: 'Refrigerazione Coldline, lavastoviglie Hoonved e arredi inox Longoni per laboratori e ristorazione. Vendita, consulenza e assistenza in Veneto e Nord‑Est.',
-  ogDescription: 'Refrigerazione Coldline, lavastoviglie Hoonved e arredi inox Longoni per laboratori e ristorazione. Vendita, consulenza e assistenza in Veneto e Nord‑Est.',
+  title: 'Attrezzature per panifici, pasticcerie, pizzerie, gelaterie a Padova e Venezia',
+  ogTitle: 'Attrezzature per panifici, pasticcerie, pizzerie, gelaterie a Padova e Venezia',
+  description: 'Attrezzature come Lavastoviglie, banco da lavoro, congelatore, refrigerate, abbattitori, teglie, carrelli. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  ogDescription: 'Attrezzature come Lavastoviglie, banco da lavoro, congelatore, refrigerate, abbattitori, teglie, carrelli. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 
