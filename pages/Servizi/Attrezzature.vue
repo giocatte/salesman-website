@@ -31,7 +31,7 @@
             <button class="w-full btnBlueRed">Ristorazione</button>
           </NuxtLink>
 
-          <NuxtLink to="/Servizi/Peogettazione"
+          <NuxtLink to="/Servizi/Progettazione"
                     class="p-1 w-[47%] rounded-full bg-BlueToRed">
             <button class="w-full btnBlueRed">Progettazione</button>
           </NuxtLink>
