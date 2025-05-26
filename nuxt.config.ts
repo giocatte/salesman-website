@@ -30,6 +30,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+  site: {
+    url:'https://andreatognon.it',
+    name: "Andrea Tognon",
+    description: "Rivenditore Autorizzato Polin",
+  },
   modules: [
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",

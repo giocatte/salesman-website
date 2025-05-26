@@ -84,9 +84,9 @@ useSeoMeta({
   title: 'Macchine e attrezzature per panifici a Padova e Venezia',
   ogTitle: 'Macchine e attrezzature per panifici a Padova e Venezia',
   description:
-    'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per panificio. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+    'Macchinari e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per panificio. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
   ogDescription:
-    'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per panificio. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+    'Macchinari e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per panificio. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 

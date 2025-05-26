@@ -83,8 +83,8 @@ import { ProductShowCarousel } from '#components'
 useSeoMeta({
   title: 'Macchine e attrezzature per gelaterie a Padova e Venezia',
   ogTitle: 'Macchine e attrezzature per gelaterie a Padova e Venezia',
-  description: 'Macchine e Attrezzature, Cuocicrema, gelatiere, vetrine refrigerate e accessori Polin per gelateria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
-  ogDescription: 'Macchine e Attrezzature, Cuocicrema, gelatiere, vetrine refrigerate e accessori Polin per gelateria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  description: 'Macchinari e Attrezzature, Cuocicrema, gelatiere, vetrine refrigerate e accessori Polin per gelateria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  ogDescription: 'Macchinari e Attrezzature, Cuocicrema, gelatiere, vetrine refrigerate e accessori Polin per gelateria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PANIFICI.png',
 })
 

@@ -83,8 +83,8 @@ import { ProductShowCarousel } from '#components'
 useSeoMeta({
   title: 'Macchine e attrezzature per pizzerie a Padova e Venezia',
   ogTitle: 'Macchine e attrezzature per pizzerie a Padova e Venezia',
-  description: 'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pizzeria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
-  ogDescription: 'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pizzeria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia',
+  description: 'Macchinari e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pizzeria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  ogDescription: 'Macchinari e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pizzeria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PIZZERIE.png',
 })
 

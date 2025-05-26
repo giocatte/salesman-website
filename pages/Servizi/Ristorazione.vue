@@ -83,8 +83,9 @@ import { ProductShowCarousel } from '#components'
 useSeoMeta({
   title: 'Macchine e attrezzature per ristoranti a Padova e Venezia',
   ogTitle: 'Macchine e attrezzature per ristoranti a Padova e Venezia',
-  description: 'Macchine e Attrezzature, forni, friggitrici, cucine, forno elettrico e a gas Giorik per ristorante. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
-  ogDescription: 'Macchine e Attrezzature, forni, friggitrici, cucine, forno elettrico e a gas Giorik per ristorante. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  description: 'Macchinari e Attrezzature, forni, friggitrici, cucine, forno elettrico e a gas Giorik per ristorante. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  ogDescription: 'Macchinari e Attrezzature, forni, friggitrici, cucine, forno elettrico e a gas Giorik per ristorante. Consulenza, vendita e assistenza in Veneto, Padova e Venezia.',
+  ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_RISTORAZIONE.png',
 })
 

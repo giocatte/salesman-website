@@ -84,8 +84,8 @@ import { ProductShowCarousel } from '#components'
 useSeoMeta({
   title: 'Macchine e attrezzature per pasticcerie a Padova e Venezia',
   ogTitle: 'Macchine e attrezzature per pasticcerie a Padova e Venezia',
-  description: 'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pasticceria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia',
-  ogDescription: 'Macchine e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pasticceria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia',
+  description: 'Macchinari e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pasticceria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia',
+  ogDescription: 'Macchinari e Attrezzature, Forni, impastatrici, Planetarie e accessori Polin per pasticceria. Consulenza, vendita e assistenza in Veneto, Padova e Venezia',
   ogImage: '/img/IMG_INIZIALI_MOBILE/IMG_MOB_PASTICCERIE.png',
 })
 
@@ -97,7 +97,7 @@ onMounted(() => { isReady.value = true })
 
 const { data } = await useFetch('/api/ServicesAPI')
 const currentRoute = router.currentRoute.value.path.split('/')[2]
-const currentProduct = data.value.products.find(
+const currentProduct = data?.value?.products.find(
   product => product.Name === currentRoute
 )
 </script>
